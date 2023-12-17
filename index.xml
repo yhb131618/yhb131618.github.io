@@ -12,7 +12,7 @@
       <link>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</guid>
-      <description>![](image/Pasted%![[../../image/Pasted image 20231217090141.png]]20image%2020231217085357.png)&#xA;![[../../image/Pasted image 20231216212554.png]]&#xA;Chap01. Mysql 설치 및 접속하기 # update mysql.user set password=password(&amp;lsquo;admin12345&amp;rsquo;) where user=&amp;lsquo;root&amp;rsquo; and host =&amp;lsquo;localhost&amp;rsquo;&#xA;Chap02. Web Application 디렉토리구조 # ![[../../image/Pasted image 20231216151515.png]]&#xA;![[../../image/Pasted image 20231216152235.png]]&#xA;![[../../image/Pasted image 20231216152939.png]]&#xA;WEB (Java Project Name) webapp (Was 처리하고 Was에 구현) WEB-INF (WEB-INFORMATION) lib (라이브러리 기능) classes(Web-INF 고유 기능) web.mxl(tomcat Server와 맵핑되는 부분) &amp;lt;web-app version=&amp;#34;3.1&amp;#34; xmlns=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;#34;&amp;gt; &amp;lt;/web-app&amp;gt; 추가하기 Chap03. Contenx등록 # Severs web.xml ![[../../image/Pasted image 20231216153752.</description>
+      <description>![](image/Pasted%![[../../../assets/image/Pasted image 20231217090141.png]]20image%2020231217085357.png)&#xA;![[../../../assets/image/Pasted image 20231216212554.png]]&#xA;Chap01. Mysql 설치 및 접속하기 # update mysql.user set password=password(&amp;lsquo;admin12345&amp;rsquo;) where user=&amp;lsquo;root&amp;rsquo; and host =&amp;lsquo;localhost&amp;rsquo;&#xA;Chap02. Web Application 디렉토리구조 # ![[../../../assets/image/Pasted image 20231216151515.png]]&#xA;![[../../../assets/image/Pasted image 20231216152235.png]]&#xA;![[../../../assets/image/Pasted image 20231216152939.png]]&#xA;WEB (Java Project Name) webapp (Was 처리하고 Was에 구현) WEB-INF (WEB-INFORMATION) lib (라이브러리 기능) classes(Web-INF 고유 기능) web.mxl(tomcat Server와 맵핑되는 부분) &amp;lt;web-app version=&amp;#34;3.1&amp;#34; xmlns=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;#34;&amp;gt; &amp;lt;/web-app&amp;gt; 추가하기 Chap03. Contenx등록 # Severs web.xml ![[../../image/Pasted image 20231216153752.</description>
     </item>
     <item>
       <title></title>
@@ -26,14 +26,7 @@
       <link>https://yhb131618.github.io/4.-skill_backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/4.-skill_backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
-      <description>![[../../image/Pasted image 20231216150020.png]]</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/image/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/image/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
-      <description></description>
+      <description>![[../../../assets/image/Pasted image 20231216150020.png]]</description>
     </item>
   </channel>
 </rss>

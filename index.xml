@@ -1,39 +1,165 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>💜 Welcome to Amethyst! on My New Hugo Site</title>
+    <title>Welcome Blog on My New Hugo Site</title>
     <link>https://yhb131618.github.io/</link>
-    <description>Recent content in 💜 Welcome to Amethyst! on My New Hugo Site</description>
+    <description>Recent content in Welcome Blog on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="https://yhb131618.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-skill_backend/_index-1/</link>
+      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-skill_backend/_index-1/</guid>
+      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</guid>
+      <description>![[assets/Pasted image 20231216212554.png]]&#xA;Chap01. Mysql 설치 및 접속하기 # update mysql.user set password=password(&amp;lsquo;admin12345&amp;rsquo;) where user=&amp;lsquo;root&amp;rsquo; and host =&amp;lsquo;localhost&amp;rsquo;&#xA;Chap02. Web Application 디렉토리구조 # ![[assets/Pasted image 20231216151515.png]]&#xA;![[assets/Pasted image 20231216152235.png]]&#xA;![[assets/Pasted image 20231216152939.png]]&#xA;WEB (Java Project Name) webapp (Was 처리하고 Was에 구현) WEB-INF (WEB-INFORMATION) lib (라이브러리 기능) classes(Web-INF 고유 기능) web.mxl(tomcat Server와 맵핑되는 부분) &amp;lt;web-app version=&amp;#34;3.1&amp;#34; xmlns=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;#34;&amp;gt; &amp;lt;/web-app&amp;gt; 추가하기 Chap03. Contenx등록 # Severs web.xml &amp;lt;Context path=&amp;#34;/web2&amp;#34; docBase=&amp;#34;C:\eGovFrame-3.10.0\workspace.edu\web2\webapp&amp;#34;&amp;gt;&amp;lt;/Context&amp;gt; Client 요청 -&amp;gt; Servers -&amp;gt; server.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/11.-reading/_index-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/11.-reading/_index-/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</link>
+      <link>https://yhb131618.github.io/0.-about-me/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</guid>
-      <description>![[assets/Pasted image 20231216212554.png]]&#xA;Chap01. Mysql 설치 및 접속하기 # update mysql.user set password=password(&amp;lsquo;admin12345&amp;rsquo;) where user=&amp;lsquo;root&amp;rsquo; and host =&amp;lsquo;localhost&amp;rsquo;&#xA;Chap02. Web Application 디렉토리구조 # ![[assets/Pasted image 20231216151515.png]]&#xA;![[assets/Pasted image 20231216152235.png]]&#xA;![[assets/Pasted image 20231216152939.png]]&#xA;WEB (Java Project Name) webapp (Was 처리하고 Was에 구현) WEB-INF (WEB-INFORMATION) lib (라이브러리 기능) classes(Web-INF 고유 기능) web.mxl(tomcat Server와 맵핑되는 부분) &amp;lt;web-app version=&amp;#34;3.1&amp;#34; xmlns=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;#34;&amp;gt; &amp;lt;/web-app&amp;gt; 추가하기 Chap03. Contenx등록 # Severs web.xml ![[../../image/Pasted image 20231216153752.png]] Client 요청 -&amp;gt; Servers -&amp;gt; server.</description>
+      <guid>https://yhb131618.github.io/0.-about-me/about-me/</guid>
+      <description>이름 : 양홍빈</description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</link>
+      <link>https://yhb131618.github.io/1.-portfolio/1-1123213/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</guid>
+      <guid>https://yhb131618.github.io/1.-portfolio/1-1123213/</guid>
+      <description>프론트 엔드</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/10.-economy/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/10.-economy/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423/</guid>
+      <description>ㅁㄴㅇㄻㄴㅇㄹ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/11.-reading/11.-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/11.-reading/11.-reading/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-skill_backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <link>https://yhb131618.github.io/11.-reading/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC2%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B72/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-skill_backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
+      <guid>https://yhb131618.github.io/11.-reading/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC2%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B72/</guid>
+      <description>ㅇㄴㅇㅎㄻㄴㅇㄹ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/2.-it-os/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/2.-it-os/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423423/</guid>
+      <description>ㅁㄴㄹㅇㄴㅇㄹ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/1/</guid>
+      <description>프론트 엔드</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description>![[../../../images 1/Pasted image 20231216150020.png]]</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</guid>
+      <description>ㅁㄹㄴㅇㄻ2</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC234234-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC234234-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC432423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC432423/</guid>
+      <description>ㅁㄹㄴㅇㄻ2</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/7.-it-network/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC3434/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/7.-it-network/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC3434/</guid>
+      <description>ㅁㄴㅇㄻㄴ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/8.-it-opensource/asadsfdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/8.-it-opensource/asadsfdf/</guid>
+      <description>asdfasdf</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</guid>
+      <description>ㅁㅇㄴㄹㄴㅇㄹ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC22/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC22/</guid>
+      <description>ㅁㄴㅇㄹㄴㅁㄹㅇ</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/blogguide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/blogguide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</guid>
+      <description>afdf</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/content/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

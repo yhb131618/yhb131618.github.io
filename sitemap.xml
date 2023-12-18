@@ -2,36 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yhb131618.github.io/1.-about-me/</loc>
+    <loc>https://yhb131618.github.io/1.-portfolio/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/</loc>
+    <loc>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/_index-1/</loc>
+    <loc>https://yhb131618.github.io/2.-it-os/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/2.-portfolio/</loc>
+    <loc>https://yhb131618.github.io/3.-it-frontend/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</loc>
+    <loc>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/8.-skill_network/</loc>
+    <loc>https://yhb131618.github.io/4.-it-backend/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/5.-it-language/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/6.-it-algorithm/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/7.-it-network/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/8.-it-opensource/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/9.-it-tool/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/10.-economy/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/11.-reading/_index-/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/0.-about-me/</loc>
   </url><url>
     <loc>https://yhb131618.github.io/blogguide/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/blogguide/hugo/</loc>
+    <loc>https://yhb131618.github.io/0.-about-me/about-me/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/blogguide/obsidian/</loc>
+    <loc>https://yhb131618.github.io/1.-portfolio/1-1123213/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/7.-skill_algorithm/</loc>
+    <loc>https://yhb131618.github.io/10.-economy/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</loc>
+    <loc>https://yhb131618.github.io/11.-reading/11.-reading/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</loc>
+    <loc>https://yhb131618.github.io/11.-reading/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC2%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B72/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/</loc>
+    <loc>https://yhb131618.github.io/2.-it-os/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423423/</loc>
   </url><url>
-    <loc>https://yhb131618.github.io/4.-skill_backend/</loc>
+    <loc>https://yhb131618.github.io/3.-it-frontend/1/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC234234-1/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC432423/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/7.-it-network/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC3434/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/8.-it-opensource/asadsfdf/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC22/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/blogguide/blogguide/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/content/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/11.-reading/</loc>
   </url><url>
     <loc>https://yhb131618.github.io/categories/</loc>
   </url><url>
     <loc>https://yhb131618.github.io/tags/</loc>
+  </url><url>
+    <loc>https://yhb131618.github.io/</loc>
   </url>
 </urlset>

@@ -5,21 +5,35 @@
     <link>https://yhb131618.github.io/5.-it-language/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>euc-kr</language>
     <atom:link href="https://yhb131618.github.io/5.-it-language/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</link>
+      <link>https://yhb131618.github.io/5.-it-language/5.-it-language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</guid>
+      <guid>https://yhb131618.github.io/5.-it-language/5.-it-language/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</link>
+      <link>https://yhb131618.github.io/5.-it-language/c/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</guid>
-      <description>ㅁㄹㄴㅇㄻ2</description>
+      <guid>https://yhb131618.github.io/5.-it-language/c/</guid>
+      <description>C언어 기초</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/java/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/java/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/python/</guid>
+      <description>Python 기초</description>
     </item>
   </channel>
 </rss>

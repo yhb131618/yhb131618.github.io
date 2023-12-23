@@ -1,6 +1,6 @@
 {
-  "name": "📓 Amethyst",
-  "short_name": "📓 Amethyst",
+  "name": "Git Blog",
+  "short_name": "Git Blog",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

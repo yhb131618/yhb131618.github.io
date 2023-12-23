@@ -5,7 +5,7 @@
     <link>https://yhb131618.github.io/blogguide/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>euc-kr</language>
     <atom:link href="https://yhb131618.github.io/blogguide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
@@ -16,10 +16,24 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</link>
+      <link>https://yhb131618.github.io/blogguide/features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</guid>
-      <description>afdf</description>
+      <guid>https://yhb131618.github.io/blogguide/features/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/hugo/</guid>
+      <description>![[assets/Pasted image 20231224013648.png]]&#xA;Chap01_Hugo&amp;amp;GO Install # Hugo 공식 웹사이트&#xA;Go Install&#xA;Hugo Install 위 링크로 들어가 각각 Hugo&amp;amp;Go를 PC에 install 한다. 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&amp;gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다. Chap02_Theme Install # Theme</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/obsidian-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/obsidian-guide/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

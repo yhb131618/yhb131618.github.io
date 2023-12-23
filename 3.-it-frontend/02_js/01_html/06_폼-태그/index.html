@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="euc-kr" dir="ltr">
+<head>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="#html
+1. 폼이란? # 폼이란 백엔드나 다른 페이지에 요청을 보낼 수 있는 특수한 기능을 가진 태그. 요청을 보낼 때 폼안에 있는 데이터들도 전송할 수 있다.
+폼 태그가 주로 사용되는 곳은 회원가입 페이지, 로그인 페이지, 회원관련 페이지, 주문 페이지 등
+폼의 동작 방식(로그인)
+- 사용자가 아이디와 비밀번호를 입력
+- 사용자가 로그인 버튼을 클릭
+- 폼에 매핑되어 있는 주소로 아이디와 비밀번호를 가지고 요청을 보냄
+- 백엔드 프로그램에서 요청으로 온 아이디와 비밀번호를 가지고 데이터베이스에서 아이디와 비밀번호가 일치하는 검사를 진행" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yhb131618.github.io/3.-it-frontend/02_js/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/" /><meta property="article:section" content="3. (IT) FrontEnd" />
+
+<meta property="og:site_name" content="Git Blog" />
+
+<title>06 폼 태그 | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="#html
+1. 폼이란? # 폼이란 백엔드나 다른 페이지에 요청을 보낼 수 있는 특수한 기능을 가진 태그. 요청을 보낼 때 폼안에 있는 데이터들도 전송할 수 있다.
+폼 태그가 주로 사용되는 곳은 회원가입 페이지, 로그인 페이지, 회원관련 페이지, 주문 페이지 등
+폼의 동작 방식(로그인)
+- 사용자가 아이디와 비밀번호를 입력
+- 사용자가 로그인 버튼을 클릭
+- 폼에 매핑되어 있는 주소로 아이디와 비밀번호를 가지고 요청을 보냄
+- 백엔드 프로그램에서 요청으로 온 아이디와 비밀번호를 가지고 데이터베이스에서 아이디와 비밀번호가 일치하는 검사를 진행"
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="https://yhb131618.github.io/favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="https://yhb131618.github.io/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="https://yhb131618.github.io/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="https://yhb131618.github.io/quartz/js/darkmode.042058fbc2e215acaed9e31a77e7fede.min.js"></script>
+
+
+
+<script src="https://yhb131618.github.io/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="https://yhb131618.github.io/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="https://yhb131618.github.io/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="https://yhb131618.github.io/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="https://yhb131618.github.io/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  true 
+  const BASE_URL = "https://yhb131618.github.io"
+  const fetchData = Promise.all([
+        fetch("https:\/\/yhb131618.github.io\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("https:\/\/yhb131618.github.io\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "https://yhb131618.github.io",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "https://yhb131618.github.io",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="https://yhb131618.github.io/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="https://yhb131618.github.io">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-15604a58f33608b9ce503a933bcc66f1" class="toggle"  />
+    <label for="section-15604a58f33608b9ce503a933bcc66f1" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. Portfolio</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e332ad3ff9fcab6940816751bd4dc9d8" class="toggle"  />
+    <label for="section-e332ad3ff9fcab6940816751bd4dc9d8" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">2. ( It) Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c26722f9f4843fba58a8f0dd4cc61ab1" class="toggle" checked />
+    <label for="section-c26722f9f4843fba58a8f0dd4cc61ab1" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. ( It) Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/00.-dom/01_bombrowser-object-model/" class="">01 Bom( Browser Object Model)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/00.-dom/02_dom/" class="">02 Dom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/00.-dom/03_element/" class="">03 Element</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/01_html/" class="">01 HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/02_%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%83%9C%EA%B7%B8/" class="">02 텍스트 태그</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/03_%EB%AA%A9%EB%A1%9D-%ED%83%9C%EA%B7%B8/" class="">03 목록 태그</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/04_%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%83%9C%EA%B7%B8/" class="">04 테이블 태그</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/05_%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC/" class="">05 이미지와 하이퍼링크</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/" class="active">06 폼 태그</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/02_jquery/01.-jquery/" class="">01. Jquery</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/02_jquery/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/02_js/js_%EB%A9%94%EB%AA%A8/" class="">Js 메모</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/03_react_js/01_%EC%8B%A4%ED%96%89%ED%99%98%EA%B2%BD/" class="">01 실행환경</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/00.-%EC%84%A4%EB%AA%85-es6/" class="">00. 설명 Es6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/01_short_circuit/" class="">01 Short Circuit</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/02_object1/" class="">02 Object(1)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/03_object2/" class="">03 Object(2)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/04_object4/" class="">04 Object(4)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/05_class/" class="">05 Class</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/06_class_inherit/" class="">06 Class Inherit</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/07_restparameter/" class="">07 Rest Parameter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/08_foreach/" class="">08 for Each</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/09_map/" class="">09 Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/10_filter/" class="">10 Filter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/11_reduce/" class="">11 Reduce</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/12_spread/" class="">12 Spread</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/13.-destructuring/" class="">13. Destructuring</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/14.-destructuringobj/" class="">14. Destructuring Obj</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/15.-map/" class="">15. Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it-frontend/02_js/06_es6/16.-set/" class="">16. Set</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-02eda261f8811b4c6d82326d153b1c5e" class="toggle"  />
+    <label for="section-02eda261f8811b4c6d82326d153b1c5e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">4. ( It) Back End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-16a8bba0b2e6bdfff1d158692d205aba" class="toggle"  />
+    <label for="section-16a8bba0b2e6bdfff1d158692d205aba" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1 Spring Mvc Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/" class="">Spring Mvc 패턴 1</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it-backend/1_spring-mvc-basic/eclipse/" class="">Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it-backend/2_springflamework/-setting/" class="">Setting</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it-backend/3_springboot/springboot-basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it-backend/error/tomcat-%EC%97%90%EB%9F%AC/" class="">Tomcat 에러</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-079a9696c162aef52d161facbc14cfae" class="toggle"  />
+    <label for="section-079a9696c162aef52d161facbc14cfae" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. ( It) Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it-language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it-language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36c03ac4375013a7bafb3d43fa6d0561" class="toggle"  />
+    <label for="section-36c03ac4375013a7bafb3d43fa6d0561" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">6. ( It) Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/6.-it-algorithm/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC432423/" class="">무제 파일432423</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-af8b35812c65d8e7ab314e511b86a9b2" class="toggle"  />
+    <label for="section-af8b35812c65d8e7ab314e511b86a9b2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">7. ( It) Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it-network/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC3434/" class="">무제 파일3434</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe420fbfb24fac80f7bcfe1d5d283b1" class="toggle"  />
+    <label for="section-8fe420fbfb24fac80f7bcfe1d5d283b1" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. ( It) Open Source</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a79426dc377413c071724e6c6158e7f7" class="toggle"  />
+    <label for="section-a79426dc377413c071724e6c6158e7f7" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. ( It) Tool</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-76138437d84657256f189474fcafb6ce" class="toggle"  />
+    <label for="section-76138437d84657256f189474fcafb6ce" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">10. Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/10.-economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">11. Readings</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/11.-reading/%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%9D%98-%EA%BF%88/" class="">갈매기의 꿈</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/yhb131618?tab=repositories"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">06 폼 태그</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<p>#html</p>
+<h2 id="1-폼이란">
+  1. 폼이란?
+  <a class="anchor" href="#1-%ed%8f%bc%ec%9d%b4%eb%9e%80">#</a>
+</h2>
+<ol>
+<li>
+<p>폼이란 백엔드나 다른 페이지에 요청을 보낼 수 있는 특수한 기능을 가진 태그. 요청을 보낼 때 폼안에 있는 데이터들도 전송할 수 있다.</p>
+</li>
+<li>
+<p>폼 태그가 주로 사용되는 곳은 회원가입 페이지, 로그인 페이지, 회원관련 페이지, 주문 페이지 등</p>
+</li>
+<li>
+<p>폼의 동작 방식(로그인)</p>
+</li>
+</ol>
+<p>    - 사용자가 아이디와 비밀번호를 입력</p>
+<p>    - 사용자가 로그인 버튼을 클릭</p>
+<p>    - 폼에 매핑되어 있는 주소로 아이디와 비밀번호를 가지고 요청을 보냄</p>
+<p>    - 백엔드 프로그램에서 요청으로 온 아이디와 비밀번호를 가지고 데이터베이스에서 아이디와 비밀번호가 일치하는 검사를 진행</p>
+<p>    - 일치하면 로그인되도록 처리 일치하지 않으면 아이디나 비밀번호가 틀렸다고 메시지를 띄워준다.</p>
+<ol start="4">
+<li>폼이 요청을 보낼 때 가지고 가는 데이터들은 모두 form 태그안의 태그로 존재해야된다.</li>
+</ol>
+<h2 id="2-폼을-만들어주는-form">
+  2. 폼을 만들어주는 form
+  <a class="anchor" href="#2-%ed%8f%bc%ec%9d%84-%eb%a7%8c%eb%93%a4%ec%96%b4%ec%a3%bc%eb%8a%94-form">#</a>
+</h2>
+<ol>
+<li>
+<p>form 태그는 폼을 만들어주는 기본 태그</p>
+</li>
+<li>
+<p>form 태그 안에 여러가지 폼 관련 태그들을 사용. 폼 관련 태그들은 전송될 데이터를 담을 수 있다.</p>
+</li>
+<li>
+<p>form 태그의 속성들</p>
+</li>
+</ol>
+<p>    - method : 사용자가 입력한 정보들을 전송할 방식 지정. get, post만 지정 가능.</p>
+<p>        - get : url 주소에 사용자가 입력한 정보들이 모두 표출. 256byte~4,096byte까지의 정보만 전송 가능</p>
+<p>        - post : url 주소에 사용자가 입력한 정보들이 표출되지 않는다. 보안상 용이하기 때문에 중요한 정보를 넘길때는 거의 대부분 post방식으로 사용한다.</p>
+<p>    - name : 한 웹 문서 안에서 여러개의 폼을 사용할 때 각각 구분하기 위해 지정하는 속성.</p>
+<p>    - id : 한 웹 문서 안에서 여러개의 폼을 사용할 때 각각 구분하기 위해 지정하는 속성.</p>
+<p>    - action : 요청을 보낼 url을 지정하는 속성.</p>
+<p>               url 매핑되어있는 소스는 대부분 java의 메소드로 되어있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;기본 form&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!--action 속성: 다른 페이지나 백엔드에 요청을 보낼 주소를 지정--&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!--method 속성: 요청을 보낼 방식 지정.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      (백엔드에서도 GET, POST로 매핑되어있는 url이 존재해야한다.)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      form에서는 GET, POST만 지정가능
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      GET 방식은 전송되는 데이터가 모두 url에 노출
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      POST 방식은 전송되는 데이터가 모두 숨김처리--&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/board/search&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;get&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!--input의 name 속성이 전송될 데이터의 key가 되고 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      입력된 내용이 value로 전송된다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      백엔드나 다른페이지에서는 전송된 key로 value를 꺼내서 사용할 수 있다.--&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchKeyword&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;검색어를 입력하세요.&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!--submit 버튼을 클릭하면 form의 action을 동작시킨다.--&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;검색&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h2 id="3-폼-안의-태그들에-제목을-달아주는-label">
+  3. 폼 안의 태그들에 제목을 달아주는 label
+  <a class="anchor" href="#3-%ed%8f%bc-%ec%95%88%ec%9d%98-%ed%83%9c%ea%b7%b8%eb%93%a4%ec%97%90-%ec%a0%9c%eb%aa%a9%ec%9d%84-%eb%8b%ac%ec%95%84%ec%a3%bc%eb%8a%94-label">#</a>
+</h2>
+<ol>
+<li>
+<p>레이블(label)이란 입력창(input 태그)옆에 아이디나 비밀번호같은 텍스트를 붙여주는 태그</p>
+</li>
+<li>
+<p>label 태그 사용 방식</p>
+</li>
+</ol>
+<p>    - label 태그로 input 태그를 감싸는 방식  </p>
+<p>    ```</p>
+<p>      <!-- raw HTML omitted -->아이디</p>
+<p>          <!-- raw HTML omitted --></p>
+<p>      <!-- raw HTML omitted --></p>
+<p>    ```</p>
+<p>    - input 태그의 아이디를 label 태그의 for 속성으로 지정하는 방식  </p>
+<p>    ```</p>
+<p>      <!-- raw HTML omitted -->아이디<!-- raw HTML omitted --></p>
+<p>      <!-- raw HTML omitted --></p>
+<p>    ```</p>
+<p>    - input type속성으로 라디오 버튼이나 checkbox 같은 input을 만들 수 있는데 label이랑 같이 사용했을 때 효용성이 올라간다.</p>
+<p>    - label 없이 checkbox나 radio 사용시 진짜 버튼을 클릭해야 동작하는데 label과 함께 사용하면 label에 지정한 텍스트를 클릭해도 radio나 checkbox가 동작하도록 구성할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;input 태그에 제목을 달아주는 label&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ul</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">li</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">li</span> <span style="color:#f92672">label</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/user/login&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&lt;!--label 지정방식 1: 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                            label 태그로 input 태그를 감싸는 방식--&gt;</span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span>&gt;아이디
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userId&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userId&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&lt;!--label 지정방식 2:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                            label 태그의 for 속성으로 input 태그의 id를
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                            입력해서 input 태그와 연결해줌--&gt;</span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userPw&#34;</span>&gt;비밀번호&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userPw&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userPw&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;로그인&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h2 id="4-폼-태그들을-그룹으로-묶어주는-fieldset-legend">
+  4. 폼 태그들을 그룹으로 묶어주는 fieldset, legend
+  <a class="anchor" href="#4-%ed%8f%bc-%ed%83%9c%ea%b7%b8%eb%93%a4%ec%9d%84-%ea%b7%b8%eb%a3%b9%ec%9c%bc%eb%a1%9c-%eb%ac%b6%ec%96%b4%ec%a3%bc%eb%8a%94-fieldset-legend">#</a>
+</h2>
+<ol>
+<li>
+<p>쇼핑몰 사이트에서 주문서 폼에서 사용자 정보와 배송 정보, 주문 정보를 분리해서 표시할 때 주로 사용</p>
+</li>
+<li>
+<p>하나의 폼에서 여러 구역을 나눠서 표시할 때 사용</p>
+</li>
+<li>
+<p>fieldset 태그는 폼 안의 태그들을 하나의 영역으로 묶고 외곽선을 그려준다.</p>
+</li>
+<li>
+<p>legend 태그는 fieldset으로 묶은 그룹에 제목을 붙여준다.</p>
+</li>
+</ol>
+<h2 id="5-사용자-입력을-위한-input">
+  5. 사용자 입력을 위한 input
+  <a class="anchor" href="#5-%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%9e%85%eb%a0%a5%ec%9d%84-%ec%9c%84%ed%95%9c-input">#</a>
+</h2>
+<ol>
+<li>
+<p>웹에서 폼은 사용자가 입력하는 부분과 요청을 보내는 버튼 부분으로 나눌 수 있다.</p>
+</li>
+<li>
+<p>input 태그로 입력할 수 있는 항목은 텍스트, 비밀번호, 이메일주소, 전화번호, 날짜, 시간, 이미지, 버튼 등 다양하며 type 속성을 통해 지정할 수 있다.</p>
+</li>
+<li>
+<p>id, name 속성은 태그들을 구분하기 위해서 사용되는 속성</p>
+</li>
+<li>
+<p>id, name 속성의 차이점</p>
+</li>
+</ol>
+<p>    - id는 한 웹 문서에서 유일해야 한다. 유일하지 않아도 에러는 발생하지 않지만 웹 접근성 검사에서 에러로 나타난다.</p>
+<p>    - name은 한 웹 문서에서 중복해서 사용가능하고 checkbox 같이 중복선택이 가능한 태그들에서 그룹을 묶는 역할도 한다.</p>
+<p>    - id는 javascript나 css에서 선택자로 활용이 많이 된다. 웹 문서에서만 사용됨.</p>
+<p>    - name 속성은 요청을 보낼 때 input의 데이터만 가지고 가지않고 key와 value로 매핑되어 넘어가는데 여기서 key역할을 해주는 것이 name 속성.  </p>
+<p>    ```</p>
+<p>      <!-- raw HTML omitted --></p>
+<p>      위 input에 사용자가 입력한 값과 함께 요청을 보낼 때 백엔드 단에서 사용자가 입력한 값을 키인 userId로 꺼내서 사용할 수 있다.</p>
+<p>    ```</p>
+<h2 id="6-input-태그의-type-속성으로-지정가능한-유형">
+  6. input 태그의 type 속성으로 지정가능한 유형
+  <a class="anchor" href="#6-input-%ed%83%9c%ea%b7%b8%ec%9d%98-type-%ec%86%8d%ec%84%b1%ec%9c%bc%eb%a1%9c-%ec%a7%80%ec%a0%95%ea%b0%80%eb%8a%a5%ed%95%9c-%ec%9c%a0%ed%98%95">#</a>
+</h2>
+<ol>
+<li>
+<p>hidden : 화면에서 보이진 않지만 요청을 보낼 때 데이터 전송은 된다.</p>
+</li>
+<li>
+<p>text : 한 줄짜리 텍스트를 입력할 수 있는 텍스트 상자를 생성</p>
+</li>
+<li>
+<p>tel : 전화번호 입력 필드 생성</p>
+</li>
+<li>
+<p>url : url 주소 입력 가능한 필드 생성</p>
+</li>
+<li>
+<p>email : 메일주소 입력 가능한 필드 생성</p>
+</li>
+<li>
+<p>password : 비밀번호를 입력할 수 있는 필드 생성. 입력한 텍스트가 *로 표출.</p>
+</li>
+<li>
+<p>date, month, week : date는 사용자 지역 기준 년, 월, 일을 지정. month는 년, 월 지정. week는 년, 주를 지정.</p>
+</li>
+<li>
+<p>number : 숫자를 조절할 수 있는 화살표 생성</p>
+</li>
+<li>
+<p>range : 숫자를 조절할 수 있는 슬라이드를 생성</p>
+</li>
+<li>
+<p>color : 색상을 선택할 수 있는 색상표를 생성</p>
+</li>
+<li>
+<p>checkbox, radio: 중복선택 가능한 checkbox를 생성하거나 단일 선택만 가능한 radio 버튼을 생성</p>
+</li>
+<li>
+<p>file : 파일을 선택할 수 있는 팝업창을 띄워주는 버튼을 생성</p>
+</li>
+<li>
+<p>submit, reset : submit은 form의 action 속성값으로 지정되어 있는 url로 요청을 보내는 버튼을 생성(요청보낼 때 입력된 데이터들도 함께 전송). reset은 폼에 입력되어 있는 내용을 초기화하는 버튼을 생성.</p>
+</li>
+<li>
+<p>image : submit 버튼 대신 사용할 이미지를 삽입</p>
+</li>
+<li>
+<p>button : 아무 기능 없는 버튼을 하나 생성(button 태그와 동일. button 태그는 type의 기본값이 submit). javascript 메소드를 매핑하여 동작이 일어날 수 있도록 직접 동작을 만든다.</p>
+</li>
+</ol>
+<h2 id="7-input-태그의-다양한-속성">
+  7. input 태그의 다양한 속성
+  <a class="anchor" href="#7-input-%ed%83%9c%ea%b7%b8%ec%9d%98-%eb%8b%a4%ec%96%91%ed%95%9c-%ec%86%8d%ec%84%b1">#</a>
+</h2>
+<ol>
+<li>autofocus 속성</li>
+</ol>
+<p>  - 페이지가 로딩될 때 원하는 input태그에 커서를 표시.</p>
+<p>  - HTML4까지는 이 속성이 존재하지 않아서 javascript로 직접 구현했지만 HTML5에서는 autofocus 속성을 지원해서 간단하게 속성만 사용하면 원하는 태그에 커서를 가져다 놓을 수 있다.</p>
+<ol start="2">
+<li>placeholder 속성</li>
+</ol>
+<p>  - 해당 input의 입력할 내용에 대한 힌트를 제공할 수 있다.</p>
+<ol start="3">
+<li>readonly 속성</li>
+</ol>
+<p>  - 읽기 전용 태그로 변경함. 사용자 입력을 막는 속성</p>
+<p>  - readonly, readonly=&ldquo;true&rdquo;, readonly=&ldquo;readonly&rdquo; 로 설정할 수 있다. 기본 값은 false로 입력을 막지 않는 상태.</p>
+<p>  - 읽기 전용 속성을 해제할 때는 readonly 설정을 삭제한다.</p>
+<ol start="4">
+<li>required 속성</li>
+</ol>
+<p>  - 필수적으로 입력돼야 하는 태그에 지정.</p>
+<p>  - required로 설정된 태그에 입력 값 없이 submit을 하게 될 경우 경고창이 뜨면서 submit 되지 않는다.</p>
+<h2 id="8-여러-데이터들을-나열해서-보여주는-select-optgroup-option">
+  8. 여러 데이터들을 나열해서 보여주는 select, optgroup, option
+  <a class="anchor" href="#8-%ec%97%ac%eb%9f%ac-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%93%a4%ec%9d%84-%eb%82%98%ec%97%b4%ed%95%b4%ec%84%9c-%eb%b3%b4%ec%97%ac%ec%a3%bc%eb%8a%94-select-optgroup-option">#</a>
+</h2>
+<ol>
+<li>
+<p>사용자가 직접 입력하지 않고 여러가지 옵션 중에 선택할 수 있도록 해주는 태그. 드롭다운이라고도 부른다.</p>
+</li>
+<li>
+<p>select 태그와 option 태그를 조합해서 드롭다운 목록을 만들 수 있다.</p>
+</li>
+<li>
+<p>select 태그는 드롭다운의 시작과 끝을 표시하는 태그이고 option 태그는 드롭다운의 항목들을 만들어주는 태그.</p>
+</li>
+<li>
+<p>드롭다운 목록에서 항목을 선택하고 submit을 할 경우 선택된 항목의 value속성의 값이 전송되게 되고 키는 select에 설정되어 있는 name속성의 값이 세팅된다.</p>
+</li>
+<li>
+<p>optgroup으로 항목을 그룹화하여 사용할 수 있다. optgroup 태그의 label 속성으로 그룹의 제목을 지정할 수 있다.</p>
+</li>
+</ol>
+<h2 id="9-여러줄-텍스트를-입력할-수-있는-textarea">
+  9. 여러줄 텍스트를 입력할 수 있는 textarea
+  <a class="anchor" href="#9-%ec%97%ac%eb%9f%ac%ec%a4%84-%ed%85%8d%ec%8a%a4%ed%8a%b8%eb%a5%bc-%ec%9e%85%eb%a0%a5%ed%95%a0-%ec%88%98-%ec%9e%88%eb%8a%94-textarea">#</a>
+</h2>
+<ol>
+<li>
+<p>두 줄이상의 텍스트를 입력받을 경우에는 textarea 태그를 이용해서 입력받는 영역을 생성한다.</p>
+</li>
+<li>
+<p>textarea로 입력된 글은 DB에서도 그대로 저장되기 때문에 엔터값이나 공백도 같이 저장된다. DB에서 조회해온 데이터의 내용을 다시 표출할 때 입력한 그대로 표출된다.</p>
+</li>
+<li>
+<p>textarear의 속성</p>
+</li>
+</ol>
+<p>  - cols : textarea영역의 가로 길이를 지정(문자의 크기 단위로 지정(px))</p>
+<p>  - rows : textarea영역의 세로 길이를 지정(줄 수 단위로 지정)</p>
+<p>  - resize(css속성, style에 작성한다.) : textarea는 기본으로 생성할 경우 크기를 조절할 수 있는 옵션이 포함되어 있는데 크기를 조절할 수 있는 옵션을 막거나 한쪽방향으로만 설정하고 싶을 때는 resize속성을 설정한다.</p>
+<p>    - none : 크기를 고정</p>
+<p>    - both : 가로, 세로 크기를 조절</p>
+<p>    - horizontal : 가로 크기 조절</p>
+<p>    - vertical : 세로 크기 조절</p>
+<h2 id="10-버튼을-만들어-주는-button">
+  10. 버튼을 만들어 주는 button
+  <a class="anchor" href="#10-%eb%b2%84%ed%8a%bc%ec%9d%84-%eb%a7%8c%eb%93%a4%ec%96%b4-%ec%a3%bc%eb%8a%94-button">#</a>
+</h2>
+<ol>
+<li>
+<p>input 태그의 type=&ldquo;submit&rdquo;, type=&ldquo;reset&rdquo;, type=&ldquo;button&rdquo; 기본적으로 동일하게 설정할 수 있는 버튼.</p>
+</li>
+<li>
+<p>button 태그에서 설정가능한 type</p>
+</li>
+</ol>
+<p>  - submit : 폼을 요청주소로 전송. 기본값.</p>
+<p>  - reset : 폼을 초기화하는 버튼 생성.</p>
+<p>  - button : 아무기능을 하지 않는 버튼을 생성.</p>
+<p>             javascript로 기능을 만들어 줘야 한다.</p>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="https://yhb131618.github.io/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2023 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="https://yhb131618.github.io">Home</a></li>
+            <li><a href="">Top</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-폼이란">1. 폼이란?</a></li>
+    <li><a href="#2-폼을-만들어주는-form">2. 폼을 만들어주는 form</a></li>
+    <li><a href="#3-폼-안의-태그들에-제목을-달아주는-label">3. 폼 안의 태그들에 제목을 달아주는 label</a></li>
+    <li><a href="#4-폼-태그들을-그룹으로-묶어주는-fieldset-legend">4. 폼 태그들을 그룹으로 묶어주는 fieldset, legend</a></li>
+    <li><a href="#5-사용자-입력을-위한-input">5. 사용자 입력을 위한 input</a></li>
+    <li><a href="#6-input-태그의-type-속성으로-지정가능한-유형">6. input 태그의 type 속성으로 지정가능한 유형</a></li>
+    <li><a href="#7-input-태그의-다양한-속성">7. input 태그의 다양한 속성</a></li>
+    <li><a href="#8-여러-데이터들을-나열해서-보여주는-select-optgroup-option">8. 여러 데이터들을 나열해서 보여주는 select, optgroup, option</a></li>
+    <li><a href="#9-여러줄-텍스트를-입력할-수-있는-textarea">9. 여러줄 텍스트를 입력할 수 있는 textarea</a></li>
+    <li><a href="#10-버튼을-만들어-주는-button">10. 버튼을 만들어 주는 button</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

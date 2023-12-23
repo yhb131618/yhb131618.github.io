@@ -5,14 +5,14 @@
     <link>https://yhb131618.github.io/</link>
     <description>Recent content in Welcome Blog on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>euc-kr</language>
     <atom:link href="https://yhb131618.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_1/</guid>
-      <description>![[assets/Pasted image 20231216212554.png]]&#xA;Chap01. Mysql 설치 및 접속하기 # update mysql.user set password=password(&amp;lsquo;admin12345&amp;rsquo;) where user=&amp;lsquo;root&amp;rsquo; and host =&amp;lsquo;localhost&amp;rsquo;&#xA;Chap02. Web Application 디렉토리구조 # ![[assets/Pasted image 20231216151515.png]]&#xA;![[assets/Pasted image 20231216152235.png]]&#xA;![[assets/Pasted image 20231216152939.png]]&#xA;WEB (Java Project Name) webapp (Was 처리하고 Was에 구현) WEB-INF (WEB-INFORMATION) lib (라이브러리 기능) classes(Web-INF 고유 기능) web.mxl(tomcat Server와 맵핑되는 부분) &amp;lt;web-app version=&amp;#34;3.1&amp;#34; xmlns=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;#34;&amp;gt; &amp;lt;/web-app&amp;gt; 추가하기 Chap03. Contenx등록 # Severs web.xml &amp;lt;Context path=&amp;#34;/web2&amp;#34; docBase=&amp;#34;C:\eGovFrame-3.10.0\workspace.edu\web2\webapp&amp;#34;&amp;gt;&amp;lt;/Context&amp;gt; Client 요청 -&amp;gt; Servers -&amp;gt; server.</description>
+      <description>![[assets/Pasted image 20231216212554.png]]&#xA;강의 후기 ★★★★★ 기초개념 설명이 너무 좋았다. 기본틀 하나씩 쌓아 올라가는 식의 강의여서 초보자가 듣기에 적합했다. 주변에 자바를 처음 공부하는 사람이 있다면 이 강의부터 들으라고 하고 싶다. 시간 낭비하지 말고, 이 강의를 돈을 내고 들을 것을 추천한다.&#xA;참고로 자기에 대한 투자를 아끼는 것은 바보 같은 짓이다. 그릇이 작은 사람은 자기에 대한 투자를 작게하고, 그릇이 큰 사람은 자기에 대한 투자를 크게 하듯, 사람은 자신의 믿음에 따라 움직이는 듯 하다.</description>
     </item>
     <item>
       <title></title>
@@ -30,17 +30,17 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/1.-portfolio/1-1123213/</link>
+      <link>https://yhb131618.github.io/10.-economy/10.-economy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/1.-portfolio/1-1123213/</guid>
-      <description>프론트 엔드</description>
+      <guid>https://yhb131618.github.io/10.-economy/10.-economy/</guid>
+      <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/10.-economy/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423/</link>
+      <link>https://yhb131618.github.io/10.-economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/10.-economy/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423/</guid>
-      <description>ㅁㄴㅇㄻㄴㅇㄹ</description>
+      <guid>https://yhb131618.github.io/10.-economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</guid>
+      <description>주식투자의 수급주체 # 기관투자자 # 기관투자자는 일반인이나 법인 등 타인으로부터 모은 자금을 운용하는 투자자를 말합니다&#xA;외국인 # 외국인은 금융감독원에 외국인투자등록을 마친 외국인과 6개월 이상 국내 거주 등의 요건에 따라 투자 등록이 면제된 기타외국인으로 구분할 수 있습니다. 금융투자 # 금융투자는 증권사, 투자자문사, 자산운용사 등에서 직접 투자할 때 잡히는 수급을 의미합니다.&#xA;투신 # 투신은 투자신탁의 줄임말로 자산운용사 수급입니다. 일반 개인이 은행이나 증권사 등을 통해 펀드에 가입하면 그 펀드는 자산운용사의 펀드매니저를 통해 운용됩니다.</description>
     </item>
     <item>
       <title></title>
@@ -51,52 +51,346 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/11.-reading/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC2%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B72/</link>
+      <link>https://yhb131618.github.io/2.-it-os/2.-it-os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/11.-reading/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC2%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B7%E3%85%82%E3%85%88%E3%84%B72/</guid>
-      <description>ㅇㄴㅇㅎㄻㄴㅇㄹ</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/2.-it-os/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423423/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/2.-it-os/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423423/</guid>
-      <description>ㅁㄴㄹㅇㄴㅇㄹ</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/3.-it-frontend/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/3.-it-frontend/1/</guid>
-      <description>프론트 엔드</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2-%EB%B0%95%EB%A7%A4%EC%9D%BC/</guid>
+      <guid>https://yhb131618.github.io/2.-it-os/2.-it-os/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/01_bombrowser-object-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
-      <description>![[../../../images 1/Pasted image 20231216150020.png]]</description>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/01_bombrowser-object-model/</guid>
+      <description>![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204160601.png]] ![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204160300.png| 600]]&#xA;대표적인 BOM 객체 # Window 객체는 모든 객체가 소속된 객체이고, 전역객체이면서, 창이나 프레임을 의미한다. 1) window: Global Context. 브라우저 창 객체 2) screen: 사용자 환경의 디스플레이 정보 객체 3) location: 현재 페이지의 url을 다루는 객체 4) navigator: 웹브라우저 및 브라우저 환경 정보 객체 5) history: 현재의 브라우저가 접근했던 URL history alert # 경고창이라고 부른다. 사용자에게 정보를 제공하거나 디버깅등의 용도로 많이 사용한다.</description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</link>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/02_dom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC23423ert4-1/</guid>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/02_dom/</guid>
+      <description>![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204171713.png]]&#xA;모든 엘리먼트는 HTMLElement의 자식이다. 따라서 HTMLElement의 프로퍼티를 똑같이 가지고 있다. 동시에 엘리먼트의 성격에 따라서 자신만의 프로퍼티를 가지고 있는데 이것은 엘리먼트의 성격에 따라서 달라진다. HTMLElement는 Element의 자식이고 Element는 Node의 자식이다. Node는 Object의 자식이다. 이러한 관계를 DOM Tree라고 한다. 이 관계를 그림으로 나타내면 아래와 같다. ( 출처-) console.location(location.toString(), location.href) # 현재 윈도우의 URL 알아내기 console.dir(navigator); # 브라우저의 정보를 제공한다. .appName .appVersion .userAgent (Http 헤더의 내용) .platForm (운영체제의 내용) </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/03_element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/03_element/</guid>
+      <description>Element # Element 객체는 엘리먼트를 추상화한 객체다. DOM은 HTML만을 제어하기 위한 모델이 아니다. HTML이나 XML, SVG, XUL과 같이 마크업 형태의 언어를 제어하기 위한 규격이기 때문에 Element는 마크업 언어의 일반적인 규격에 대한 속성을 정의하고 있고, 각각의 구체적인 언어(HTML,XML,SVG)를 위한 기능은 HTMLElement, SVGElement, XULElement와 같은 객체를 통해서 추가해서 사용하고 있다. ![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204180934.png]]&#xA;식별자 # 문서내에서 특정한 엘리먼트를 식별하기 위한 용도로 사용되는 API&#xA;lement.classList Element.className Element.id Element.tagName 조회 # 엘리먼트의 하위 엘리먼트를 조회하는 API</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/00.-dom/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</link>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/01_html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/5.-it-language/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC4xcvxcv32423/</guid>
-      <description>ㅁㄹㄴㅇㄻ2</description>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/01_html/</guid>
+      <description>#html&#xA;1.HTML이란 # html은 웹사이트에서 사용할 파일의 형식. html확장자로 구성된 문서이다.&#xA;HTML은 Hyper Text Markup Language의 약자로 Hyper Text는 다른 문서나 다른 사이트로 이동할 수 있는 기능을 가진 텍스트 Markup은 태그들로 HTML문서의 body부분을 채워넣는 작업을 말한다.&#xA;마크업을 진행할 때는 약속된 표기법을 사용해서 진행하게 되는데 &amp;lt;&amp;gt;로 표시된 태그들을 사용한다.&#xA;대부분의 태그들은 여는태그와 닫는태그 쌍으로 존재한다. &amp;lt;h1&amp;gt;내용&amp;lt;/h1&amp;gt;, &amp;lt;h1/&amp;gt;, &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;...&#xA;몇 몇 태그들은 닫는 태그가 없다. &amp;lt;img&amp;gt;, &amp;lt;input&amp;gt;...&#xA;태그들은 각각의 속성이 존재하여 속성값과 함께 사용 &amp;lt;img width=&amp;#34;가로길이&amp;#34; height=&amp;#34;세로길이&amp;#34; src=&amp;#34;이미지경로&amp;#34; style=&amp;#34;css관련 속성 &amp;#34;&amp;gt; 태그안에 태그를 포함할 때는 포함관계를 명확하게 명시해야한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/02_%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/02_%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%83%9C%EA%B7%B8/</guid>
+      <description>1. 텍스트 태그 # #html&#xA;1. 제목을 만들어주는 h1~h6 # h1~h6 태그는 제목을 표시하는 태그.&#xA;h1이 가장 크고 진하게 표시되고 숫자가 커질수록 크기가 작아지고 연해지게 표시된다. h6가 가장 작으면서 가장 연하게 표시되는 태그.&#xA;2. 단락을 만들어 주는 p # 텍스트를 표출할 때 가장 많이 사용되는 태그&#xA;텍스트의 단락을 만들어주는 태그로써 단락은 줄바꿈이 있는 텍스트 덩어리를 의미&#xA;&amp;lt;/p&amp;gt;를 만나기 전까지의 텍스트는 한 줄로 표시(브라우저 사이즈에 따라 여러줄로 표시).&#xA;블록태그의 속성으로 인해 단락처럼 보임.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/03_%EB%AA%A9%EB%A1%9D-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/03_%EB%AA%A9%EB%A1%9D-%ED%83%9C%EA%B7%B8/</guid>
+      <description>1. 목록을 만들어 주는 태그 # #html&#xA;1. 순서없는 목록을 만들어 주는 ul # ul(unordered list)의 약자 ul 태그 안에 항목을 추가할 때는 li태그 사용 ul 태그의 li 태그는 작은 원이나 사각형 같은 불릿을 표출 css list-style-type 속성을 이용해서 불릿의 모양을 변경할 수 있다. 2. 순서가 있는 목록을 만들어주는 ol # ol은 ordered list의 약자. ol 태그도 마찬가지로 항목을 만들 때는 li 태그 사용 목록의 번호의 표기방법이나 시작 숫자, 문자를 지정할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/04_%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/04_%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%83%9C%EA%B7%B8/</guid>
+      <description>#html&#xA;1. 테이블을 만들어주는 태그 # 1. table 태그 # 표의 자리를 지정해주는 태그 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;표를 만들어주는 table, tr, th, td&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; table, th, td { border: 1px solid black; border-collapse: collapse; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--table 태그: 표를 만들어주는 태그--&amp;gt; &amp;lt;table&amp;gt; &amp;lt;!--tr 태그: 표에 행을 추가--&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;!--th 태그: 제목 셀--&amp;gt; &amp;lt;th&amp;gt;Java&amp;lt;/th&amp;gt; &amp;lt;!--td 태그: 내용 셀--&amp;gt; &amp;lt;td&amp;gt;변수&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;클래스&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;Oracle&amp;lt;/th&amp;gt; &amp;lt;td&amp;gt;DML&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;DDL&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/body&amp;gt; 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/05_%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/05_%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC/</guid>
+      <description>#html&#xA;1. 이미지 # 웹에서 사용하는 이미지의 종류 - GIF : Graphic Iterchange Form의 약자.&#xA;표시가능한 색상의 수가 256가지.&#xA;다른 이미지 파일들에 비해 크기가 작아서 주로 아이콘이나 불릿 등 작은 이미지에 사용이 되고 또는 움직이는 이미지를 제작할 때 사용.&#xA;- JPG/JPEG : Joint Photographic Experts&#xA;Group의 약자.&#xA;GIF보다 더 다양한 색생과 명암 표현이 가능하고 저장을 여러번 반복하면 화질이 저하되는 단점이 있다.&#xA;- PNG : Portable Network Graphics의 약자.&#xA;네트워크 용으로 만들어지 이미지 파일이라 최근에 많이 사용되고 있고 배경을 투명하게 만들 수 있어서 다양한 배경의 표현이 가능하다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/</guid>
+      <description>#html&#xA;1. 폼이란? # 폼이란 백엔드나 다른 페이지에 요청을 보낼 수 있는 특수한 기능을 가진 태그. 요청을 보낼 때 폼안에 있는 데이터들도 전송할 수 있다.&#xA;폼 태그가 주로 사용되는 곳은 회원가입 페이지, 로그인 페이지, 회원관련 페이지, 주문 페이지 등&#xA;폼의 동작 방식(로그인)&#xA;- 사용자가 아이디와 비밀번호를 입력&#xA;- 사용자가 로그인 버튼을 클릭&#xA;- 폼에 매핑되어 있는 주소로 아이디와 비밀번호를 가지고 요청을 보냄&#xA;- 백엔드 프로그램에서 요청으로 온 아이디와 비밀번호를 가지고 데이터베이스에서 아이디와 비밀번호가 일치하는 검사를 진행</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/02_jquery/01.-jquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/02_jquery/01.-jquery/</guid>
+      <description>1. Jquery # Jquery는 자바스크립트의 DOM 객체 조작을 도와주는 라이브러리&#xA;선택자부터 이벤트, 애니메이션 등 DOM객체를 선택하거나 DOM객체에 이벤트를 만들고 애니메이션 효과를 추가할 때 순수 자바스크립트보다 편하게 구현할 수 있다.&#xA;//순수자바스크립트 선택자 const box = document.getElementById(&amp;#34;box&amp;#34;); const box = document.querySelector(&amp;#34;#box&amp;#34;); //jquery 선택자 const box = $(&amp;#34;#box&amp;#34;); 2. Jquery의 장점 # DOM객체를 조작하는 것이 순수 자바스크립트보다 편하고 간단하며 코드가 짧다.&#xA;Jquery로 구성된 라이브러리들이 다양해서 달력이나 시계 등 순수 자바스크립트로 구현하는 것보다 훨씬 간편하게 구현할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/02_jquery/02_selector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/02_jquery/02_selector/</guid>
+      <description>1. 직접 선택자 # 전체 선택자: DOM의 모든 태그 선택. $(&amp;quot;*&amp;quot;) 아이디 선택자: 해당 아이디명을 가지고 있는 태그 선택. $(&amp;quot;#아이디&amp;quot;) 클래스 선택자: 해당 클래스명으로 되어있는 태그 선택. $(&amp;quot;.클래스명&amp;quot;) 태그 선택자: 해당 태그들 모두 선택. $(&amp;ldquo;태그명&amp;rdquo;) 그룹 선택자: 여러 개의 선택자를 묶어서 선택. $(&amp;ldquo;선택자1, 선택자2, &amp;hellip;, 선택자n&amp;rdquo;). 선택자n에는 아이디, 클래스, 태그 선택자 등 다양한 선택자들을 넣을 수 있다. 2. 관계 선택자 # 선택자.parent(): 선택자의 부모 요소 선택 $(&amp;ldquo;기준 선택자&amp;rdquo;): 기준이 되는 태그의 모든 하위 태그 중에 선택자에 해당되는 태그들 모두 선택 선택자.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/02_js/js_%EB%A9%94%EB%AA%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/02_js/js_%EB%A9%94%EB%AA%A8/</guid>
+      <description>Object.assign 기본함수&#xA;HTML : id(#) &amp;gt; class(.) &amp;gt; 태그&#xA;영상 배속 속도를 올리는 자바스크립트 코드 ![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231206154746.png]]&#xA;![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231206154955.png]] ![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231206160931.png]] ![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231207144910.png]]![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231207144922.png]] ![[content/3. (IT) FrontEnd/02_JS/02_JS/[IMAGE]/Pasted image 20231207144950.png]]</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/03_react_js/01_%EC%8B%A4%ED%96%89%ED%99%98%EA%B2%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/03_react_js/01_%EC%8B%A4%ED%96%89%ED%99%98%EA%B2%BD/</guid>
+      <description> Node.JS 설치 Node 터미널 npm install -g create-react-app create-react-app my-app cd my-app npm start 만약 npm 5.2.0+를 설치했다면, npx를 대신 사용할 수 있습니다.&#xA;npx create-react-app my-app cd my-app npm start 강의 # ![[content/3. (IT) FrontEnd/02_JS/03_React_JS/이미지_파일/2023-11-06 15 24 37.jpg]]&#xA;커리큘럼 # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/03_react_js/02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/03_react_js/02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/00.-%EC%84%A4%EB%AA%85-es6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/00.-%EC%84%A4%EB%AA%85-es6/</guid>
+      <description>1. ES6(Ecma Script 6) # 1. const, let의 등장 # var 변수는 중복 선언이 가능하고 블록단위 변수가 아니며 호이스팅이 가능한 문제점이 존재하여 ES6부터는 let, const라는 변수 선언 방식이 등장했다. 블록단위 변수 let let은 중복선언 불가능하고 블록단위이며 var의 대체 변수 상수를 선언하는 const const변수는 상수를 선언할 때 사용하여 선언과 동시에 초기화가 일어나야 한다. const도 let과 동일하게 블록단위 변수 const는 상수이기 때문에 값의 재할당 불가능 기본적으로 const로 변수를 선언하되 변경될 경우가 있는 변수만 let으로 선언한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/01_short_circuit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/01_short_circuit/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;단축 평가&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .box { width: 100px; height: 100px; background: red; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;box&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; id=&amp;#34;btn&amp;#34;&amp;gt;색상변경&amp;lt;/button&amp;gt; &amp;lt;script&amp;gt; const isDone = false; let message = &amp;#39;&amp;#39;; // 1. 단축평가 // 논리 연산자의 결과가 결정되는 시점의 값을 리턴한다. // false || ====&amp;gt; || 뒤의 값이 논리연산자의 결과를 결정하기 때문에 // || 뒤의 값이 리턴 message = isDone || &amp;#39;성공&amp;#39;; console.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/02_object1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/02_object1/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;속성 축약표현&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. 속성 축약표현 //변수를 만들고 변수들을 중괄호 블록으로 묶어주면 //변수명이 키, 값이 밸류로 매핑된 객체를 생성할 수 있다. let company = &amp;#39;현대&amp;#39;; let price = 3000000; let model = &amp;#39;avante&amp;#39;; const car = {company, price, model}; console.log(car); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/03_object2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/03_object2/</guid>
+      <description> &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;속성 축약표현&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. 속성 축약표현 //변수를 만들고 변수들을 중괄호 블록으로 묶어주면 //변수명이 키, 값이 밸류로 매핑된 객체를 생성할 수 있다. let company = &amp;#39;현대&amp;#39;; let price = 3000000; let model = &amp;#39;avante&amp;#39;; const car = {company, price, model}; console.log(car); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/04_object4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/04_object4/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;메소드 축약표현&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. ES5 객체의 메소드 var obj1 = { add: function(a, b) { return a + b; } } //2. ES6의 메소드 축약 표현 const obj2 = { add(a, b) { return a + b; } } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;**** </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/05_class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/05_class/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;ES6의 클래스&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; class Car { //1. 생성자 함수 constructor(company, price, model) { this.company = company; this.price = price; this.model = model; } //2. 일반 함수 carInfo() { console.log(this.company); console.log(this.price); console.log(this.model); } //3. static 키워드로 정적 함수 static info(company, price, model) { console.log(company); console.log(price); console.log(model); } } //4. 클래스 사용 //인스턴스 생성해서 사용한다. const hCar = new Car(&amp;#39;hyundai&amp;#39;, 30000000, &amp;#39;avante&amp;#39;); //5.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/06_class_inherit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/06_class_inherit/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;클래스의 상속&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; class Tv { constructor(company, price, resolution) { this.company = company; this.price = price; this.resolution = resolution; } turnOn() { console.log(&amp;#39;Tv를 켠다.&amp;#39;); } turnOff() { console.log(&amp;#39;Tv를 끈다.&amp;#39;); } info() { console.log(this.company); console.log(this.price); console.log(this.resolution); } } class LgTv extends Tv { //생성자 함수 생략하면 부모의 생성자와 호출 //...으로 피라미터를 전달 constructor(color, ...args) { super(...args); this.color = color; } volumUp() { console.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/07_restparameter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/07_restparameter/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;rest 파라미터&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. rest parameter : 전달받은 매개변수를 배열에 담아서 사용 const add = (...rest) =&amp;gt; { console.log(rest); let sum = 0; for (let i = 0; i &amp;lt; rest.length; i++) { sum += rest[i]; } console.log(sum); } add(1, 2, 3, 4, 5, 6) //2. 특정 매개변수만 변수로 받고 나머지 매개변수는 배열로 묶기 const mul = (num1, num2, .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/08_foreach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/08_foreach/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;배열의 고차함수-forEach&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const arr = [ { id: 1, name: &amp;#39;홍길동&amp;#39;, year: 2, result: 3.2 }, { id: 2, name: &amp;#39;임꺽정&amp;#39;, year: 3, result: 2.8 }, { id: 3, name: &amp;#39;장길산&amp;#39;, year: 1, result: 1.7 }, { id: 4, name: &amp;#39;정도전&amp;#39;, year: 2, result: 4.1 } ]; arr.forEach(student =&amp;gt; { if(student.result &amp;gt;= 4.0) { console.log(&amp;#39;A학점&amp;#39;); } else if(student.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/09_map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/09_map/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;배열의 고차 함수-map&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const arr = [{ id: 1, name: &amp;#39;홍길동&amp;#39;, year: 2, result: 3.2 }, { id: 2, name: &amp;#39;임꺽정&amp;#39;, year: 3, result: 2.8 }, { id: 3, name: &amp;#39;장길산&amp;#39;, year: 1, result: 1.7 }, { id: 4, name: &amp;#39;정도전&amp;#39;, year: 2, result: 4.1 }]; const newArr = arr.map(st =&amp;gt; { //map 원본 데이터는 변화가 없어야 한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/10_filter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/10_filter/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;배열의 고차 함수-filter&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const arr = [ { id: 1, name: &amp;#39;홍길동&amp;#39;, year: 2, result: 3.2 }, { id: 2, name: &amp;#39;임꺽정&amp;#39;, year: 3, result: 2.8 }, { id: 3, name: &amp;#39;장길산&amp;#39;, year: 1, result: 1.7 }, { id: 4, name: &amp;#39;정도전&amp;#39;, year: 2, result: 4.0 } ]; const newArr = arr.filter(st =&amp;gt; st.year &amp;gt;= 2); console.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/11_reduce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/11_reduce/</guid>
+      <description> &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;배열의 고차 함수-reduce&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const arr = [13, 27, 78, 91, 67]; // reduce의 두 번째의 값은 초기값을 의미한다. const max = arr.reduce((pre, cur) =&amp;gt; (cur &amp;gt; pre ? cur : pre), 0); console.log(max); const sum = arr.reduce((pre, cur) =&amp;gt; pre + cur, 0); console.log(sum); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/12_spread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/12_spread/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;스프레드 문법&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. 배열의 스프레드 문법 const arr = [1, 2, 3, 4, 5]; console.log(arr); console.log(...arr); //2. 객체의 스프레드 문법 const obj = { id: 1, name: &amp;#39;홍길동&amp;#39; }; const obj2 = { ...obj, year: 4 } console.log(obj2); //3. 스프레드 문법은 변수 받을 수 없다. // const spread = ...arr; //4. 배열을 합칠 때도 사용할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/13.-destructuring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/13.-destructuring/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;비구조화 할당&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const arr = [31, 47, 80]; //1. 배열을 비구조화할당하여 매개변수로 받는 함수 const add = ([num1, num2, num3]) =&amp;gt; { console.log(num1 + num2 + num3); } add(arr); //2. 배열의 비구조화 할당은 순서대로 진행된다. //배열의 요소의 개수와 변수의 개수를 맞출 필요는 없다. const mul = ([num1, num2]) =&amp;gt; { console.log(num1 * num2); } mul(arr); //3.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/14.-destructuringobj/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/14.-destructuringobj/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;객체의 비구조화할당&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const car = { company: &amp;#39;kia&amp;#39;, price: 3000000, model: &amp;#39;k5&amp;#39; }; //1. 객체의 비구조화할당 //사용할 변수는 객체의 속성 키값과 일치해야한다. const {company, price, model} = car; console.log(`${company}, ${price}, ${model}`); //2. 객체 배열에서 비구조화 할당 const carArr = [ { id: 1,sv company: &amp;#39;kia&amp;#39;, price: 3000000, model: &amp;#39;k5&amp;#39; }, { id: 2, company: &amp;#39;kia&amp;#39;, price: 5000000, model: &amp;#39;k7&amp;#39; }, { id: 3, company: &amp;#39;hyundai&amp;#39;, price: 3000000, model: &amp;#39;avante&amp;#39; }, { id: 4, company: &amp;#39;hyundai&amp;#39;, price: 5000000, model: &amp;#39;sonata&amp;#39; }, ]; const [car1, car2, .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/15.-map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/15.-map/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Javascript의 Map&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. 비어있는 Map 생성 const map1 = new Map(); console.log(map1); //2. 값이 있는 Map 생성 const map2 = new Map([[&amp;#39;id&amp;#39;, 1], [&amp;#39;name&amp;#39;, &amp;#39;홍길동&amp;#39;], [&amp;#39;year&amp;#39;, 3]]); console.log(map2); //3. 맵의 크기 확인은 size console.log(map2.size); //size는 속성값이므로 비구조화할당으로 받아올 수도 있다. const {size} = map2; console.log(size); //4. 맵에 데이터를 추가하는 set map1.set(&amp;#39;id&amp;#39;, 1); //set 함수는 체이닝기법 지원 map1.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/16.-set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_js/06_es6/16.-set/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Set&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; //1. 비어있는 Set 생성 const set1 = new Set(); console.log(set1); //2. 값이 있는 Set 생성 //중복값은 제거된다. const set2 = new Set([&amp;#39;홍길동&amp;#39;, &amp;#39;장길산&amp;#39;, &amp;#39;임꺽정&amp;#39;, &amp;#39;홍길동&amp;#39;]); console.log(set2); //3. Set이 나오기 전에 중복값 제거 const arr = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7]; //num: 현재값 //index: 현재 값의 인덱스 //origin: 배열 자체 const newArr = arr.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/3.-it-frontend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/3.-it-frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/1_spring-mvc-basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/1_spring-mvc-basic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/eclipse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/eclipse/</guid>
+      <description> 프로젝트 뷰 환경 Reset </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/1_spring-mvc-basic/spring-mvc-%ED%8C%A8%ED%84%B4_2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/-setting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/-setting/</guid>
+      <description> 인코딩 설정하기 # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/2_springflamework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/2_springflamework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/3_springboot/3_springboot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/3_springboot/3_springboot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/3_springboot/springboot-basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/3_springboot/springboot-basic/</guid>
+      <description> Chap01_Project Create # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/4.-it-backend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/4.-it-backend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/error/error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/error/error/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it-backend/error/tomcat-%EC%97%90%EB%9F%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it-backend/error/tomcat-%EC%97%90%EB%9F%AC/</guid>
+      <description> Multiple Contexts have a path # 해당 문제는 Tomcat 서버에서 프로젝트 path가 중복되어 생기는 문제로 똑같은 경로를 가진 프로젝트를 불러와 실행해서 생긴 문제이다. 톰캣 더블클릭 Modules 탭으로 이동 중복된 Path를 삭제 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/5.-it-language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/5.-it-language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/c/</guid>
+      <description>C언어 기초</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/java/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/java/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/5.-it-language/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/5.-it-language/python/</guid>
+      <description>Python 기초</description>
     </item>
     <item>
       <title></title>
@@ -121,27 +415,6 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/8.-it-opensource/asadsfdf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/8.-it-opensource/asadsfdf/</guid>
-      <description>asdfasdf</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</guid>
-      <description>ㅁㅇㄴㄹㄴㅇㄹ</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC22/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/9.-it-tool/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC22/</guid>
-      <description>ㅁㄴㅇㄹㄴㅁㄹㅇ</description>
-    </item>
-    <item>
-      <title></title>
       <link>https://yhb131618.github.io/blogguide/blogguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/blogguide/blogguide/</guid>
@@ -149,10 +422,24 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</link>
+      <link>https://yhb131618.github.io/blogguide/features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/blogguide/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BCasdf/</guid>
-      <description>afdf</description>
+      <guid>https://yhb131618.github.io/blogguide/features/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/hugo/</guid>
+      <description>![[assets/Pasted image 20231224013648.png]]&#xA;Chap01_Hugo&amp;amp;GO Install # Hugo 공식 웹사이트&#xA;Go Install&#xA;Hugo Install 위 링크로 들어가 각각 Hugo&amp;amp;Go를 PC에 install 한다. 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&amp;gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다. Chap02_Theme Install # Theme</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/obsidian-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/obsidian-guide/</guid>
+      <description></description>
     </item>
     <item>
       <title></title>
@@ -160,6 +447,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/content/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>갈매기의 꿈</title>
+      <link>https://yhb131618.github.io/11.-reading/%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%9D%98-%EA%BF%88/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/11.-reading/%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%9D%98-%EA%BF%88/</guid>
+      <description> 갈매기의 꿈 # </description>
     </item>
   </channel>
 </rss>

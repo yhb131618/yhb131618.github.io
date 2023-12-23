@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://yhb131618.github.io/3.-it-frontend/02_jquery/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>euc-kr</language>
+    <atom:link href="https://yhb131618.github.io/3.-it-frontend/02_jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_jquery/01_jquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_jquery/01_jquery/</guid>
+      <description>1. Jquery # Jquery는 자바스크립트의 DOM 객체 조작을 도와주는 라이브러리&#xA;선택자부터 이벤트, 애니메이션 등 DOM객체를 선택하거나 DOM객체에 이벤트를 만들고 애니메이션 효과를 추가할 때 순수 자바스크립트보다 편하게 구현할 수 있다.&#xA;//순수자바스크립트 선택자 const box = document.getElementById(&amp;#34;box&amp;#34;); const box = document.querySelector(&amp;#34;#box&amp;#34;); //jquery 선택자 const box = $(&amp;#34;#box&amp;#34;); 2. Jquery의 장점 # DOM객체를 조작하는 것이 순수 자바스크립트보다 편하고 간단하며 코드가 짧다.&#xA;Jquery로 구성된 라이브러리들이 다양해서 달력이나 시계 등 순수 자바스크립트로 구현하는 것보다 훨씬 간편하게 구현할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it-frontend/02_jquery/02_selector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it-frontend/02_jquery/02_selector/</guid>
+      <description>1. 직접 선택자 # 전체 선택자: DOM의 모든 태그 선택. $(&amp;quot;*&amp;quot;) 아이디 선택자: 해당 아이디명을 가지고 있는 태그 선택. $(&amp;quot;#아이디&amp;quot;) 클래스 선택자: 해당 클래스명으로 되어있는 태그 선택. $(&amp;quot;.클래스명&amp;quot;) 태그 선택자: 해당 태그들 모두 선택. $(&amp;ldquo;태그명&amp;rdquo;) 그룹 선택자: 여러 개의 선택자를 묶어서 선택. $(&amp;ldquo;선택자1, 선택자2, &amp;hellip;, 선택자n&amp;rdquo;). 선택자n에는 아이디, 클래스, 태그 선택자 등 다양한 선택자들을 넣을 수 있다. 2. 관계 선택자 # 선택자.parent(): 선택자의 부모 요소 선택 $(&amp;ldquo;기준 선택자&amp;rdquo;): 기준이 되는 태그의 모든 하위 태그 중에 선택자에 해당되는 태그들 모두 선택 선택자.</description>
+    </item>
+  </channel>
+</rss>

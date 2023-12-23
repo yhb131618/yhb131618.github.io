@@ -9,59 +9,10 @@
     <atom:link href="https://yhb131618.github.io/4.-it-backend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/-setting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/-setting/</guid>
-      <description> 인코딩 설정하기 # </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/2_springflamework/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/2_springflamework/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/2_springflamework/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC-1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/3_springboot/3_springboot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/3_springboot/3_springboot/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/3_springboot/springboot-basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/3_springboot/springboot-basic/</guid>
-      <description> Chap01_Project Create # </description>
-    </item>
-    <item>
-      <title></title>
       <link>https://yhb131618.github.io/4.-it-backend/4.-it-backend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/4.-it-backend/4.-it-backend/</guid>
       <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/error/error/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/error/error/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/4.-it-backend/error/tomcat-%EC%97%90%EB%9F%AC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/4.-it-backend/error/tomcat-%EC%97%90%EB%9F%AC/</guid>
-      <description> Multiple Contexts have a path # 해당 문제는 Tomcat 서버에서 프로젝트 path가 중복되어 생기는 문제로 똑같은 경로를 가진 프로젝트를 불러와 실행해서 생긴 문제이다. 톰캣 더블클릭 Modules 탭으로 이동 중복된 Path를 삭제 </description>
     </item>
   </channel>
 </rss>

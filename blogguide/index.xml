@@ -5,34 +5,48 @@
     <link>https://yhb131618.github.io/blogguide/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>euc-kr</language>
+    <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/blogguide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/01-install-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/01-install-guide/</guid>
+      <description>Chap01_Hugo&amp;amp;GO Install # Hugo 공식 웹사이트&#xA;Go Install&#xA;Hugo Install&#xA;위 링크로 들어가 각각 Hugo&amp;amp;Go를 PC에 install 한다. ![[assets/Pasted image 20231223232713.png]]&#x9;- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&amp;gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/02-obsidian-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/02-obsidian-guide/</guid>
+      <description>01_단축키 # 보기/편집 : Ctrl+E # 커맨드 : Ctrl+P # 최근파일 : Ctrl+r # 02_Callout # [!tip] I&amp;rsquo;m a tip type, and here&amp;rsquo;s the title.&#xA;I am a callouts block. It is similar to a citation block, but you can specify a type and title for the first line.&#xA;[!success]- Callouts block - Initially folded callouts block I am a callouts of type success.&#xA;[!INFO]- info -&#xA;접기 기능</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/03-features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/03-features/</guid>
+      <description>01_Details # Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.&#xA;Title Markdown content # Lorem markdownum insigne&amp;hellip;&#xA;02_Columns # Columns help organize shorter pieces of content horizontally for readability.&#xA;Left Content # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/04-mermaid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/04-mermaid/</guid>
+      <description> Mermaid 관련 정리 예정 # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/blogguide/05-hugo-logic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/blogguide/05-hugo-logic/</guid>
+      <description>Hugo Logic 예정</description>
+    </item>
     <item>
       <title></title>
       <link>https://yhb131618.github.io/blogguide/blogguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/blogguide/blogguide/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/blogguide/features/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/blogguide/features/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/blogguide/guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/blogguide/guide/</guid>
-      <description>Chap01_Hugo&amp;amp;GO Install # Hugo 공식 웹사이트&#xA;Go Install&#xA;Hugo Install&#xA;위 링크로 들어가 각각 Hugo&amp;amp;Go를 PC에 install 한다. ![[assets/Pasted image 20231223232713.png]]&#x9;- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&amp;gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://yhb131618.github.io/blogguide/obsidian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/blogguide/obsidian/</guid>
       <description></description>
     </item>
   </channel>

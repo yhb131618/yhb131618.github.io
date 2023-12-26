@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://yhb131618.github.io/3.-it_frontend/01_html/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://yhb131618.github.io/3.-it_frontend/01_html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/01_bombrowser-object-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/01_bombrowser-object-model/</guid>
+      <description>![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204160601.png]] ![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204160300.png| 600]]&#xA;대표적인 BOM 객체 # Window 객체는 모든 객체가 소속된 객체이고, 전역객체이면서, 창이나 프레임을 의미한다. 1) window: Global Context. 브라우저 창 객체 2) screen: 사용자 환경의 디스플레이 정보 객체 3) location: 현재 페이지의 url을 다루는 객체 4) navigator: 웹브라우저 및 브라우저 환경 정보 객체 5) history: 현재의 브라우저가 접근했던 URL history alert # 경고창이라고 부른다. 사용자에게 정보를 제공하거나 디버깅등의 용도로 많이 사용한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/01_html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/01_html/</guid>
+      <description>#html&#xA;1.HTML이란 # html은 웹사이트에서 사용할 파일의 형식. html확장자로 구성된 문서이다.&#xA;HTML은 Hyper Text Markup Language의 약자로 Hyper Text는 다른 문서나 다른 사이트로 이동할 수 있는 기능을 가진 텍스트 Markup은 태그들로 HTML문서의 body부분을 채워넣는 작업을 말한다.&#xA;마크업을 진행할 때는 약속된 표기법을 사용해서 진행하게 되는데 &amp;lt;&amp;gt;로 표시된 태그들을 사용한다.&#xA;대부분의 태그들은 여는태그와 닫는태그 쌍으로 존재한다. &amp;lt;h1&amp;gt;내용&amp;lt;/h1&amp;gt;, &amp;lt;h1/&amp;gt;, &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;...&#xA;몇 몇 태그들은 닫는 태그가 없다. &amp;lt;img&amp;gt;, &amp;lt;input&amp;gt;...&#xA;태그들은 각각의 속성이 존재하여 속성값과 함께 사용 &amp;lt;img width=&amp;#34;가로길이&amp;#34; height=&amp;#34;세로길이&amp;#34; src=&amp;#34;이미지경로&amp;#34; style=&amp;#34;css관련 속성 &amp;#34;&amp;gt; 태그안에 태그를 포함할 때는 포함관계를 명확하게 명시해야한다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/02_dom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/02_dom/</guid>
+      <description>![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204171713.png]]&#xA;모든 엘리먼트는 HTMLElement의 자식이다. 따라서 HTMLElement의 프로퍼티를 똑같이 가지고 있다. 동시에 엘리먼트의 성격에 따라서 자신만의 프로퍼티를 가지고 있는데 이것은 엘리먼트의 성격에 따라서 달라진다. HTMLElement는 Element의 자식이고 Element는 Node의 자식이다. Node는 Object의 자식이다. 이러한 관계를 DOM Tree라고 한다. 이 관계를 그림으로 나타내면 아래와 같다. ( 출처-) console.location(location.toString(), location.href) # 현재 윈도우의 URL 알아내기 console.dir(navigator); # 브라우저의 정보를 제공한다. .appName .appVersion .userAgent (Http 헤더의 내용) .platForm (운영체제의 내용) </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/02_%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/02_%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%83%9C%EA%B7%B8/</guid>
+      <description>1. 텍스트 태그 # #html&#xA;1. 제목을 만들어주는 h1~h6 # h1~h6 태그는 제목을 표시하는 태그.&#xA;h1이 가장 크고 진하게 표시되고 숫자가 커질수록 크기가 작아지고 연해지게 표시된다. h6가 가장 작으면서 가장 연하게 표시되는 태그.&#xA;2. 단락을 만들어 주는 p # 텍스트를 표출할 때 가장 많이 사용되는 태그&#xA;텍스트의 단락을 만들어주는 태그로써 단락은 줄바꿈이 있는 텍스트 덩어리를 의미&#xA;&amp;lt;/p&amp;gt;를 만나기 전까지의 텍스트는 한 줄로 표시(브라우저 사이즈에 따라 여러줄로 표시).&#xA;블록태그의 속성으로 인해 단락처럼 보임.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/03_element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/03_element/</guid>
+      <description>Element # Element 객체는 엘리먼트를 추상화한 객체다. DOM은 HTML만을 제어하기 위한 모델이 아니다. HTML이나 XML, SVG, XUL과 같이 마크업 형태의 언어를 제어하기 위한 규격이기 때문에 Element는 마크업 언어의 일반적인 규격에 대한 속성을 정의하고 있고, 각각의 구체적인 언어(HTML,XML,SVG)를 위한 기능은 HTMLElement, SVGElement, XULElement와 같은 객체를 통해서 추가해서 사용하고 있다. ![[content/3. (IT) FrontEnd/02_JS/00. DOM/[IMAGE]/Pasted image 20231204180934.png]]&#xA;식별자 # 문서내에서 특정한 엘리먼트를 식별하기 위한 용도로 사용되는 API&#xA;lement.classList Element.className Element.id Element.tagName 조회 # 엘리먼트의 하위 엘리먼트를 조회하는 API</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/03_%EB%AA%A9%EB%A1%9D-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/03_%EB%AA%A9%EB%A1%9D-%ED%83%9C%EA%B7%B8/</guid>
+      <description>1. 목록을 만들어 주는 태그 # #html&#xA;1. 순서없는 목록을 만들어 주는 ul # ul(unordered list)의 약자 ul 태그 안에 항목을 추가할 때는 li태그 사용 ul 태그의 li 태그는 작은 원이나 사각형 같은 불릿을 표출 css list-style-type 속성을 이용해서 불릿의 모양을 변경할 수 있다. 2. 순서가 있는 목록을 만들어주는 ol # ol은 ordered list의 약자. ol 태그도 마찬가지로 항목을 만들 때는 li 태그 사용 목록의 번호의 표기방법이나 시작 숫자, 문자를 지정할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/04_%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/04_%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%83%9C%EA%B7%B8/</guid>
+      <description>#html&#xA;1. 테이블을 만들어주는 태그 # 1. table 태그 # 표의 자리를 지정해주는 태그 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;표를 만들어주는 table, tr, th, td&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; table, th, td { border: 1px solid black; border-collapse: collapse; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--table 태그: 표를 만들어주는 태그--&amp;gt; &amp;lt;table&amp;gt; &amp;lt;!--tr 태그: 표에 행을 추가--&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;!--th 태그: 제목 셀--&amp;gt; &amp;lt;th&amp;gt;Java&amp;lt;/th&amp;gt; &amp;lt;!--td 태그: 내용 셀--&amp;gt; &amp;lt;td&amp;gt;변수&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;클래스&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;Oracle&amp;lt;/th&amp;gt; &amp;lt;td&amp;gt;DML&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;DDL&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/body&amp;gt; 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/05_%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/05_%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC/</guid>
+      <description>#html&#xA;1. 이미지 # 웹에서 사용하는 이미지의 종류 - GIF : Graphic Iterchange Form의 약자.&#xA;표시가능한 색상의 수가 256가지.&#xA;다른 이미지 파일들에 비해 크기가 작아서 주로 아이콘이나 불릿 등 작은 이미지에 사용이 되고 또는 움직이는 이미지를 제작할 때 사용.&#xA;- JPG/JPEG : Joint Photographic Experts&#xA;Group의 약자.&#xA;GIF보다 더 다양한 색생과 명암 표현이 가능하고 저장을 여러번 반복하면 화질이 저하되는 단점이 있다.&#xA;- PNG : Portable Network Graphics의 약자.&#xA;네트워크 용으로 만들어지 이미지 파일이라 최근에 많이 사용되고 있고 배경을 투명하게 만들 수 있어서 다양한 배경의 표현이 가능하다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/06_%ED%8F%BC-%ED%83%9C%EA%B7%B8/</guid>
+      <description>#html&#xA;1. 폼이란? # 폼이란 백엔드나 다른 페이지에 요청을 보낼 수 있는 특수한 기능을 가진 태그. 요청을 보낼 때 폼안에 있는 데이터들도 전송할 수 있다.&#xA;폼 태그가 주로 사용되는 곳은 회원가입 페이지, 로그인 페이지, 회원관련 페이지, 주문 페이지 등&#xA;폼의 동작 방식(로그인)&#xA;- 사용자가 아이디와 비밀번호를 입력&#xA;- 사용자가 로그인 버튼을 클릭&#xA;- 폼에 매핑되어 있는 주소로 아이디와 비밀번호를 가지고 요청을 보냄&#xA;- 백엔드 프로그램에서 요청으로 온 아이디와 비밀번호를 가지고 데이터베이스에서 아이디와 비밀번호가 일치하는 검사를 진행</description>
+    </item>
+  </channel>
+</rss>

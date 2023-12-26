@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://yhb131618.github.io/1.-it_os/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://yhb131618.github.io/1.-it_os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/01-%EC%BB%A4%EB%84%90%EC%9D%98-%EA%B5%AC%EC%A1%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/01-%EC%BB%A4%EB%84%90%EC%9D%98-%EA%B5%AC%EC%A1%B0/</guid>
+      <description>01_커널이란? # #커널 #쉘 #Shell&#xA;[[[content/7. IT_Network/가상화|가상화]]&#xA;커널은 운영체제 자체라 보기도 하고, 운영체제의 핵심이라고 말하기도 한다.&#xA;즉, 커널은 하드웨어의 자원을 관리하는 역할을 한다.&#xA;flowchart TD 컴퓨터--&gt;하드웨어; 컴퓨터--&gt;소프트웨어; 소프트웨어--&gt;운영체제; 소프트웨어--&gt;응용프로그램; 운영체제--&gt;커널; 운영체제--&gt;시스템프로그램; 시스템 프로그램은 사용자와 상호작용을 위한 역할을 한다.&#xA;대표적인 예로 쉴(shell)이라는 시스템 프로그램이 있으며,&#xA;쉴(shell)은 사용자가 컴퓨터에게 전달하는 명령어를 해석하는 프로그램으로 사용자와 컴퓨터간의 상호작용이 가능케 한다.&#xA;02_커널의 역할 # 컴퓨터의 물리적 자원과 추상화 자원을 관리하는 것이다.&#xA;여기서 추상화란 물리적으로 하나 뿐인 하드웨어를 여러 사용자들이 번갈아 사용하게 중재함으로서,</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/1.-it_os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/1.-it_os/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

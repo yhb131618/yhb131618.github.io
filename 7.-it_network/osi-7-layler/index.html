@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="![[assets/Pasted image 20231225181003.png]]
+OSI 7계층 # 참조 https://shlee0882.tistory.com/110
+1계층 # 물리계층(Physical Layer)
+이 계층에서는 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하게 된다. 이 계층에서 사용되는 통신 단위는 비트이며 이것은 1과 0으로 나타내어지는, 즉 전기적으로 On, Off 상태라고 생각하면 된다. 이 계층에서는 단지 데이터를 전달만 할 뿐 전송하려는(또는 받으려는)데이터가 무엇인지, 어떤 에러가 있는지 등에는 전혀 신경 쓰지 않는다. 단지 데이터 전기적인 신호로 변환해서 주고받는 기능만 할 뿐이다. 이 계층에 속하는 대표적인 장비는 통신 케이블, 리피터, 허브등이 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/7.-it_network/osi-7-layler/" /><meta property="article:section" content="7.-it_network" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>OSI 7 Layler | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="![[assets/Pasted image 20231225181003.png]]
+OSI 7계층 # 참조 https://shlee0882.tistory.com/110
+1계층 # 물리계층(Physical Layer)
+이 계층에서는 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하게 된다. 이 계층에서 사용되는 통신 단위는 비트이며 이것은 1과 0으로 나타내어지는, 즉 전기적으로 On, Off 상태라고 생각하면 된다. 이 계층에서는 단지 데이터를 전달만 할 뿐 전송하려는(또는 받으려는)데이터가 무엇인지, 어떤 에러가 있는지 등에는 전혀 신경 쓰지 않는다. 단지 데이터 전기적인 신호로 변환해서 주고받는 기능만 할 뿐이다. 이 계층에 속하는 대표적인 장비는 통신 케이블, 리피터, 허브등이 있다."
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle"  />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle"  />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle" checked />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="active">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle"  />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">OSI 7 Layler</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+
+
+
+
+
+
+<p><img src="/assets/Pasted image 20231225181003.png" width="auto" /></p>
+<h2 id="osi-7계층">
+  OSI 7계층
+  <a class="anchor" href="#osi-7%ea%b3%84%ec%b8%b5">#</a>
+</h2>
+<p>참조 
+<a href="https://shlee0882.tistory.com/110" rel="noopener">https://shlee0882.tistory.com/110</a></p>
+<h3 id="1계층">
+  1계층
+  <a class="anchor" href="#1%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>물리계층(Physical Layer)</p>
+<blockquote>
+<p>이 계층에서는 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하게 된다. </p>
+<p>이 계층에서 사용되는 통신 단위는 비트이며 이것은 1과 0으로 나타내어지는, 즉 전기적으로 On, Off 상태라고 생각하면 된다. </p>
+<p>이 계층에서는 단지 데이터를 전달만 할 뿐 전송하려는(또는 받으려는)<strong>데이터가 무엇인지, 어떤 에러가 있는지 등에는 전혀 신경 쓰지 않는다.</strong> </p>
+<p>단지 데이터 전기적인 신호로 변환해서 주고받는 기능만 할 뿐이다. 이 계층에 속하는 대표적인 장비는 <strong>통신 케이블, 리피터, 허브</strong>등이 있다.</p>
+</blockquote>
+<p>
+
+<img src="https://t1.daumcdn.net/cfile/tistory/990DA13D5B73B8C615" width="auto" alt=""  />
+
+<img src="https://t1.daumcdn.net/cfile/tistory/9927F73D5B73B8C735" width="auto" alt=""  /></p>
+<h3 id="2계층">
+  2계층
+  <a class="anchor" href="#2%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>데이터 링크계층(DataLink Layer)</p>
+<blockquote>
+<p>물리계층을 통해 송수신되는 정보의 오류와 흐름을 관리하여 안전한 <strong>정보의 전달을 수행</strong>할 수 있도록 도와주는 역할을 한다. </p>
+<p>따라서 통신에서의 오류도 찾아주고 재전송도 하는 기능을 가지고 있는 것이다. </p>
+<p>이 계층에서는 <strong>맥 주소를 가지고 통신</strong>하게 된다. </p>
+<p>이 계층에서 전송되는 단위를 프레임이라고 하고, 대표적인 장비로는 <strong>브리지, 스위치</strong> 등이 있다.(여기서 MAC주소를 사용한다.)</p>
+<p>데이터 링크 계층(Data link layer)은 포인트 투 포인트(Point to Point) 간 신뢰성있는 전송을 보장하기 위한 계층으로</p>
+<p>CRC 기반의 오류 제어와 흐름 제어가 필요하다. 네트워크 위의 개체들 간 데이터를 전달하고, </p>
+<p>물리 계층에서 발생할 수 있는 오류를 찾아 내고, 수정하는 데 필요한 기능적, 절차적 수단을 제공한다. </p>
+<p>주소 값은 물리적으로 할당 받는데, 이는 네트워크 카드가 만들어질 때부터 맥 주소(MAC address)가 정해져 있다는 뜻이다. </p>
+<p>주소 체계는 계층이 없는 단일 구조이다. 데이터 링크 계층의 가장 잘 알려진 예는 이더넷이다. </p>
+<p>이 외에도 HDLC나 ADCCP 같은 포인트 투 포인트(point-to-point) 프로토콜이나 </p>
+<p>패킷 스위칭 네트워크나 LLC, ALOHA 같은 근거리 네트워크용 프로토콜이 있다. </p>
+<p>네트워크 브릿지나 스위치 등이 이 계층에서 동작하며, 직접 이어진 곳에만 연결할 수 있다.</p>
+</blockquote>
+<p><strong>프레임에 주소부여(MAC - 물리적주소)</strong></p>
+<p><strong>에러검출/재전송/흐름제어</strong></p>
+<p>
+
+<img src="https://t1.daumcdn.net/cfile/tistory/9931734D5B73BA3D2F" width="auto" alt=""  /></p>
+<h3 id="3계층">
+  3계층
+  <a class="anchor" href="#3%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p> <strong>네트워크 계층(Network Layer)</strong>
+<img src="/assets/Pasted image 20231226074955.png" width="auto" /></p>
+<blockquote>
+<p>이 계층에서 가장 중요한 기능은 데이터를 목적지까지 가장 안전하고 빠르게 전달하는 기능(라우팅)이다. </p>
+<p>여기에 사용되는 프로토콜의 종류도 다양하고, 라우팅하는 기술도 다양하다.</p>
+<p>이 계층은 경로를 선택하고 주소를 정하고 경로에 따라 패킷을 전달해주는 것이 이 계층의 역할이다.</p>
+<p>이 계층의 대표적인 장비는 라우터 이며, 요즘은 2계층의 장비 중 스위치라는 장비에 라우팅 기능을 장착한 Layer 3 스위치도 있다.</p>
+<p>네트워크 계층(Network layer)은 여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층으로 </p>
+<p>다양한 길이의 데이터를 네트워크들을 통해 전달하고, 그 과정에서 전송 계층이 요구하는 서비스 품질(QoS)을 제공하기 위한 기능적, 절차적 수단을 제공한다. </p>
+<p>네트워크 계층은 라우팅, 흐름 제어, 세그멘테이션(segmentation/desegmentation), 오류 제어, 인터네트워킹(Internetworking) 등을 수행한다. </p>
+<p>라우터가 이 계층에서 동작하고 이 계층에서 동작하는 스위치도 있다. </p>
+<p>데이터를 연결하는 다른 네트워크를 통해 전달함으로써 인터넷이 가능하게 만드는 계층이다. </p>
+<p>논리적인 주소 구조(IP), 곧 네트워크 관리자가 직접 주소를 할당하는 구조를 가지며, 계층적(hierarchical)이다.</p>
+<p>서브네트의 최상위 계층으로 경로를 설정하고, 청구 정보를 관리한다. 개방형 시스템들의 사이에서 네트워크 연결을 설정, 유지, 해제하는 기능을 부여하고, 전송 계층 사이에 네트워크 서비스 데이터 유닛(NSDU : Network Service Data Unit)을 교환하는 기능을 제공한다.</p>
+</blockquote>
+<blockquote>
+<p>TCP/IP 상에서 IP 계층이란 네트워크의 주소 (IP 주소)를 정의하고,  
+<strong>IP 패킷의 전달 및 라우팅을 담당하는 계층</strong>
+OSI 7계층모델의 관점에서 보면  IP 계층은 네트워크계층에 해당</p>
+<p>즉, 패킷을 목적지까지 전달하는 역할 및 그에 수반되는 기타 역할을 함</p>
+<p>IP 계층에서는 그 하위계층인 데이터링크 계층의 하드웨어적인 특성에(즉, ATM 이 든 Frame Relay 이든 상관없이) 관계없이 독립적인 역할을 수행
+<img src="/assets/Pasted image 20231226075017.png" width="auto" /></p>
+</blockquote>
+<h4 id="01-프로토콜">
+  01) 프로토콜
+  <a class="anchor" href="#01-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9c">#</a>
+</h4>
+<blockquote>
+<p>IP: 패킷의 전달을 책임지는 IP
+ICMP: 패킷 전달 에러의 보고 및 진단을 위한 ICMP
+ROUTE: 복잡한 네트워크에서 인터네트워킹을 위한 경로를 찾게해주는 라우팅 프로토콜 </p>
+</blockquote>
+<h4 id="02-ip-프로토콜">
+  02) IP 프로토콜
+  <a class="anchor" href="#02-ip-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9c">#</a>
+</h4>
+<blockquote>
+<p>IP 계층에서 IP 패킷의 라우팅 대상이 됨 (Routing)
+IP 주소 지정 (Addressing)
+<code>신뢰성(에러제어)</code> 및 <code>흐름제어</code>  기능이 전혀 없음  ☞ Best-Effort Service
+한편, 신뢰성을 확보하려면 IP 계층 위의 TCP와 같은 상위 트랜스포트 계층에 의존</p>
+</blockquote>
+<ul>
+<li>Connectionless
+<ul>
+<li>비연결성 데이터그램 방식으로 전달되는 프로토콜</li>
+</ul>
+</li>
+<li>Unreliable
+<ul>
+<li>패킷의 완전한 전달(소실,중복,지연,순서바뀜 등이 없게함)을 보장 않음</li>
+</ul>
+</li>
+<li>IP 헤더
+<ul>
+<li>패킷 헤더 내 수신 및 발신 주소를 포함 IPv4 헤더, IPv6 헤더, IP 주소</li>
+<li></li>
+</ul>
+</li>
+<li>Big-endian 
+<ul>
+<li>IP 헤더 내 바이트 전달 순서 : 최상위 바이트(MSB)를 먼저 보냄 </li>
+</ul>
+</li>
+<li>TCP, UDP, ICMP, IGMP 등이 IP 데이타그램에 실려서 전송</li>
+</ul>
+<h3 id="4계층">
+  4계층
+  <a class="anchor" href="#4%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>전송 계층(Transport Layer)</p>
+<blockquote>
+<p>통신을 활성화하기 위한 계층이다. 보통 TCP프로토콜을 이용하며, 포트를 열어서 응용프로그램들이 전송을 할 수 있게 한다. </p>
+<p>만약 데이터가 왔다면 4계층에서 해당 데이터를 하나로 합쳐서 5계층에 던져 준다. </p>
+<p>단대단 오류제어 및 흐름제어 이 계층 까지는 물리적인 계층에 속한다.(TCP/UDP프로토콜을 사용한다.)</p>
+<p>전송 계층(Transport layer)은 양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, </p>
+<p>상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다. </p>
+<p>시퀀스 넘버 기반의 오류 제어 방식을 사용한다. </p>
+<p>전송 계층은 특정 연결의 유효성을 제어하고, 일부 프로토콜은 상태 개념이 있고(stateful), </p>
+<p>**연결 기반(connection oriented)**이다. </p>
+<p>이는 <strong>전송 계층이 패킷들의 전송이 유효한지 확인하고 전송 실패한 패킷들을 다시 전송한다는 것</strong>을 뜻한다. </p>
+<p>가장 잘 알려진 전송 계층의 예는 TCP이다.</p>
+<p>종단간(end-to-end) 통신을 다루는 최하위 계층으로 종단간 신뢰성 있고 효율적인 데이터를 전송하며, </p>
+<p>기능은 오류검출 및 복구와 흐름제어, 중복검사 등을 수행한다.</p>
+</blockquote>
+<h4 id="01-tcp-프로토콜">
+  01) TCP 프로토콜
+  <a class="anchor" href="#01-tcp-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9c">#</a>
+</h4>
+<p>(Transmission Control Protocol)
+<img src="/assets/Pasted image 20231226075153.png" width="auto" />
+<img src="/assets/Pasted image 20231226075205.png" width="auto" /></p>
+<blockquote>
+<p>OSI 계층모델의 관점에서 전송 계층(4계층)에 해당</p>
+<p>양종단 호스트 내 프로세스 상호 간에 신뢰적인 연결지향성 서비스를 제공</p>
+<p>IP의 비신뢰적인 최선형 서비스에다가 신뢰적인 연결지향성 서비스를 제공하게 됨</p>
+<p><strong>신뢰적인 전송을 보장</strong>함으로써, 어플리케이션 구현이 한층 쉬워지게 됨</p>
+</blockquote>
+<ul>
+<li>
+<ol>
+<li>신뢰성 있음 (Reliable)</li>
+</ol>
+<ul>
+<li>패킷 손실, 중복, 순서바뀜 등이 없도록 보장</li>
+<li>TCP 하위계층인 IP 계층의 신뢰성 없는 서비스에 대해 다방면으로 신뢰성을 제공</li>
+<li></li>
+</ul>
+</li>
+<li>
+<ol start="2">
+<li>연결지향적 (Connection-oriented)</li>
+</ol>
+<ul>
+<li>양단간 어플리케이션/프로세스는 TCP가 제공하는 연결성 회선을 통하여 서로 통신</li>
+</ul>
+</li>
+</ul>
+<h4 id="02-udp-프로토콜">
+  02) UDP 프로토콜
+  <a class="anchor" href="#02-udp-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9c">#</a>
+</h4>
+<p>(User Datagram Protocol)</p>
+<blockquote>
+<p>전송 계층의 통신 프로토콜의 하나 (TCP에 대비됨)</p>
+<p><strong>신뢰성이 낮은 프로토콜</strong>로써 완전성을 보증하지 않으나,  </p>
+<p>가상회선을 굳이 확립할 필요가 없고 유연하며 효율적 응용의 데이타 전송에 사용</p>
+</blockquote>
+<ul>
+<li>
+<p>비연결성</p>
+<ul>
+<li>메세지가 제대로 도착했는지 확인하지 않음 (확인응답 없음)</li>
+<li>수신된 메세지의 순서를 맞추지 않음 (순서제어 없음) </li>
+<li>흐름 제어를 위한 피드백을 제공하지 않음 (흐름제어 없음)</li>
+<li>검사합을 제외한 특별한 오류 검출 및 제어 없음 (오류제어 거의 없음)</li>
+<li>UDP를 사용하는 프로그램 쪽에서 오류제어 기능을 스스로 갖추어야 함</li>
+<li>데이터그램 지향의 전송계층용 프로토콜 (논리적인 가상회선 연결이 필요없음)</li>
+</ul>
+</li>
+<li>
+<p>헤더가 단순함</p>
+<ul>
+<li>UDP는 TCP 처럼 16 비트의 포트 번호를 사용하나,</li>
+<li>헤더는 고정크기의 8 바이트(TCP는 20 바이트) 만 사용</li>
+<li>즉, 헤더 처리에 많은 시간과 노력을 요하지 않음</li>
+</ul>
+</li>
+</ul>
+<h3 id="5계층">
+  5계층
+  <a class="anchor" href="#5%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>세션 계층(Session Layer)</p>
+<blockquote>
+<p><strong>데이터가 통신하기 위한 논리적인 연결</strong>을 말한다. 통신을 하기위한 대문이라고 보면 된다. </p>
+<p>하지만 4계층에서도 연결을 맺고 종료할 수 있기 때문에 우리가 어느 계층에서 통신이 끊어 졌나 판단하기는 한계가 있다. </p>
+<p>그러므로 세션 계층은 4 계층과 무관하게 응용 프로그램 관점에서 봐야 한다. </p>
+<p>세션 설정, 유지, 종료, 전송 중단시 복구 등의 기능이 있다.</p>
+<p>세션 계층(Session layer)은 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다. </p>
+<p>**동시 송수신 방식(duplex), 반이중 방식(half-duplex), 전이중 방식(Full Duplex)**의 통신과 함께, 체크 포인팅과 유휴, 종료, 다시 시작 과정 등을 수행한다. </p>
+<p>이 계층은 <strong>TCP/IP 세션을 만들고 없애는 책임</strong>을 진다.</p>
+<p>통신하는 사용자들을 동기화하고 오류복구 명령들을 일괄적으로 다룬다.</p>
+<p>통신을 하기 위한 세션을 확립/유지/중단 (운영체제가 해줌)</p>
+</blockquote>
+<h3 id="6계층">
+  6계층
+  <a class="anchor" href="#6%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>표현 계층(Presentation Layer)</p>
+<blockquote>
+<p>데이터 표현이 상이한 응용 프로세스의 독립성을 제공하고, 암호화 한다.</p>
+<p>표현 계층(Presentation layer)은 코드 간의 번역을 담당하여 사용자 시스템에서 데이터의 형식상 차이를 다루는 부담을 응용 계층으로부터 덜어 준다. MIME 인코딩이나 암호화 등의 동작이 이 계층에서 이루어진다. </p>
+<p>예를 들면, EBCDIC로 인코딩된 문서 파일을 ASCII로 인코딩된 파일로 바꿔 주는 것,  </p>
+<p>해당 데이터가 TEXT인지, 그림인지, GIF인지 JPG인지의 구분 등이 표현 계층의 몫이다.</p>
+</blockquote>
+<p>사용자의 명령어를 완성및 결과 표현. 포장/압축/암호화</p>
+<h3 id="7계층">
+  7계층
+  <a class="anchor" href="#7%ea%b3%84%ec%b8%b5">#</a>
+</h3>
+<p>응용 계층(Application Layer)</p>
+<blockquote>
+<p>최종 목적지로서 HTTP, FTP, SMTP, POP3, IMAP, Telnet 등과 같은 프로토콜이 있다. </p>
+<p>해당 통신 패킷들은 방금 나열한 프로토콜에 의해 모두 처리되며 우리가 사용하는 브라우저나, 메일 프로그램은 프로토콜을 보다 쉽게 사용하게 해주는 응용프로그램이다.</p>
+<p>한마디로 모든 통신의 양 끝단은 HTTP와 같은 프로토콜이지 응용프로그램이 아니다.</p>
+<p>응용 계층(Application layer)은 응용 프로세스와 직접 관계하여 일반적인 <strong>응용 서비스를 수행</strong>한다. </p>
+<p>일반적인 응용 서비스는 관련된 응용 프로세스들 사이의 전환을 제공한다. </p>
+<p>응용 서비스의 예로, 가상 터미널(예를 들어, <strong>텔넷</strong>), &ldquo;Job transfer and Manipulation protocol&rdquo; (JTM, 표준 ISO/IEC 8832) 등이 있다.</p>
+</blockquote>
+<pre><code>네트워크 소프트웨어 UI 부분, 사용자의 입출력(I/O)부분
+</code></pre>
+<h4 id="01-http-프로토콜">
+  01) HTTP 프로토콜
+  <a class="anchor" href="#01-http-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9c">#</a>
+</h4>
+<p>(HyperText Transfer Protocol)</p>
+<blockquote>
+<p>웹 상에서 웹 서버 및 웹브라우저 상호 간의 데이터 전송을 위한 응용계층 프로토콜</p>
+<p>처음에는, WWW 상의 하이퍼텍스트 형태의 문서를 전달하는데 주로 이용</p>
+<p>현재에는, 이미지,비디오,음성 등 거의 모든 형식의 데이터 전송 가능</p>
+</blockquote>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#osi-7계층">OSI 7계층</a>
+      <ul>
+        <li><a href="#1계층">1계층</a></li>
+        <li><a href="#2계층">2계층</a></li>
+        <li><a href="#3계층">3계층</a></li>
+        <li><a href="#4계층">4계층</a></li>
+        <li><a href="#5계층">5계층</a></li>
+        <li><a href="#6계층">6계층</a></li>
+        <li><a href="#7계층">7계층</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

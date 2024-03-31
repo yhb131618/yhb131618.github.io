@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="TEXT # 1. font-family # 웹 문서에서 사용할 글꼴을 지정하는 속성 웹 문서에서 글꼴을 지정할 시 한 가지 글꼴만 지정할 때도 있지만 해당 글꼴이 없을 경우를 대비해서 두 번째, 세 번째 글꼴까지 지정하는게 일반적이다. font관련 스타일들은 상속되기 때문에 body에 지정해 놓으면 웹 문서의 통일성을 높일 수가 있어 body에 지정하고 특정 태그에서만 변경하는 경우가 많다. 글꼴 지정 방식 - font-family: 글꼴이름1, 글꼴이름2, 글꼴이름3, &hellip; ex) font-family: &lsquo;맑은 고딕&rsquo;, 돋움, 굴림 =&gt; 맑은 고딕으로 글꼴이 적용되는데 맑은 고딕이 없을 경우 돋움으로 돋움도 없을 경우에는 굴림이 적용 웹 글꼴 사용하기 - 웹 폰트 : 웹 문서 안에 글꼴에 대한 정보를 저장했다가 웹 문서를 여는 순간 해당 웹페이지에서 글꼴을 가져와서 사용하는 방식." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/3.-it_frontend/02_css/03_text-styling/" /><meta property="article:section" content="3.-it_frontend" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>03 Text Styling | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="TEXT # 1. font-family # 웹 문서에서 사용할 글꼴을 지정하는 속성 웹 문서에서 글꼴을 지정할 시 한 가지 글꼴만 지정할 때도 있지만 해당 글꼴이 없을 경우를 대비해서 두 번째, 세 번째 글꼴까지 지정하는게 일반적이다. font관련 스타일들은 상속되기 때문에 body에 지정해 놓으면 웹 문서의 통일성을 높일 수가 있어 body에 지정하고 특정 태그에서만 변경하는 경우가 많다. 글꼴 지정 방식 - font-family: 글꼴이름1, 글꼴이름2, 글꼴이름3, &hellip; ex) font-family: &lsquo;맑은 고딕&rsquo;, 돋움, 굴림 =&gt; 맑은 고딕으로 글꼴이 적용되는데 맑은 고딕이 없을 경우 돋움으로 돋움도 없을 경우에는 굴림이 적용 웹 글꼴 사용하기 - 웹 폰트 : 웹 문서 안에 글꼴에 대한 정보를 저장했다가 웹 문서를 여는 순간 해당 웹페이지에서 글꼴을 가져와서 사용하는 방식."
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle"  />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle"  />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle" checked />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="active">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle"  />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle"  />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">03 Text Styling</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<h1 id="text">
+  TEXT
+  <a class="anchor" href="#text">#</a>
+</h1>
+<hr>
+<h2 id="1-font-family">
+  1. font-family
+  <a class="anchor" href="#1-font-family">#</a>
+</h2>
+<ol>
+<li>웹 문서에서 사용할 글꼴을 지정하는 속성</li>
+<li>웹 문서에서 글꼴을 지정할 시 한 가지 글꼴만 지정할 때도 있지만 해당 글꼴이 없을 경우를 대비해서 두 번째, 세 번째 글꼴까지 지정하는게 일반적이다.</li>
+<li>font관련 스타일들은 상속되기 때문에 body에 지정해 놓으면 웹 문서의 통일성을 높일 수가 있어 body에 지정하고 특정 태그에서만 변경하는 경우가 많다.</li>
+<li>글꼴 지정 방식
+    - font-family: 글꼴이름1, 글꼴이름2, 글꼴이름3, &hellip;  
+      ex) font-family: &lsquo;맑은 고딕&rsquo;, 돋움, 굴림 =&gt; 맑은 고딕으로 글꼴이 적용되는데 맑은 고딕이 없을 경우 돋움으로 돋움도 없을 경우에는 굴림이 적용</li>
+<li>웹 글꼴 사용하기
+    - 웹 폰트 : 웹 문서 안에 글꼴에 대한 정보를 저장했다가 웹 문서를 여는 순간 해당 웹페이지에서 글꼴을 가져와서 사용하는 방식. 시스템 없는 글꼴이더라도 개발자가 원하는 글꼴을 사용할 수 있는 장점이 있다.
+    - 웹 글꼴에 대한 정보 저장
+        - @import url(웹 글꼴 주소)
+        - font-family: 해당 url에서 가져오는 웹 글꼴의 이름</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@import url(&#39;https://fonts.googleapis.com/css2family=Nanum+Pen+Script&amp;display=swap&#39;);
+</span></span><span style="display:flex;"><span>.webfont {
+</span></span><span style="display:flex;"><span>    font-family: &#39;Nanum Pen Script&#39;, cursive, serif;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;글꼴을 지정하는 font-family&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/_01_fontfamily.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;브라우저 기본 글꼴&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;webfont&#34;</span>&gt;구글 웹 글꼴&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h2 id="2-font-size">
+  2. font-size
+  <a class="anchor" href="#2-font-size">#</a>
+</h2>
+<ol>
+<li>글자 크기를 조절할 때 사용하는 속성.</li>
+<li>사용할 수 있는 속성 값 : 절대 크기, 상대 크기, 백분율</li>
+<li>기본 값은 medium</li>
+<li>font-size : 절대크기|상대크기|백분율;</li>
+<li>절대크기 : 브라우저에서 가지고 있는 글자크기. xx-small|x-small|small|medium|large|x-large|xx-large</li>
+<li>상대크기 : 부모 태그의 글자크기를 기준으로 크기를 조절. larger|smaller</li>
+<li>크기 : 브라우저와 상관없이 글자 크기를 직접 지정. px, rem, em, pt 등 단위로 지정 가능.</li>
+<li>백분율 : 부모 태그의 글자크기를 기준으로 백분율로 글자크기 조절.</li>
+<li>크기에서 사용되는 단위들
+    - px : 모니터에 따라 상태크기가 됨. 웹 문서에서 가장 많이 사용하는 단위.
+    - rem : 해당 글꼴의 소문자 r의 넓이를 기준으로 크기를 조절함. 소문자 r의 크기가 1rem. 크기를 작게하려면 1보다 작게 크기를 키우려면 1보다 크게 설정.
+    - em : 해당 글꼴의 대문자 M의 넓이를 기준으로 크기를 조절함. 대문자 M의 크기가 1em.
+    - pt : 포인트 단위. 일반문서에서 사용하는 포인트단위와 동일한 크기.
+    - px, rem, em 단위를 많이 사용하게 되는데 px는 폰트크기가 고정되어 작은 모바일기기에서도 동일한 크기의 글자를 표시함. em, rem은 기준이 기기의 문자 크기로 바뀌기 때문에 기준이 되는 문자의 상대크기로 변경됨.</li>
+</ol>
+<h2 id="3-font-weight">
+  3. font-weight
+  <a class="anchor" href="#3-font-weight">#</a>
+</h2>
+<ol>
+<li>글자의 굵기를 조절할 때 사용하는 속성</li>
+<li>font-weight: 키워드|숫자;</li>
+<li>font-weight에서 사용가능한 속성 값
+    - normal : 기본 값. 기본 두께로 표출
+    - bold|lighter|bolder : 굵게|기본 두께보다 가늘게|기본 굵기보다 더 굵게
+    - 100 ~ 900: 100단위로 작성한다. 400이 normal과 같은 굵기를 갖고 700은 bold와 같은 굵기. 키워드로 조절하는 것보다 세밀한 굵기 조절이 가능</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#content1 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#content2 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bolder</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#content3 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">lighter</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#content4 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">900</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-font-variant">
+  4. font-variant
+  <a class="anchor" href="#4-font-variant">#</a>
+</h2>
+<ol>
+<li>소문자 크기에 맞춰서 대문자로 표기</li>
+<li>지정 가능한 속성 값
+    - normal : 일반적인 형태로 표출
+    - small-caps : 작은 대문자로 표출</li>
+</ol>
+<h2 id="5-font-style">
+  5. font-style
+  <a class="anchor" href="#5-font-style">#</a>
+</h2>
+<ol>
+<li>글자를 이탤릭체로 표현하기 위한 속성</li>
+<li>지정 가능한 속성 값
+    - normal : 일반적인 형태로 표출
+    - italic, oblique : 이탤릭체로 표출.
+    - italic은 이탤릭체가 디자인되어 있는 폰트에서 사용
+    - oblique는 이탤릭체가 디자인되어 있지 않아도 글자를 기울여서 표시</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#content1 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">normal</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#content2 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#content3 {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">oblique</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="6-font">
+  6. font
+  <a class="anchor" href="#6-font">#</a>
+</h2>
+<ol>
+<li>앞서 배운 font관련 속성들을 한 번에 정의한다.</li>
+<li>font 속성 지정법
+    - font: font-style의 속성 값 font-size의 속성값/line-height의 속성값 font-weight의 속성값 font-variant의 솏성값 font-family의 속성값
+    - 기본값으로 사용할 속성은 생략 가능하다. font-vaiant, font-weight, font-style은 항상 font-size 앞에 지정돼야한다. font-family, font-size는 필수값. font-family는 항상 마지막에 입력한다. 나머지 순서들은 무방하다.
+    - 그리고 위의 속성들을 미리 지정해놓은 키워드들을 사용해서도 지정할 수 있다.
+    - font: caption|icon|menu| &hellip;
+        - caption: 제목에 어울리는 글꼴스타일 지정
+        - icon: 아이콘에 어울리는 글꼴스타일 지정
+        - menu: 드롭다운 메뉴에 어울리는 글꼴스타일 지정
+        - message-box: 대화상자에 어울리는 글꼴스타일 지정
+        - small-caption: 부제목에 어울리는 글꼴스타일 지정
+        - status-bar: 상태표시줄에 어울리는 글꼴스타일 지정
+    - line-height : 줄 간격 지정할 때 사용하는 속성. 글자크기랑 줄간격이 밀접한 연관이 있어서 글자크기/줄간격을 하나의 속성처럼 사용하기도 한다.</li>
+</ol>
+<h2 id="7-color">
+  7. color
+  <a class="anchor" href="#7-color">#</a>
+</h2>
+<ol>
+<li>
+<p>글자의 색상을 지정할 때 사용하는 속성</p>
+</li>
+<li>
+<p>font에서 지정하지는 못한다.</p>
+</li>
+<li>
+<p>16진수 값, rgb값, 색상이름으로 지정가능</p>
+</li>
+<li>
+<p>color: 색상값</p>
+</li>
+<li>
+<p>16진수 값은 6자리로 구성 앞 두자리는 red의 값 지정(00~ff)지정 가능 두 번째 두자리는 green의 값 지정(00~ff)지정 마지막 두자리는 blue의 값 지정(00~ff)지정. 두 자리씩 같은 값이 반복 될때는 축약해서 세자리로 표현 가능. ff00aa -&gt; f0a</p>
+</li>
+<li>
+<p>rgb값은 rgb(red(0~255), green(0~255), blue(0~255))지정</p>
+</li>
+</ol>
+<h2 id="7-텍스트에-밑줄이나-취소선을-그어주는-text-decoration">
+  7. 텍스트에 밑줄이나 취소선을 그어주는 text-decoration
+  <a class="anchor" href="#7-%ed%85%8d%ec%8a%a4%ed%8a%b8%ec%97%90-%eb%b0%91%ec%a4%84%ec%9d%b4%eb%82%98-%ec%b7%a8%ec%86%8c%ec%84%a0%ec%9d%84-%ea%b7%b8%ec%96%b4%ec%a3%bc%eb%8a%94-text-decoration">#</a>
+</h2>
+<ol>
+<li>
+<p>텍스트에 밑줄이나 중간에 취소선을 추가할 때 사용하는 속성</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - underline: 밑줄을 그어줌</p>
+<p>    - overline: 윗줄을 그어줌</p>
+<p>    - line-through: 취소선을 그어줌</p>
+<p>    - none: 기본값으로 아무 선도 표시하지 않음.</p>
+<h2 id="8-대소문자를-변환해주는-text-transform">
+  8. 대소문자를 변환해주는 text-transform
+  <a class="anchor" href="#8-%eb%8c%80%ec%86%8c%eb%ac%b8%ec%9e%90%eb%a5%bc-%eb%b3%80%ed%99%98%ed%95%b4%ec%a3%bc%eb%8a%94-text-transform">#</a>
+</h2>
+<ol>
+<li>
+<p>영문자의 대/소문자를 변환할 때 사용하는 속성</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - capitalize: 시작하는 첫 번째 글자를 대문자로 변환</p>
+<p>    - lowercase: 모든 글자를 소문자로 변환</p>
+<p>    - uppercase: 모든 글자를 대문자로 변환</p>
+<p>    - none: 변환하지 않음. 기본값.</p>
+<h2 id="9-텍스트에-그림자를-그려주는-text-shadow">
+  9. 텍스트에 그림자를 그려주는 text-shadow
+  <a class="anchor" href="#9-%ed%85%8d%ec%8a%a4%ed%8a%b8%ec%97%90-%ea%b7%b8%eb%a6%bc%ec%9e%90%eb%a5%bc-%ea%b7%b8%eb%a0%a4%ec%a3%bc%eb%8a%94-text-shadow">#</a>
+</h2>
+<ol>
+<li>
+<p>텍스트에 그림자 효과를 추가할 때 사용하는 속성</p>
+</li>
+<li>
+<p>자주 사용하면 웹 문서 자체가 지저분해보이기 때문에 제목이나 강조할 내용에만 추가</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - none: 그림자 추가하지 않음</p>
+<p>    - 가로거리 세로거리 번짐정도 색상</p>
+<p>        - 가로거리: 텍스트로부터 그림자까지의 가로거리 지정. 양수로 지정하면 오른쪽으로 그림자가 커지고 음수로 지정하면 왼쪽으로 그림자가 커진다. 필수 입력값.</p>
+<p>        - 세로거리: 텍스트로부터 그림자까지의 세로거리 지정. 양수는 아래쪽으로 음수는 위쪽으로 그림자를 생성. 필수 입력값.</p>
+<p>        - 번짐정도: 그림자의 번짐정도를 지정. 양수는 그림자가 모든 방향으로 퍼져나가 그림자가 크게 표시. 음수는 그림자가 모든방향으로 축소되어 표시. 기본 값 0.</p>
+<p>        - 색상: 그림자의 색상을 지정. 한 가지 색상을 지정할 수도 있고 스페이스(공백)을 추가해서 여러가지 색상을 지정할 수도 있다. 기본값은 현재 글자의 색상.</p>
+<h2 id="10-공백을-처리해주는-white-space">
+  10. 공백을 처리해주는 white-space
+  <a class="anchor" href="#10-%ea%b3%b5%eb%b0%b1%ec%9d%84-%ec%b2%98%eb%a6%ac%ed%95%b4%ec%a3%bc%eb%8a%94-white-space">#</a>
+</h2>
+<ol>
+<li>
+<p>텍스트와 함께 연속적으로 입력된 공백에 대한 처리를 할 때 사용하는 속성</p>
+</li>
+<li>
+<p>지정 가능한 속성 값</p>
+</li>
+</ol>
+<p>    - normal: 여러개의 공백을 하나로 처리. 기본 값.</p>
+<p>    - nowrap: 여러개의 공백을 하나로 처리하되 영역을 넘어가는 내용은 줄을 바꾸지 않고 그대로 표시</p>
+<p>    - pre: 여러개의 공백을 그대로 표출하고 영역을 넘어가는 내용은 줄을 바꾸지 않고 그대로 표시</p>
+<p>    - pre-line: 여러개의 공백을 하나로 표출하고 넘어가는 내용은 줄바꿔 표시</p>
+<p>    - pre-wrap: 여러개의 공백을 그대로 표시하고 영역을 넘아가는 내용은 줄바꿔서 표시</p>
+<h2 id="11-텍스트사이의-간격을-조절하는-letter-spacing-word-spacing">
+  11. 텍스트사이의 간격을 조절하는 letter-spacing, word-spacing
+  <a class="anchor" href="#11-%ed%85%8d%ec%8a%a4%ed%8a%b8%ec%82%ac%ec%9d%b4%ec%9d%98-%ea%b0%84%ea%b2%a9%ec%9d%84-%ec%a1%b0%ec%a0%88%ed%95%98%eb%8a%94-letter-spacing-word-spacing">#</a>
+</h2>
+<ol>
+<li>
+<p>letter-spacing 글자간의 간격 조절(자간 조절)</p>
+</li>
+<li>
+<p>word-spacing 단어간의 간격 조절</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - normal: 기본값. 일반적인 간격으로 설정됨.</p>
+<p>    - 수치값으로 크기 지정</p>
+<h2 id="12-글자의-쓰기-방향을-지정하는-direction">
+  12. 글자의 쓰기 방향을 지정하는 direction
+  <a class="anchor" href="#12-%ea%b8%80%ec%9e%90%ec%9d%98-%ec%93%b0%ea%b8%b0-%eb%b0%a9%ed%96%a5%ec%9d%84-%ec%a7%80%ec%a0%95%ed%95%98%eb%8a%94-direction">#</a>
+</h2>
+<ol>
+<li>
+<p>텍스트를 어느 방향부터 쓰기 시작할 것인지 결정하는 속성</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - ltr: 왼쪽에서 오른쪽으로(left to right) 텍스트 표시. 기본값.</p>
+<p>    - rtl: 오른쪽에서 왼쪽으로(right to left) 텍스트 표시.</p>
+<h2 id="13-text-align">
+  13. text-align
+  <a class="anchor" href="#13-text-align">#</a>
+</h2>
+<ol>
+<li>
+<p>문단의 텍스트 정렬 방법을 지정</p>
+</li>
+<li>
+<p>텍스트만 정렬하진 않고 자식 태그들도 정렬</p>
+</li>
+<li>
+<p>지정가능한 속성 값
+    - start: 텍스트를 줄의 시작위치에 맞춰서 정렬
+    - end: 텍스트를 줄의 끝 위치에 맞춰서 정렬
+    - left: 왼쪽 정렬
+    - right: 오른쪽 정렬
+    - center: 가운데 정렬
+    - justify: 양쪽에 맞춰서 정렬
+    - match-parent: 부모 요소에 따라 정렬</p>
+</li>
+<li>
+<p>text-justify: text-align 속성이 justify 일 때 사용가능한 속성. 정렬할 때 공백을 처리하는 방식을 지정</p>
+</li>
+</ol>
+<p>    - 지정가능한 속성 값
+        - auto: 웹 브라우저에서 자동으로 지정
+        - none: 정렬하지 않음.
+        - inter-word: 단어 사이의 공백을 조절해 정렬
+        - distribute: 인접한 글자 사이의 공백을 똑같이 맞춰 정렬</p>
+<h2 id="14-text-indent">
+  14. text-indent
+  <a class="anchor" href="#14-text-indent">#</a>
+</h2>
+<ol>
+<li>
+<p>문단의 첫 글자를 얼마나 들여쓸지를 지정하는 속성</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - 크기: 단위와 함께 사용. 음수도 지정가능.</p>
+<p>    - 백분율: 부모 태그 넓이 기준으로 상대적 크기를 지정</p>
+<h2 id="15-줄-간격을-조절하는-line-height">
+  15. 줄 간격을 조절하는 line-height
+  <a class="anchor" href="#15-%ec%a4%84-%ea%b0%84%ea%b2%a9%ec%9d%84-%ec%a1%b0%ec%a0%88%ed%95%98%eb%8a%94-line-height">#</a>
+</h2>
+<ol>
+<li>
+<p>원하는 만큼의 줄 간격을 지정할 때 사용하는 속성</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - normal: 기본 값. 일반적인 줄간격으로 지정</p>
+<p>    - 숫자: 실수로 단위없이 지정하는 방식. 글자크기의 몇배로 지정할 것인지 지정.</p>
+<p>    - 크기: 단위와 함께 크기를 지정하는 방식</p>
+<p>    - 백분율: 부모 태그의 높이 기준으로 퍼센테이지 지정</p>
+<p>    - inherit: 부모의 지정된 줄간격 상속받아 사용.</p>
+<ol start="3">
+<li>보통 글자 크기의 1.5~2배 정도면 적당하다.</li>
+</ol>
+<h2 id="16-넘치는-텍스트를-처리해주는-text-overflow">
+  16. 넘치는 텍스트를 처리해주는 text-overflow
+  <a class="anchor" href="#16-%eb%84%98%ec%b9%98%eb%8a%94-%ed%85%8d%ec%8a%a4%ed%8a%b8%eb%a5%bc-%ec%b2%98%eb%a6%ac%ed%95%b4%ec%a3%bc%eb%8a%94-text-overflow">#</a>
+</h2>
+<ol>
+<li>
+<p>지정한 영역의 범위를 벗어나는 텍스트를 어떻게 처리할 것인지에 대한 설정</p>
+</li>
+<li>
+<p>overflow속성이 hidden, scroll, auto이면서 white-space속성이 nowrap일 때만 적용 가능</p>
+</li>
+<li>
+<p>지정가능한 속성 값</p>
+</li>
+</ol>
+<p>    - clip: 넘치는 텍스를 잘라버림</p>
+<p>    - ellipsis: 말 줄임표(&hellip;)로 잘린 텍스트가 있다고 표시</p>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-font-family">1. font-family</a></li>
+    <li><a href="#2-font-size">2. font-size</a></li>
+    <li><a href="#3-font-weight">3. font-weight</a></li>
+    <li><a href="#4-font-variant">4. font-variant</a></li>
+    <li><a href="#5-font-style">5. font-style</a></li>
+    <li><a href="#6-font">6. font</a></li>
+    <li><a href="#7-color">7. color</a></li>
+    <li><a href="#7-텍스트에-밑줄이나-취소선을-그어주는-text-decoration">7. 텍스트에 밑줄이나 취소선을 그어주는 text-decoration</a></li>
+    <li><a href="#8-대소문자를-변환해주는-text-transform">8. 대소문자를 변환해주는 text-transform</a></li>
+    <li><a href="#9-텍스트에-그림자를-그려주는-text-shadow">9. 텍스트에 그림자를 그려주는 text-shadow</a></li>
+    <li><a href="#10-공백을-처리해주는-white-space">10. 공백을 처리해주는 white-space</a></li>
+    <li><a href="#11-텍스트사이의-간격을-조절하는-letter-spacing-word-spacing">11. 텍스트사이의 간격을 조절하는 letter-spacing, word-spacing</a></li>
+    <li><a href="#12-글자의-쓰기-방향을-지정하는-direction">12. 글자의 쓰기 방향을 지정하는 direction</a></li>
+    <li><a href="#13-text-align">13. text-align</a></li>
+    <li><a href="#14-text-indent">14. text-indent</a></li>
+    <li><a href="#15-줄-간격을-조절하는-line-height">15. 줄 간격을 조절하는 line-height</a></li>
+    <li><a href="#16-넘치는-텍스트를-처리해주는-text-overflow">16. 넘치는 텍스트를 처리해주는 text-overflow</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

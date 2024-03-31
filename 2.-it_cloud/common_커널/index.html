@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="01_커널이란? # #커널 #쉘 #Shell
+[[[content/7. IT_Network/가상화|가상화]]
+커널은 운영체제 자체라 보기도 하고, 운영체제의 핵심이라고 말하기도 한다.
+즉, 커널은 하드웨어의 자원을 관리하는 역할을 한다.
+flowchart TD 컴퓨터--&gt;하드웨어; 컴퓨터--&gt;소프트웨어; 소프트웨어--&gt;운영체제; 소프트웨어--&gt;응용프로그램; 운영체제--&gt;커널; 운영체제--&gt;시스템프로그램; 시스템 프로그램은 사용자와 상호작용을 위한 역할을 한다.
+대표적인 예로 쉴(shell)이라는 시스템 프로그램이 있으며,
+쉴(shell)은 사용자가 컴퓨터에게 전달하는 명령어를 해석하는 프로그램으로 사용자와 컴퓨터간의 상호작용이 가능케 한다.
+02_커널의 역할 # 컴퓨터의 물리적 자원과 추상화 자원을 관리하는 것이다.
+여기서 추상화란 물리적으로 하나 뿐인 하드웨어를 여러 사용자들이 번갈아 사용하게 중재함으로서," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" /><meta property="article:section" content="2.-it_cloud" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>Common 커널 | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="01_커널이란? # #커널 #쉘 #Shell
+[[[content/7. IT_Network/가상화|가상화]]
+커널은 운영체제 자체라 보기도 하고, 운영체제의 핵심이라고 말하기도 한다.
+즉, 커널은 하드웨어의 자원을 관리하는 역할을 한다.
+flowchart TD 컴퓨터--&gt;하드웨어; 컴퓨터--&gt;소프트웨어; 소프트웨어--&gt;운영체제; 소프트웨어--&gt;응용프로그램; 운영체제--&gt;커널; 운영체제--&gt;시스템프로그램; 시스템 프로그램은 사용자와 상호작용을 위한 역할을 한다.
+대표적인 예로 쉴(shell)이라는 시스템 프로그램이 있으며,
+쉴(shell)은 사용자가 컴퓨터에게 전달하는 명령어를 해석하는 프로그램으로 사용자와 컴퓨터간의 상호작용이 가능케 한다.
+02_커널의 역할 # 컴퓨터의 물리적 자원과 추상화 자원을 관리하는 것이다.
+여기서 추상화란 물리적으로 하나 뿐인 하드웨어를 여러 사용자들이 번갈아 사용하게 중재함으로서,"
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle"  />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle" checked />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="active">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle"  />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle"  />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">Common 커널</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+
+
+
+
+
+
+<h2 id="01_커널이란">
+  01_커널이란?
+  <a class="anchor" href="#01_%ec%bb%a4%eb%84%90%ec%9d%b4%eb%9e%80">#</a>
+</h2>
+<p>#커널 #쉘 #Shell</p>
+<p><a class="internal-link broken">가상화</a></p>
+<blockquote>
+<p>커널은 운영체제 자체라 보기도 하고, 운영체제의 핵심이라고 말하기도 한다.</p>
+<p>즉, <strong>커널</strong>은 하드웨어의 자원을 관리하는 역할을 한다.</p>
+</blockquote>
+<pre class="mermaid">flowchart TD
+
+컴퓨터-->하드웨어;  
+컴퓨터-->소프트웨어;
+소프트웨어-->운영체제;
+소프트웨어-->응용프로그램;
+운영체제-->커널;
+운영체제-->시스템프로그램;</pre>
+<blockquote>
+<p><strong>시스템 프로그램</strong>은 사용자와 상호작용을 위한 역할을 한다.</p>
+<p>대표적인 예로 쉴(shell)이라는 <strong>시스템 프로그램</strong>이 있으며,</p>
+<p>쉴(shell)은 사용자가 컴퓨터에게 전달하는 명령어를 해석하는 프로그램으로 사용자와 컴퓨터간의 상호작용이 가능케 한다.</p>
+</blockquote>
+<h2 id="02_커널의-역할">
+  02_커널의 역할
+  <a class="anchor" href="#02_%ec%bb%a4%eb%84%90%ec%9d%98-%ec%97%ad%ed%95%a0">#</a>
+</h2>
+<blockquote>
+<p>컴퓨터의 물리적 자원과 추상화 자원을 관리하는 것이다.</p>
+<p>여기서 <strong>추상화</strong>란 물리적으로 하나 뿐인 하드웨어를 여러 사용자들이 번갈아 사용하게 중재함으로서,</p>
+<p>마치 한 개의 하드웨어가 여러 개인 것처럼 보여지도록 하는 기술을 말한다.</p>
+</blockquote>
+<hr>
+<ul>
+<li><strong>추상화 자원 명칭</strong>
+<ul>
+<li>CPU -&gt; 태스크(task)</li>
+<li>메모리 -&gt; 페이지(page), 세그먼트(segment)</li>
+<li>디스크 -&gt; 파일(file)</li>
+<li>네트워크 -&gt; 소켓(socket)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>태스크(Task) 관리자</strong>
+<ul>
+<li>물리적 자원인 CPU를 추상적 자원인 태스크로 제공</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>메모리(Memory) 관리자</strong>
+<ul>
+<li>물리적 자원인 메모리를 추상적 자원인 페이지나 세그먼트로 제공</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>파일 시스템(File System) 관리자</strong>
+<ul>
+<li>물리적 자원인 디스크를 추상적 자원인 파일로 제공</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>네트워크(Network) 관리자</strong>
+<ul>
+<li>물리적 자원인 네트워크 장치를 추상적 자원인 소켓으로 제공</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>디바이스 드라이버(Device Driver) 관리자</strong>
+<ul>
+<li>각종 외부 장치에대한 접근</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="03_커널-아키텍쳐">
+  03_커널 아키텍쳐
+  <a class="anchor" href="#03_%ec%bb%a4%eb%84%90-%ec%95%84%ed%82%a4%ed%85%8d%ec%b3%90">#</a>
+</h2>
+<p><img src="/assets/Untitled 2 5.png" width="auto" /></p>
+<h3 id="01-단일형-모놀로식">
+  01 단일형 모놀로식
+  <a class="anchor" href="#01-%eb%8b%a8%ec%9d%bc%ed%98%95-%eb%aa%a8%eb%86%80%eb%a1%9c%ec%8b%9d">#</a>
+</h3>
+<p><img src="/assets/Untitled 4 4.png" width="auto" /></p>
+<ul>
+<li>단일형 구조 커널은 초창기 운영체제의 구조로, 커널의 핵심 기능을 구현하는 모듈들이 구분 없이 하나로 구성되어 있다</li>
+<li>유닉스, 리눅스 등이 모두 단일형 구조 커널을 기반으로 만들어졌다.</li>
+</ul>
+<p><strong>장점</strong></p>
+<ol>
+<li>모듈이 거의 분리되지 않았기 때문에 모듈간의 통신비용이 줄어들고, 효율적인 운영이 가능하다.</li>
+<li>빠르다.</li>
+</ol>
+<p><strong>단점</strong></p>
+<ol>
+<li>모든 모듈이 하나로 묶여있기 때문에, 한 모듈에 장애가 생기면 전체에 영향이 끼친다.</li>
+<li>이식성이 떨어진다. 단일형 구조는 수정이 어렵기 때문이다.</li>
+<li>매우 크고 복잡한 현대의 운영체제를 구현하기는 어렵다.</li>
+</ol>
+<h3 id="02-단일형-마이크로-구조">
+  02 단일형 마이크로 구조
+  <a class="anchor" href="#02-%eb%8b%a8%ec%9d%bc%ed%98%95-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c-%ea%b5%ac%ec%a1%b0">#</a>
+</h3>
+<p><img src="/assets/Untitled 5 5.png" width="auto" /></p>
+<ul>
+<li>마이크로 구조 커널의 OS는 <strong>프로세스 관리, 메모리 관리, IPC 등 가장 기본적인 기능만 제공</strong>한다.</li>
+<li>이외의 <strong>다른 기능(파일 시스템 관리, 입출력 관리 등)은 커널 영역이 아니라 사용자 영역에 구현</strong>함으로써 커널의 크기를 줄인 구조이다.</li>
+<li>커널은 메모리 관리와 프로세스간 동기화 서비스를 제공하며, 이 두 모듈은 IPC 모듈로 연결되어있다. 따라서, 두 모듈은 서로 나뉘어져 있고, IPC를 통해 정보교환이 이뤄진다.</li>
+</ul>
+<p><strong>장점</strong></p>
+<ol>
+<li>각 모듈은 독립적으로 작동하기 때문에 한 모듈에 장애가 생겨도 전체에 영향을 주지 않는다</li>
+<li>이식성이 뛰어나다</li>
+<li>커널이 작고 가벼워 사양이 낮은 CPU에도 설치 가능</li>
+</ol>
+<p><strong>단점</strong></p>
+<ol>
+<li>모듈 간의 프로세스 통신(IPC)가 발생하여 느리다.</li>
+</ol>
+<h3 id="03-계층형-마이크로-구조-커널">
+  03 계층형 마이크로 구조 커널
+  <a class="anchor" href="#03-%ea%b3%84%ec%b8%b5%ed%98%95-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c-%ea%b5%ac%ec%a1%b0-%ec%bb%a4%eb%84%90">#</a>
+</h3>
+<p><img src="/assets/Untitled 6 4.png" width="auto" /></p>
+<ul>
+<li>
+<p>비슷한 기능을 가진 모듈을 묶어서 하나의 계층으로 만들고, 계층간의 통신을 통해 운영체제를 구현하는 방식.</p>
+</li>
+<li>
+<p><strong>비슷한 기능을 모아 모듈화</strong> 했기 때문에 단일형 구조보다는 디버깅에 용이하다.</p>
+</li>
+<li>
+<p>대부분의 운영체제가 <strong>계층형 구조</strong>를 이루고 있다.</p>
+</li>
+</ul>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#01_커널이란">01_커널이란?</a></li>
+    <li><a href="#02_커널의-역할">02_커널의 역할</a></li>
+    <li><a href="#03_커널-아키텍쳐">03_커널 아키텍쳐</a>
+      <ul>
+        <li><a href="#01-단일형-모놀로식">01 단일형 모놀로식</a></li>
+        <li><a href="#02-단일형-마이크로-구조">02 단일형 마이크로 구조</a></li>
+        <li><a href="#03-계층형-마이크로-구조-커널">03 계층형 마이크로 구조 커널</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

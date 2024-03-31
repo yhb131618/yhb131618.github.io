@@ -1,0 +1,5334 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="Chap01_Hugo&amp;GO Install # Hugo 공식 웹사이트
+Go Install
+Hugo Install
+위 링크로 들어가 각각 Hugo&amp;Go를 PC에 install 한다. ![[assets/Pasted image 20231223232713.png]]	- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blogguide/01-install-guide/" /><meta property="article:section" content="blogguide" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>01) Install Guide | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="Chap01_Hugo&amp;GO Install # Hugo 공식 웹사이트
+Go Install
+Hugo Install
+위 링크로 들어가 각각 Hugo&amp;Go를 PC에 install 한다. ![[assets/Pasted image 20231223232713.png]]	- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다."
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle"  />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle"  />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle"  />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle" checked />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="active">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">01) Install Guide</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<h2 id="chap01_hugogo-install">
+  Chap01_Hugo&amp;GO Install
+  <a class="anchor" href="#chap01_hugogo-install">#</a>
+</h2>
+<p>
+<a href="https://gohugo.io/installation/windows/" rel="noopener">Hugo 공식 웹사이트</a></p>
+<p>
+<a href="https://go.dev/doc/install" rel="noopener">Go Install</a></p>
+<p>
+<a href="https://github.com/gohugoio/hugo/releases" rel="noopener">Hugo Install</a></p>
+<ul>
+<li>위 링크로 들어가 각각 Hugo&amp;Go를 PC에 install 한다.
+<img src="/assets/Pasted image 20231223232713.png" width="auto" />	- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다.
+<ul>
+<li>만약 설치 확인이 안되면 환경 설정을 해준다.</li>
+</ul>
+</li>
+<li>이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다.
+<ul>
+<li>예) C://새폴더 -&gt; 터미널 Hugo new site TEST_project</li>
+</ul>
+</li>
+<li>Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다.</li>
+<li>이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다.<img src="/assets/Pasted image 20231223233202.png" width="auto" /></li>
+</ul>
+<h2 id="chap02_theme-install">
+  Chap02_Theme Install
+  <a class="anchor" href="#chap02_theme-install">#</a>
+</h2>
+<p>
+<a href="https://github.com/64bitpandas/amethyst" rel="noopener">Theme</a></p>
+<ul>
+<li>위 링크로 들어가 해당 파일을 다운 받는다.</li>
+<li>해당 파일을 TEST_protject/themes 디렉토리 안에 넣는다.</li>
+</ul>
+<h2 id="chap03_obsidian-install">
+  Chap03_Obsidian Install
+  <a class="anchor" href="#chap03_obsidian-install">#</a>
+</h2>
+<p>
+<a href="https://obsidian.md/" rel="noopener">옵시디언</a></p>
+<ul>
+<li>
+<p>위 링크로 들어가 옵시디언을 다운받는다.</p>
+</li>
+<li>
+<p>설치가 끝내면 해당 파일을 실행시켜 디렉토리를 TEST_protject로 위치시킨다.</p>
+</li>
+<li>
+<p>위의 과정이 끝나면 옵션으로 들어가 아래와 같이 설정한다.
+<img src="/assets/Pasted image 20231224072000.png" width="auto" /></p>
+</li>
+<li>
+<p>그리고 커뮤니티 플러그인 MAKE.md를 설치하고 활성화한다.</p>
+</li>
+<li>
+<p>설정이 끝났으면, 설정창을 닫고 Content 디렉토리 안에 테스트로 글 하나를 작성한다.</p>
+</li>
+<li>
+<p>참고로 보기 불필요한 디렉토리들은 마우스로 오른쪽 버튼을 클릭한 뒤 Hide 버튼을 클릭하여 숨김처리 한다.
+<img src="/assets/Pasted image 20231223234349.png" width="auto" /></p>
+<p><img src="/assets/Pasted image 20231223233812.png" width="auto" /></p>
+</li>
+<li>
+<p>참고로 assets 폴더는 이미지 저장 공간으로 활용되며, hugo.toml 파일에 아래와 같이 수정해야 이미지들이 블로그에 보일 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>baseURL = &#39;https://yhb131618.github.io&#39;
+</span></span><span style="display:flex;"><span>languageCode = &#39;euc-kr&#39;
+</span></span><span style="display:flex;"><span>title = &#39;My New Hugo Site&#39;
+</span></span><span style="display:flex;"><span>themes = &#39;amethyst&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-----추가 부분-----
+</span></span><span style="display:flex;"><span>[[module.mounts]]
+</span></span><span style="display:flex;"><span>source = &#39;static&#39;
+</span></span><span style="display:flex;"><span>target = &#39;static&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[module.mounts]]
+</span></span><span style="display:flex;"><span>source = &#39;assets&#39;
+</span></span><span style="display:flex;"><span>target = &#39;static/assets&#39;	
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="chap04_hugo-build">
+  Chap04_Hugo Build
+  <a class="anchor" href="#chap04_hugo-build">#</a>
+</h2>
+<ul>
+<li>위의 모든 과정이 끝났으면, 다시 터미널에서 TEST_protject디렉토리로 이동하여 <strong>hugo server -t Amethyst</strong>  명령어를 입력한다.
+<img src="/assets/Pasted image 20231223235838.png" width="auto" />
+<img src="/assets/Pasted image 20231223233812.png" width="auto" />	
+디렉토리를 보면 Public이란 디렉토리가 Build되어 생성된 것을 확인 할 수 있다.</li>
+</ul>
+<h2 id="chap05_git-push">
+  Chap05_Git Push
+  <a class="anchor" href="#chap05_git-push">#</a>
+</h2>
+<p>
+<a href="https://github.com/" rel="noopener">Github</a></p>
+<ul>
+<li>
+<p>Github로 들어가 repository를 생성한다.</p>
+</li>
+<li>
+<p>repository 이름은 아래와 같은 형식으로 한다.</p>
+<ul>
+<li>yhb131618.github.io</li>
+</ul>
+</li>
+<li>
+<p>repository 생성되었으면 터미널를 열고 TEST_protject/public 안으로 들어간다.</p>
+</li>
+<li>
+<p>이후 public 안에서 repository(yhb131618.github.io)로 git push하여 배포한다<img src="/assets/Pasted image 20231223233812.png" width="auto" /></p>
+</li>
+<li>
+<p>마지막으로 Github의 Acitons 탭에서 배포 완료되었는지 확인 한 뒤 블로그를 접속한다.<img src="/assets/Pasted image 20231223235436.png" width="auto" /></p>
+</li>
+<li>
+<p>접속은 
+<a href="https://yhb131618.github.io" rel="noopener">https://yhb131618.github.io</a>와 같은 형식으로 접속하면 된다.</p>
+</li>
+</ul>
+<h2 id="chap06_hugo-content-management">
+  Chap06_Hugo Content Management
+  <a class="anchor" href="#chap06_hugo-content-management">#</a>
+</h2>
+<ul>
+<li>디렉토리는 계층 구조를 가질 수 있다. 이 계층 구조를 웹페이지에서 보이게 하려면 _index.md 파일을 각 디렉토리에 넣어주어야 한다.<img src="/assets/Pasted image 20231224002538.png" width="auto" /></li>
+</ul>
+<h2 id="chap07_amethyst-guide">
+  Chap07_Amethyst Guide
+  <a class="anchor" href="#chap07_amethyst-guide">#</a>
+</h2>
+<p>
+<a href="https://github.com/64bitpandas/amethyst" rel="noopener">Amthyst</a></p>
+<h3 id="01_page-configuration">
+  01_Page Configuration
+  <a class="anchor" href="#01_page-configuration">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Set type to &#39;docs&#39; if you want to render page outside of configured section or if you render section other than &#39;docs&#39;</span>
+</span></span><span style="display:flex;"><span>type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;docs&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set page weight to re-arrange items in file-tree menu (if BookMenuBundle not set)</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set to &#39;true&#39; to mark page as flat section in file-tree menu (if BookMenuBundle not set)</span>
+</span></span><span style="display:flex;"><span>bookFlatSection <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set to hide nested sections or pages at that level. Works only with file-tree menu mode</span>
+</span></span><span style="display:flex;"><span>bookCollapseSection <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set true to hide page or section from side menu (if BookMenuBundle not set)</span>
+</span></span><span style="display:flex;"><span>bookHidden <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set &#39;false&#39; to hide ToC from page</span>
+</span></span><span style="display:flex;"><span>bookToC <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) If you have enabled BookComments for the site, you can disable it for specific pages.</span>
+</span></span><span style="display:flex;"><span>bookComments <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set to &#39;false&#39; to exclude page from search index.</span>
+</span></span><span style="display:flex;"><span>bookSearchExclude <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Optional) Set explicit href attribute for this page in a menu (if BookMenuBundle not set)</span>
+</span></span><span style="display:flex;"><span>bookHref <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span></code></pre></div><h3 id="02_partials">
+  02_Partials
+  <a class="anchor" href="#02_partials">#</a>
+</h3>
+<p>There are layout partials available for you to easily override components of the theme in <code>layouts/partials/</code>.</p>
+<p>In addition to this, there are several empty partials you can override to easily add/inject code.</p>
+<table>
+<thead>
+<tr>
+<th>Empty Partial</th>
+<th>Placement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layouts/partials/docs/inject/head.html</code></td>
+<td>Before closing <code>&lt;head&gt;</code> tag</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/body.html</code></td>
+<td>Before closing <code>&lt;body&gt;</code> tag</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/footer.html</code></td>
+<td>After page footer content</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/menu-before.html</code></td>
+<td>At the beginning of <code>&lt;nav&gt;</code> menu block</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/menu-after.html</code></td>
+<td>At the end of <code>&lt;nav&gt;</code> menu block</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/content-before.html</code></td>
+<td>Before page content</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/content-after.html</code></td>
+<td>After page content</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/toc-before.html</code></td>
+<td>At the beginning of table of contents block</td>
+</tr>
+<tr>
+<td><code>layouts/partials/docs/inject/toc-after.html</code></td>
+<td>At the end of table of contents block</td>
+</tr>
+</tbody>
+</table>
+<h3 id="03_plugins">
+  03_Plugins
+  <a class="anchor" href="#03_plugins">#</a>
+</h3>
+<p>There are a few features implemented as plugable <code>scss</code> styles. Usually these are features that don&rsquo;t make it to the core but can still be useful.</p>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assets/plugins/_numbered.scss</code></td>
+<td>Makes headings in markdown numbered, e.g. <code>1.1</code>, <code>1.2</code></td>
+</tr>
+<tr>
+<td><code>assets/plugins/_scrollbars.scss</code></td>
+<td>Overrides scrollbar styles to look similar across platforms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="04_internal-templates">
+  04_Internal templates
+  <a class="anchor" href="#04_internal-templates">#</a>
+</h3>
+<p>Hugo ships with a group of boilerplate templates that cover the most common use cases for static websites.</p>
+<p>While the following internal templates are called similar to partials, they do <em>not</em> observe the partial template lookup order.</p>
+<h4 id="a-google-analyticshttpsgohugoiotemplatesinternalgoogle-analytics">
+  (A) Google Analytics 
+<a href="https://gohugo.io/templates/internal/#google-analytics" rel="noopener"></a>
+  <a class="anchor" href="#a-google-analyticshttpsgohugoiotemplatesinternalgoogle-analytics">#</a>
+</h4>
+<p>Hugo ships with an internal template supporting 
+<a href="https://support.google.com/analytics/answer/10089681" rel="noopener">Google Analytics 4</a>.</p>
+<h5 id="configure-google-analyticshttpsgohugoiotemplatesinternalconfigure-google-analytics">
+  Configure Google Analytics 
+<a href="https://gohugo.io/templates/internal/#configure-google-analytics" rel="noopener"></a>
+  <a class="anchor" href="#configure-google-analyticshttpsgohugoiotemplatesinternalconfigure-google-analytics">#</a>
+</h5>
+<p>Provide your tracking ID in your configuration file:</p>
+<p><strong>Google Analytics 4 (gtag.js)</strong></p>
+<p>hugo.</p>
+<p>yaml toml json </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">googleAnalytics</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ID</span>: <span style="color:#ae81ff">G-MEASUREMENT_ID</span>
+</span></span></code></pre></div><h5 id="use-the-google-analytics-templatehttpsgohugoiotemplatesinternaluse-the-google-analytics-template">
+  Use the Google Analytics template 
+<a href="https://gohugo.io/templates/internal/#use-the-google-analytics-template" rel="noopener"></a>
+  <a class="anchor" href="#use-the-google-analytics-templatehttpsgohugoiotemplatesinternaluse-the-google-analytics-template">#</a>
+</h5>
+<p>Include the Google Analytics internal template in your templates where you want the code to appear:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">template</span> <span style="color:#e6db74">&#34;_internal/google_analytics.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><p>To create your own template, access the configured ID with <code>{{ site.Config.Services.GoogleAnalytics.ID }}</code>.</p>
+<h4 id="b-disqushttpsgohugoiotemplatesinternaldisqus">
+  (B) Disqus 
+<a href="https://gohugo.io/templates/internal/#disqus" rel="noopener"></a>
+  <a class="anchor" href="#b-disqushttpsgohugoiotemplatesinternaldisqus">#</a>
+</h4>
+<p>Hugo also ships with an internal template for 
+<a href="https://disqus.com/" rel="noopener">Disqus comments</a>, a popular commenting system for both static and dynamic websites. To effectively use Disqus, secure a Disqus “shortname” by 
+<a href="https://disqus.com/profile/signup/" rel="noopener">signing up for the free service</a>.</p>
+<h5 id="configure-disqushttpsgohugoiotemplatesinternalconfigure-disqus">
+  Configure Disqus 
+<a href="https://gohugo.io/templates/internal/#configure-disqus" rel="noopener"></a>
+  <a class="anchor" href="#configure-disqushttpsgohugoiotemplatesinternalconfigure-disqus">#</a>
+</h5>
+<p>To use Hugo’s Disqus template, first set up a single configuration value:</p>
+<p>hugo.</p>
+<p>yaml toml json </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disqus</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shortname</span>: <span style="color:#ae81ff">your-disqus-shortname</span>
+</span></span></code></pre></div><p>Hugo’s Disqus template accesses this value with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Site.Config.Services.Disqus.Shortname</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><p>You can also set the following in the front matter for a given piece of content:</p>
+<ul>
+<li><code>disqus_identifier</code></li>
+<li><code>disqus_title</code></li>
+<li><code>disqus_url</code></li>
+</ul>
+<h5 id="use-the-disqus-templatehttpsgohugoiotemplatesinternaluse-the-disqus-template">
+  Use the Disqus template 
+<a href="https://gohugo.io/templates/internal/#use-the-disqus-template" rel="noopener"></a>
+  <a class="anchor" href="#use-the-disqus-templatehttpsgohugoiotemplatesinternaluse-the-disqus-template">#</a>
+</h5>
+<p>To add Disqus, include the following line in the templates where you want your comments to appear:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">template</span> <span style="color:#e6db74">&#34;_internal/disqus.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h5 id="conditional-loading-of-disqus-commentshttpsgohugoiotemplatesinternalconditional-loading-of-disqus-comments">
+  Conditional loading of Disqus comments 
+<a href="https://gohugo.io/templates/internal/#conditional-loading-of-disqus-comments" rel="noopener"></a>
+  <a class="anchor" href="#conditional-loading-of-disqus-commentshttpsgohugoiotemplatesinternalconditional-loading-of-disqus-comments">#</a>
+</h5>
+<p>Users have noticed that enabling Disqus comments when running the Hugo web server on <code>localhost</code> (i.e. via <code>hugo server</code>) causes the creation of unwanted discussions on the associated Disqus account.</p>
+<p>You can create the following <code>layouts/partials/disqus.html</code>:</p>
+<p>layouts/partials/disqus.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;disqus_thread&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Don&#39;t ever inject Disqus on localhost--it creates unwanted
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// discussions from &#39;localhost:1313&#39; on your Disqus account...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">hostname</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;localhost&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dsq</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>); <span style="color:#a6e22e">dsq</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>; <span style="color:#a6e22e">dsq</span>.<span style="color:#66d9ef">async</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">disqus_shortname</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Site.Config.Services.Disqus.Shortname</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">dsq</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;//&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">disqus_shortname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.disqus.com/embed.js&#39;</span>;
+</span></span><span style="display:flex;"><span>    (document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;head&#39;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">||</span> document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;body&#39;</span>)[<span style="color:#ae81ff">0</span>]).<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">dsq</span>);
+</span></span><span style="display:flex;"><span>})();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">noscript</span>&gt;Please enable JavaScript to view the &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://disqus.com/?ref_noscript&#34;</span>&gt;comments powered by Disqus.&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">noscript</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://disqus.com/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dsq-brlink&#34;</span>&gt;comments powered by &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logo-disqus&#34;</span>&gt;Disqus&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>The <code>if</code> statement skips the initialization of the Disqus comment injection when you are running on <code>localhost</code>.</p>
+<p>You can then render your custom Disqus partial template as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;disqus.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h4 id="c-open-graphhttpsgohugoiotemplatesinternalopen-graph">
+  (C) Open Graph 
+<a href="https://gohugo.io/templates/internal/#open-graph" rel="noopener"></a>
+  <a class="anchor" href="#c-open-graphhttpsgohugoiotemplatesinternalopen-graph">#</a>
+</h4>
+<p>An internal template for the 
+<a href="https://ogp.me/" rel="noopener">Open Graph protocol</a>, metadata that enables a page to become a rich object in a social graph. This format is used for Facebook and some other sites.</p>
+<h5 id="configure-open-graphhttpsgohugoiotemplatesinternalconfigure-open-graph">
+  Configure Open Graph 
+<a href="https://gohugo.io/templates/internal/#configure-open-graph" rel="noopener"></a>
+  <a class="anchor" href="#configure-open-graphhttpsgohugoiotemplatesinternalconfigure-open-graph">#</a>
+</h5>
+<p>Hugo’s Open Graph template is configured using a mix of configuration variables and 
+<a href="https://gohugo.io/content-management/front-matter/" rel="noopener">front-matter</a> on individual pages.</p>
+<p>hugo.</p>
+<p>yaml toml json </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Text about my cool site</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">site-feature-image.jpg</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">My cool site</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">taxonomies</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">series</span>: <span style="color:#ae81ff">series</span>
+</span></span></code></pre></div><p>content/blog/my-post.md.</p>
+<p>yaml toml json </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">audio</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">&#34;2006-01-02&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#ae81ff">Text about this post</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">images</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">post-cover.png</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">series</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Post title</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">videos</span>: []
+</span></span></code></pre></div><p>Hugo uses the page title and description for the title and description metadata. The first 6 URLs from the <code>images</code> array are used for image metadata. If 
+<a href="https://gohugo.io/content-management/page-bundles/" rel="noopener">page bundles</a> are used and the <code>images</code> array is empty or undefined, images with file names matching <code>*feature*</code> or <code>*cover*,*thumbnail*</code> are used for image metadata.</p>
+<p>Various optional metadata can also be set:</p>
+<ul>
+<li>Date, published date, and last modified data are used to set the published time metadata if specified.</li>
+<li><code>audio</code> and <code>videos</code> are URL arrays like <code>images</code> for the audio and video metadata tags, respectively.</li>
+<li>The first 6 <code>tags</code> on the page are used for the tags metadata.</li>
+<li>The <code>series</code> taxonomy is used to specify related “see also” pages by placing them in the same series.</li>
+</ul>
+<p>If using YouTube this will produce a og:video tag like <code>&lt;meta property=&quot;og:video&quot; content=&quot;url&quot;&gt;</code>. Use the <code>https://youtu.be/&lt;id&gt;</code> format with YouTube videos (example: <code>https://youtu.be/qtIqKaDlqXo</code>).</p>
+<h5 id="use-the-open-graph-templatehttpsgohugoiotemplatesinternaluse-the-open-graph-template">
+  Use the Open Graph template 
+<a href="https://gohugo.io/templates/internal/#use-the-open-graph-template" rel="noopener"></a>
+  <a class="anchor" href="#use-the-open-graph-templatehttpsgohugoiotemplatesinternaluse-the-open-graph-template">#</a>
+</h5>
+<p>To add Open Graph metadata, include the following line between the <code>&lt;head&gt;</code> tags in your templates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">template</span> <span style="color:#e6db74">&#34;_internal/opengraph.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h4 id="d-the-internal-templateshttpsgohugoiotemplatesinternalthe-internal-templates">
+  (D) The internal templates 
+<a href="https://gohugo.io/templates/internal/#the-internal-templates" rel="noopener"></a>
+  <a class="anchor" href="#d-the-internal-templateshttpsgohugoiotemplatesinternalthe-internal-templates">#</a>
+</h4>
+<p>The code for these templates is located 
+<a href="https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates" rel="noopener">here</a>.</p>
+<ul>
+<li><code>_internal/disqus.html</code></li>
+<li><code>_internal/google_analytics.html</code></li>
+<li><code>_internal/opengraph.html</code></li>
+<li><code>_internal/pagination.html</code></li>
+<li><code>_internal/schema.html</code></li>
+<li><code>_internal/twitter_cards.html</code></li>
+</ul>
+<h3 id="05_editing-content">
+  05_Editing Content
+  <a class="anchor" href="#05_editing-content">#</a>
+</h3>
+<p><strong>To edit the main home page, open <code>/content/_index.md</code>.</strong></p>
+<p>To create a link between notes in your garden, just create a normal link using Markdown pointing to the document in question. Please note that <strong>all links should be relative to the root <code>/content</code> path</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>For example, I want to link this current document to <span style="color:#e6db74">`setup/config.md`</span>.
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">A link to the config page</span>](<span style="color:#a6e22e">setup/config.md</span>)
+</span></span></code></pre></div><p>Similarly, you can put local images anywhere in the <code>/content</code> folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Example image (source is in content/setup/images/example.png)
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">Example Image</span>](<span style="color:#a6e22e">/content/setup/images/example.png</span>)
+</span></span></code></pre></div><p>You can also use wikilinks if that is what you are more comfortable with!</p>
+<h3 id="06_templates">
+  06_Templates
+  <a class="anchor" href="#06_templates">#</a>
+</h3>
+<p>Inserting front matter everytime you want to create a new Note gets annoying really quickly. Luckily, Obsidian supports templates which makes inserting new content really easily.</p>
+<p><strong>If you decide to overwrite the <code>/content</code> folder completely, don’t remove the <code>/content/templates</code> folder!</strong></p>
+<p>Head over to Options &gt; Core Plugins and enable the Templates plugin. Then go to Options &gt; Hotkeys and set a hotkey for ‘Insert Template’ (I recommend <code>[cmd]+T</code>). That way, when you create a new note, you can just press the hotkey for a new template and be ready to go!</p>
+<h3 id="07_customization">
+  07_Customization
+  <a class="anchor" href="#07_customization">#</a>
+</h3>
+<h4 id="a-code-block-titles">
+  (A) Code Block Titles 
+  <a class="anchor" href="#a-code-block-titles">#</a>
+</h4>
+<p>To add code block titles with Amethyst:</p>
+<ol>
+<li>
+<p>Ensure that code block titles are enabled in the configuration:</p>
+<p>data/config.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">enableCodeBlockTitle</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Add the <code>title</code> attribute to the desired 
+<a href="https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences" rel="noopener">code block fence</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span> ```yaml {title=&#34;data/config.yaml&#34;}
+</span></span><span style="display:flex;"><span> enableCodeBlockTitle: true  # example from step 1
+</span></span></code></pre></div><pre tabindex="0"><code></code></pre></li>
+</ol>
+<p><strong>Note</strong> that if <code>{title=&lt;my-title&gt;}</code> is included, and code block titles are not enabled, no errors will occur, and the title attribute will be ignored.</p>
+<h4 id="b-html-favicons">
+  (B) HTML Favicons
+  <a class="anchor" href="#b-html-favicons">#</a>
+</h4>
+<p>If you would like to customize the favicons, you can add them to the <code>data/config.yaml</code> file. The <strong>default</strong> without any set <code>favicon</code> key is:</p>
+<p>layouts/partials/head.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon.png&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/png&#34;</span>&gt;
+</span></span></code></pre></div><p>The default can be overridden by defining a value to the <code>favicon</code> key in your <code>data/config.yaml</code> file. For example, here is a <code>List[Dictionary]</code> example format, which is equivalent to the default:</p>
+<p>data/config.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">favicon</span>:
+</span></span><span style="display:flex;"><span>  - { <span style="color:#f92672">rel</span>: <span style="color:#e6db74">&#34;shortcut icon&#34;</span><span style="color:#f92672">, href</span>: <span style="color:#e6db74">&#34;icon.png&#34;</span><span style="color:#f92672">, type</span>: <span style="color:#e6db74">&#34;image/png&#34;</span> }
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  - { ... } # Repeat for each additional favicon you want to add</span>
+</span></span></code></pre></div><p>In this format, the keys are identical to their HTML representations.</p>
+<p>If you plan to add multiple favicons generated by a website (see list below), it may be easier to define it as HTML. Here is an example which appends the <strong>Apple touch icon</strong> to Amethyst’s default favicon:</p>
+<p>data/config.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">favicon</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;link rel=&#34;shortcut icon&#34; href=&#34;icon.png&#34; type=&#34;image/png&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;180x180&#34; href=&#34;/apple-touch-icon.png&#34;&gt;  </span>  
+</span></span></code></pre></div><p>This second favicon will now be used as a web page icon when someone adds your webpage to the home screen of their Apple device. If you are interested in more information about the current and past standards of favicons, you can read 
+<a href="https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/" rel="noopener">this article</a>.</p>
+<p><strong>Note</strong> that all generated favicon paths, defined by the <code>href</code> attribute, are relative to the <code>static/</code> directory.</p>
+<h4 id="c-custom-styles">
+  (C) Custom Styles
+  <a class="anchor" href="#c-custom-styles">#</a>
+</h4>
+<h5 id="changing-the-color-scheme">
+  Changing the Color Scheme 
+  <a class="anchor" href="#changing-the-color-scheme">#</a>
+</h5>
+<p>The default color schemes for light mode and dark mode are located in <code>assets/_colors.scss</code>. You can replace the values for existing color variables for drop-in edits, or create new variables to reference in <code>_custom.scss</code>.</p>
+<h5 id="changing-the-fontshttpsamethystbencuanmesetupconfigchanging-the-fonts">
+  Changing the Fonts 
+<a href="https://amethyst.bencuan.me/setup/config/#changing-the-fonts" rel="noopener">#</a>
+  <a class="anchor" href="#changing-the-fontshttpsamethystbencuanmesetupconfigchanging-the-fonts">#</a>
+</h5>
+<p>All fonts are defined in <code>assets/_fonts.scss</code>. There are examples for both local fonts (defined using <code>@font-face</code>) and webfonts (fetched with <code>@import</code> from a font distributor such as Google Fonts).</p>
+<p>You can place all local fonts in the <code>static/fonts</code> folder.</p>
+<h5 id="partials">
+  Partials
+  <a class="anchor" href="#partials">#</a>
+</h5>
+<p>Partials are what dictate what gets rendered to the page. Want to change how pages are styled and structured? You can edit the appropriate layout in <code>/layouts</code>.</p>
+<p>For example, the structure of the home page can be edited through <code>/layouts/index.html</code>. To customize the footer, you can edit <code>/layouts/partials/footer.html</code></p>
+<p>
+
+
+<img src="http://localhost:1313/blogguide%5Cassets/pasted%20image%2020231224011353.png" width="auto" alt=""  /></p>
+<h3 id="08_search">
+  08_Search
+  <a class="anchor" href="#08_search">#</a>
+</h3>
+<p>Amethyst supports two modes of searching through content.</p>
+<h4 id="full-texthttpsamethystbencuanmesetupsearchfull-text">
+  Full-text 
+<a href="https://amethyst.bencuan.me/setup/search/#full-text" rel="noopener">#</a>
+  <a class="anchor" href="#full-texthttpsamethystbencuanmesetupsearchfull-text">#</a>
+</h4>
+<p>Full-text search is the default in Amethyst. It produces results that <em>exactly</em> match the search query. This is easier to setup but usually produces lower quality matches.</p>
+<p>config.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># the default option</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">enableSemanticSearch</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h4 id="natural-languagehttpsamethystbencuanmesetupsearchnatural-language">
+  Natural Language 
+<a href="https://amethyst.bencuan.me/setup/search/#natural-language" rel="noopener">#</a>
+  <a class="anchor" href="#natural-languagehttpsamethystbencuanmesetupsearchnatural-language">#</a>
+</h4>
+<p>Natural language search is powered by 
+<a href="https://beta.operand.ai/" rel="noopener">Operand</a>. It understands language like a person does and finds results that best match user intent. In this sense, it is closer to how Google Search works.</p>
+<p>Natural language search tends to produce higher quality results than full-text search.</p>
+<p>Here’s how to set it up.</p>
+<ol>
+<li>Login or Register for a new Operand account. Click the verification link sent to your email, and you’ll be redirected to the dashboard. (Note) You do not need to enter a credit card to create an account, or get started with the Operand API. The first $10 of usage each month is free. To learn more, see pricing. If you go over your free quota, we’ll (politely) reach out and ask you to configure billing.</li>
+<li>Create your first index. On the dashboard, under “Indexes”, enter the name and description of your index, and click “Create Index”. Note down the ID of the index (obtained by clicking on the index name in the list of indexes), as you’ll need it in the next step. IDs are unique to each index, and look something like <code>uqv1duxxbdxu</code>.</li>
+<li>Click into the index you’ve created. Under “Index Something”, select “SITEMAP” from the dropdown and click “Add Source”.</li>
+<li>For the “Sitemap.xml URL”, put your deployed site’s base URL followed by <code>sitemap.xml</code>. For example, for <code>amethyst.bencuan.me</code>, put <code>https://amethyst.bencuan.me/sitemap.xml</code>. Leave the URL Regex empty.</li>
+<li>Get your API key. On the dashboard, under “API Keys”, you can manage your API keys. If you don’t already have an API key, click “Create API Key”. You’ll need this for the next step.</li>
+<li>Open <code>config.yaml</code>. Set <code>enableSemanticSearch</code> to <code>true</code>, <code>operandApiKey</code> to your copied key, and <code>operandIndexId</code> to the ID of the index we created from earlier..</li>
+</ol>
+<p>config.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># the default option</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">search</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enableSemanticSearch</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">operandApiKey</span>: <span style="color:#e6db74">&#34;jp9k5hudse2a828z98kxd6z3payi8u90rnjf&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">operandIndexId</span>: <span style="color:#e6db74">&#34;s0kf3bd6tldw&#34;</span>
+</span></span></code></pre></div><ol start="7">
+<li>Push your changes to the site and wait for it to deploy.</li>
+<li>Check the Operand dashboard and wait for your site to index. Enjoy natural language search powered by Operand!</li>
+</ol>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#chap01_hugogo-install">Chap01_Hugo&amp;GO Install</a></li>
+    <li><a href="#chap02_theme-install">Chap02_Theme Install</a></li>
+    <li><a href="#chap03_obsidian-install">Chap03_Obsidian Install</a></li>
+    <li><a href="#chap04_hugo-build">Chap04_Hugo Build</a></li>
+    <li><a href="#chap05_git-push">Chap05_Git Push</a></li>
+    <li><a href="#chap06_hugo-content-management">Chap06_Hugo Content Management</a></li>
+    <li><a href="#chap07_amethyst-guide">Chap07_Amethyst Guide</a>
+      <ul>
+        <li><a href="#01_page-configuration">01_Page Configuration</a></li>
+        <li><a href="#02_partials">02_Partials</a></li>
+        <li><a href="#03_plugins">03_Plugins</a></li>
+        <li><a href="#04_internal-templates">04_Internal templates</a></li>
+        <li><a href="#05_editing-content">05_Editing Content</a></li>
+        <li><a href="#06_templates">06_Templates</a></li>
+        <li><a href="#07_customization">07_Customization</a></li>
+        <li><a href="#08_search">08_Search</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

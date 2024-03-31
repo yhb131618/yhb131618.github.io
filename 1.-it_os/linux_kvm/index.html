@@ -1,0 +1,2728 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="KVM이란? (Ubuntu 20.04) # __ 1.1_KVM 패키지 설명 # qemu-kvm KVM 하이퍼바이저에 대한 하드웨어 에뮬레이션을 제공 Kernel Space - KVM User Space - QEMU libvirt-daemon-system libvirt 데몬을 시스템 서비스로 실행하는 구성 파일 리눅스에서 Hypervisor 기반 가상화 관리 및 제어도구 libvirt-clients 가상화 플랫폼을 관리하기위한 소프트웨어 bridge-utils 이더넷 브리지를 구성하기위한 명령 줄 도구 세트 virtinst 가상 머신을 만들기위한 명령 줄 도구 집합 virt-manager 사용하기 쉬운 GUI 인터페이스와 libvirt를 통해 가상 머신을 관리하기위한 명령 줄 유틸리티 __ 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/1.-it_os/linux_kvm/" /><meta property="article:section" content="1.-it_os" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>Linux Kvm | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="KVM이란? (Ubuntu 20.04) # __ 1.1_KVM 패키지 설명 # qemu-kvm KVM 하이퍼바이저에 대한 하드웨어 에뮬레이션을 제공 Kernel Space - KVM User Space - QEMU libvirt-daemon-system libvirt 데몬을 시스템 서비스로 실행하는 구성 파일 리눅스에서 Hypervisor 기반 가상화 관리 및 제어도구 libvirt-clients 가상화 플랫폼을 관리하기위한 소프트웨어 bridge-utils 이더넷 브리지를 구성하기위한 명령 줄 도구 세트 virtinst 가상 머신을 만들기위한 명령 줄 도구 집합 virt-manager 사용하기 쉬운 GUI 인터페이스와 libvirt를 통해 가상 머신을 관리하기위한 명령 줄 유틸리티 __ 1."
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle" checked />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="active">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle"  />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle"  />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle"  />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">Linux Kvm</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<h1 id="kvm이란-ubuntu-2004">
+  KVM이란? (Ubuntu 20.04)
+  <a class="anchor" href="#kvm%ec%9d%b4%eb%9e%80-ubuntu-2004">#</a>
+</h1>
+<h2 id="__-11_kvm-패키지-설명">
+  __ 1.1_KVM 패키지 설명
+  <a class="anchor" href="#__-11_kvm-%ed%8c%a8%ed%82%a4%ec%a7%80-%ec%84%a4%eb%aa%85">#</a>
+</h2>
+<ul>
+<li><code>qemu-kvm</code>
+<ul>
+<li>KVM 하이퍼바이저에 대한 하드웨어 에뮬레이션을 제공</li>
+<li>Kernel Space - KVM</li>
+<li>User Space - QEMU</li>
+</ul>
+</li>
+<li><code>libvirt-daemon-system</code>
+<ul>
+<li>libvirt 데몬을 시스템 서비스로 실행하는 구성 파일</li>
+<li>리눅스에서 Hypervisor 기반 가상화 관리 및 제어도구</li>
+</ul>
+</li>
+<li><code>libvirt-clients</code>
+<ul>
+<li>가상화 플랫폼을 관리하기위한 소프트웨어</li>
+</ul>
+</li>
+<li><code>bridge-utils</code>
+<ul>
+<li>이더넷 브리지를 구성하기위한 명령 줄 도구 세트</li>
+</ul>
+</li>
+<li><code>virtinst</code>
+<ul>
+<li>가상 머신을 만들기위한 명령 줄 도구 집합</li>
+</ul>
+</li>
+<li><code>virt-manager</code>
+<ul>
+<li>사용하기 쉬운 GUI 인터페이스와 libvirt를 통해 가상 머신을 관리하기위한 명령 줄 유틸리티</li>
+</ul>
+</li>
+</ul>
+<h2 id="__-12_kvm-설치">
+  __ 1.2_KVM 설치
+  <a class="anchor" href="#__-12_kvm-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<p><code>sudo apt-get update sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils</code></p>
+<h2 id="__-13_package-status">
+  __ 1.3_Package Status
+  <a class="anchor" href="#__-13_package-status">#</a>
+</h2>
+<ul>
+<li>Qemu-kvm 상태 확인 명령어
+<ul>
+<li>sudo systemctl status qemu-kvm
+<ul>
+<li>sudo systemctl start qemu-kvm (시작)</li>
+<li>sudo systemctl stop qemu-kvm (정지)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/assets/Pasted image 20240125142345.png" width="auto" /></p>
+<ul>
+<li>KVM-libvirtd 상태 확인 명령어
+<ul>
+<li>sudo systemctl status libvirtd</li>
+</ul>
+</li>
+</ul>
+<h2 id="__-14_libeirtd-network">
+  __ 1.4_Libeirtd Network
+  <a class="anchor" href="#__-14_libeirtd-network">#</a>
+</h2>
+<h3 id="__-__-141_network-type">
+  __ __ 1.4.1_Network Type
+  <a class="anchor" href="#__-__-141_network-type">#</a>
+</h3>
+<ul>
+<li>NAT
+<ul>
+<li>가상머신 개별 IP를 가지지만 외부로 나갈 때는 NAT으로 인터넷이 가능하다.</li>
+</ul>
+</li>
+<li>Bridge
+<ul>
+<li>호스트의 IP를 공유하는 방식</li>
+</ul>
+</li>
+<li>Host-Only
+<ul>
+<li>호스트 VM과 게스트 VM은 통신이 가능하지만, 게스트 VM 끼리는 통신이 불가능하다.</li>
+</ul>
+</li>
+<li>Internal Networking
+<ul>
+<li>가상 머신들이 호스트 시스템과는 독립적인 개인 네트워크에 연결되도록 한다. 가상 머신끼리 통신은 연결이 가능하지만 외부 통신은 불가능하다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="__-__-142_bridge-network">
+  __ __ 1.4.2_Bridge Network
+  <a class="anchor" href="#__-__-142_bridge-network">#</a>
+</h3>
+<ul>
+<li>
+<p>/etc/netpaln/01-network-manager-all.yaml  수정</p>
+</li>
+<li>
+<p>/etc/netplan/br0.xml 작성</p>
+</li>
+<li>
+<p>sudo netplan apply 실행</p>
+</li>
+<li>
+<p>sudo ifconfig 확인</p>
+</li>
+<li>
+<p>sudo virsh net-define /ect/netplan/br0.xml</p>
+</li>
+<li>
+<p>sudo virsh net-list &ndash;all 명령어로 br0 네트워크 확인</p>
+</li>
+<li>
+<p>sudo virsh net-start br0 명령어로 br0 네트워크 활성화</p>
+</li>
+<li>
+<p>sudo virsh net-autostart br0 명령어로 br0 네트워크 오토스타트 활성화</p>
+</li>
+<li>
+<p>명령어 <code>IP addr</code>로 네트워크 확인</p>
+<ul>
+<li>w로 시작하는 네트워크는 무선 네트워크를 의미(Bridge를 생성이 불가능하다.)</li>
+<li>e로 시작하는 네트워크는 유선 네트워크를 의미(Bridge 생성이 가능하다.)
+<img src="/assets/Pasted image 20240131142419.png" width="auto" /></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># /etc/netpaln/01-network-manager-all.yaml  수정</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>network:
+</span></span><span style="display:flex;"><span>  version: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  renderer: networkd
+</span></span><span style="display:flex;"><span>  ethernets:
+</span></span><span style="display:flex;"><span>    enx00e04c362038:
+</span></span><span style="display:flex;"><span>      dhcp4: no
+</span></span><span style="display:flex;"><span>  bridges:
+</span></span><span style="display:flex;"><span>    br0:
+</span></span><span style="display:flex;"><span>      interfaces: <span style="color:#f92672">[</span>enx00e04c362038<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      addresses: <span style="color:#f92672">[</span>192.168.77.29/24<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      gateway4: 192.168.77.1
+</span></span><span style="display:flex;"><span>      nameservers:
+</span></span><span style="display:flex;"><span>        addresses: <span style="color:#f92672">[</span>168.126.63.1, 168.126.63.2<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      parameters:
+</span></span><span style="display:flex;"><span>        stp: false
+</span></span><span style="display:flex;"><span>        forward-delay: <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># /etc/netplan/br0.xml 작성</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sudo vi /etc/br0.xml</span>
+</span></span><span style="display:flex;"><span>&lt;network&gt;
+</span></span><span style="display:flex;"><span>  &lt;name&gt;br0&lt;/name&gt;
+</span></span><span style="display:flex;"><span>  &lt;forward mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bridge&#39;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;bridge mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;br0&#39;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;/network&gt;
+</span></span></code></pre></div><ul>
+<li>Virsh 명령어
+<ul>
+<li>network
+<ul>
+<li>virsh net-list
+<ul>
+<li>가상 네트워크 조회</li>
+</ul>
+</li>
+<li>virsh net-define Name
+<ul>
+<li>가상 네트워크 등록</li>
+</ul>
+</li>
+<li>virsh net-undine Name
+<ul>
+<li>가상 네트워크 삭제</li>
+</ul>
+</li>
+<li>virsh net-destroy Name
+<ul>
+<li>가상 네트워크 종료</li>
+</ul>
+</li>
+<li>virsh net-start Name
+<ul>
+<li>가상 네트워크 시작</li>
+</ul>
+</li>
+<li>virsh net-autostart Name
+<ul>
+<li>가상 네트워크 자동 시작</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>service libvirtd restart
+<ul>
+<li>가상 네트워크 설정 후 재시작</li>
+</ul>
+</li>
+</ul>
+<h2 id="__-15_kvm-create">
+  __ 1.5_KVM Create
+  <a class="anchor" href="#__-15_kvm-create">#</a>
+</h2>
+<ul>
+<li>virt-install 설치</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>virt-install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--name test <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--ram <span style="color:#ae81ff">3072</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--vcpus <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--disk path<span style="color:#f92672">=</span>/var/lib/libvirt/images/test.qcow2,size<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--os-variant centos7.0 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--os-type linux <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--network bridge<span style="color:#f92672">=</span>br0 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--graphics none <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--console pty,target_type<span style="color:#f92672">=</span>serial <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--location /img/CentOS-7-x86_64-Minimal-2009.iso  <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--extra-args <span style="color:#e6db74">&#39;console=ttyS0,115200n8 serial&#39;</span>
+</span></span></code></pre></div><ul>
+<li>스냅샷 만들기</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Shell" data-lang="Shell"><span style="display:flex;"><span>qemu-img craete -f qcow2 -b /var/lib/libvirt/images/test.qcow2  clone.qcow2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>virt-install --name k8s_node1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--vcpus <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--ram <span style="color:#ae81ff">3082</span> <span style="color:#ae81ff">\ </span>        
+</span></span><span style="display:flex;"><span>--disk path<span style="color:#f92672">=</span>/img/k8s_node1.qcow2 <span style="color:#ae81ff">\ </span>   
+</span></span><span style="display:flex;"><span>--network bridge<span style="color:#f92672">=</span>br0,mac<span style="color:#f92672">=</span>00:00:00:00:00:61 <span style="color:#ae81ff">\ </span>        
+</span></span><span style="display:flex;"><span>--graphics none <span style="color:#ae81ff">\ </span>         
+</span></span><span style="display:flex;"><span>--import
+</span></span></code></pre></div><ul>
+<li>용량 조절하기</li>
+</ul>
+<ol>
+<li>KVM 내부 저장공간 축소</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>resize2fs /dev/sda1 10G
+</span></span></code></pre></div><ol start="2">
+<li>qcow2 이미지 축소</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>virt-sparsify --compress original.qcow2 smaller.qcow2
+</span></span></code></pre></div><ol start="3">
+<li>KVM 내부 저장공간 늘리기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>virsh start &lt;가상머신이름&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>qemu-img resize &lt;디스크파일경로&gt; +20G
+</span></span></code></pre></div><ol start="4">
+<li>가상 머신 내부 
+
+
+
+
+
+<a href="/1.-it_os/linux_lvm/"  rel="noopener"
+  class="internal-link" data-src="/1.-it_os/linux_lvm/">(참고</a> )</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pvresize /dev/sdaX
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>lvextend -l +100%FREE /dev/mapper/&lt;볼륨그룹명&gt;-&lt;논리볼륨명&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>resize2fs /dev/mapper/&lt;볼륨그룹명&gt;-&lt;논리볼륨명&gt;
+</span></span></code></pre></div><h2 id="__-17_kvm-connect">
+  __ 1.7_KVM connect
+  <a class="anchor" href="#__-17_kvm-connect">#</a>
+</h2>
+<ul>
+<li>KVM 리스트 확인
+<ul>
+<li>virsh list &ndash;all</li>
+</ul>
+</li>
+<li>KVM 콘솔 접속
+<ul>
+<li>virsh console work_node_1</li>
+</ul>
+</li>
+<li>KVM 삭제
+<ul>
+<li>virsh undefine work_node_1</li>
+</ul>
+</li>
+<li>KVM 정지
+<ul>
+<li>virsh destroy work_node_1</li>
+</ul>
+</li>
+<li>KVM 시작
+<ul>
+<li>virsh start work_node_1</li>
+</ul>
+</li>
+<li>KVM 스냅샷</li>
+</ul>
+<h2 id="__-18_console-접속-안-될-때">
+  __ 1.8_console 접속 안 될 때
+  <a class="anchor" href="#__-18_console-%ec%a0%91%ec%86%8d-%ec%95%88-%eb%90%a0-%eb%95%8c">#</a>
+</h2>
+<ul>
+<li>systemctl enable 
+
+
+
+
+
+<a  rel="noopener"
+  class="internal-link broken" data-src="mailto:serial-getty@ttyS0.service">serial-getty@ttyS0.service</a></li>
+<li>systemctl start 
+
+
+
+
+
+<a  rel="noopener"
+  class="internal-link broken" data-src="mailto:serial-getty@ttyS0.service">serial-getty@ttyS0.service</a></li>
+</ul>
+<h2 id="__-19_kvm-복제">
+  __ 1.9_KVM 복제
+  <a class="anchor" href="#__-19_kvm-%eb%b3%b5%ec%a0%9c">#</a>
+</h2>
+<h3 id="1-기존-가상-머신-이미지-복사">
+  1. 기존 가상 머신 이미지 복사
+  <a class="anchor" href="#1-%ea%b8%b0%ec%a1%b4-%ea%b0%80%ec%83%81-%eb%a8%b8%ec%8b%a0-%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%b3%b5%ec%82%ac">#</a>
+</h3>
+<p>먼저, 기존 가상 머신(VM)의 디스크 이미지를 복사해야 합니다. 이를 위해 가상 머신이 저장된 위치로 이동합니다. 기본적으로 KVM의 이미지는 <code>/var/lib/libvirt/images/</code>에 저장됩니다.</p>
+<p>bashCopy code</p>
+<p><code>cd /var/lib/libvirt/images/</code></p>
+<p>다음으로, <code>cp</code> 명령어를 사용하여 기존 가상 머신의 디스크 이미지를 새로운 이름으로 복사합니다. 예를 들어, <code>original_vm.img</code>를 <code>cloned_vm.img</code>로 복사하는 경우:</p>
+<p>bashCopy code</p>
+<p><code>sudo cp original_vm.img cloned_vm.img</code></p>
+<h3 id="2-복제할-가상-머신-정의-생성">
+  2. 복제할 가상 머신 정의 생성
+  <a class="anchor" href="#2-%eb%b3%b5%ec%a0%9c%ed%95%a0-%ea%b0%80%ec%83%81-%eb%a8%b8%ec%8b%a0-%ec%a0%95%ec%9d%98-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<p>기존 가상 머신의 정의를 복사하여 새 가상 머신에 사용할 수 있도록 합니다. 먼저, 기존 가상 머신의 정의를 XML 파일로 내보냅니다.</p>
+<p>bashCopy code</p>
+<p><code>virsh dumpxml original_vm &gt; original_vm.xml</code></p>
+<p>XML 파일을 편집하여 새 가상 머신에 맞게 수정합니다. 주요 변경 사항은 가상 머신의 이름과 디스크 이미지 파일 경로입니다. 예를 들어, <code>nano</code> 편집기를 사용할 수 있습니다.</p>
+<p>bashCopy code</p>
+<p><code>sudo nano original_vm.xml</code></p>
+<ul>
+<li><code>&lt;name&gt;</code> 태그의 값을 새 가상 머신의 이름으로 변경합니다.</li>
+<li><code>&lt;source file=...&gt;</code> 태그(디스크 섹션 내부에 위치)의 <code>file</code> 속성 값을 새로운 이미지 파일 경로로 변경합니다.</li>
+<li>필요한 경우 MAC 주소(<code>&lt;mac address=...&gt;</code>)를 제거하거나 변경하여 네트워크 충돌을 방지합니다.</li>
+</ul>
+<p>변경 후, 파일을 저장하고 편집기를 종료합니다.</p>
+<h3 id="3-새-가상-머신-정의-등록">
+  3. 새 가상 머신 정의 등록
+  <a class="anchor" href="#3-%ec%83%88-%ea%b0%80%ec%83%81-%eb%a8%b8%ec%8b%a0-%ec%a0%95%ec%9d%98-%eb%93%b1%eb%a1%9d">#</a>
+</h3>
+<p>수정된 XML 파일을 사용하여 새 가상 머신을 정의합니다.</p>
+<p>bashCopy code</p>
+<p><code>virsh define original_vm.xml</code></p>
+<h3 id="4-새-가상-머신-시작">
+  4. 새 가상 머신 시작
+  <a class="anchor" href="#4-%ec%83%88-%ea%b0%80%ec%83%81-%eb%a8%b8%ec%8b%a0-%ec%8b%9c%ec%9e%91">#</a>
+</h3>
+<p>새로 정의된 가상 머신을 시작합니다.</p>
+<p>bashCopy code</p>
+<p><code>virsh start new_vm_name</code></p>
+<p>여기서 <code>new_vm_name</code>은 XML 파일에서 설정한 가상 머신의 이름입니다.</p>
+<h3 id="주의-사항">
+  주의 사항
+  <a class="anchor" href="#%ec%a3%bc%ec%9d%98-%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<ul>
+<li>복제 과정에서 네트워크 설정(특히, MAC 주소)과 호스트 이름을 적절히 변경하는 것이 중요합니다. 이는 네트워크 충돌을 방지하기 위함입니다.</li>
+<li>가상 머신의 복제는 저장소와 리소스 사용량 증가로 이어질 수 있으므로, 시스템 용량을 사전에 확인하는 것이 좋습니다.</li>
+<li>복제된 가상 머신에서 특정 애플리케이션이나 서비스를 실행하기 전에, 해당 서비스의 구성이 새 환경에 적합한지 검토해야 합니다.</li>
+</ul>
+<p>이 과정을 통해 Ubuntu 20.04 시스템에서 KVM 가상 머신을 성공적으로 복제할 수 있습니다.</p>
+<h2 id="__-ex_console">
+  __ EX_Console
+  <a class="anchor" href="#__-ex_console">#</a>
+</h2>
+<p><a class="internal-link broken">Linux_Console</a></p>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#__-11_kvm-패키지-설명">__ 1.1_KVM 패키지 설명</a></li>
+    <li><a href="#__-12_kvm-설치">__ 1.2_KVM 설치</a></li>
+    <li><a href="#__-13_package-status">__ 1.3_Package Status</a></li>
+    <li><a href="#__-14_libeirtd-network">__ 1.4_Libeirtd Network</a>
+      <ul>
+        <li><a href="#__-__-141_network-type">__ __ 1.4.1_Network Type</a></li>
+        <li><a href="#__-__-142_bridge-network">__ __ 1.4.2_Bridge Network</a></li>
+      </ul>
+    </li>
+    <li><a href="#__-15_kvm-create">__ 1.5_KVM Create</a></li>
+    <li><a href="#__-17_kvm-connect">__ 1.7_KVM connect</a></li>
+    <li><a href="#__-18_console-접속-안-될-때">__ 1.8_console 접속 안 될 때</a></li>
+    <li><a href="#__-19_kvm-복제">__ 1.9_KVM 복제</a>
+      <ul>
+        <li><a href="#1-기존-가상-머신-이미지-복사">1. 기존 가상 머신 이미지 복사</a></li>
+        <li><a href="#2-복제할-가상-머신-정의-생성">2. 복제할 가상 머신 정의 생성</a></li>
+        <li><a href="#3-새-가상-머신-정의-등록">3. 새 가상 머신 정의 등록</a></li>
+        <li><a href="#4-새-가상-머신-시작">4. 새 가상 머신 시작</a></li>
+        <li><a href="#주의-사항">주의 사항</a></li>
+      </ul>
+    </li>
+    <li><a href="#__-ex_console">__ EX_Console</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

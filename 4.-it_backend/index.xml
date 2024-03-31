@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT_BackEnd on My New Hugo Site</title>
+    <link>http://localhost:1313/4.-it_backend/</link>
+    <description>Recent content in IT_BackEnd on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <atom:link href="http://localhost:1313/4.-it_backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/java-mvc_eclipse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/java-mvc_eclipse/</guid>
+      <description> 01__인코딩 설정하기 # 02_Error # __ 2.1_Multiple Contexts have a path # 해당 문제는 Tomcat 서버에서 프로젝트 path가 중복되어 생기는 문제로 똑같은 경로를 가진 프로젝트를 불러와 실행해서 생긴 문제이다. 톰캣 더블클릭 Modules 탭으로 이동 중복된 Path를 삭제 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/java-mvc_basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/java-mvc_basic/</guid>
+      <description>GIT 보러가기&#xA;![[assets/Pasted image 20231216212554.png]]&#xA;강의 후기 ★★★★★ 기초개념 설명이 너무 좋았다. 기본틀 하나씩 쌓아 올라가는 식의 강의여서 초보자가 듣기에 적합했다. 주변에 자바를 처음 공부하는 사람이 있다면 이 강의 부터 들으라고 하고 싶다. 시간 낭비하지 말고, 이 강의를 돈을 내고 들을 것을 추천한다.&#xA;Java Web # Test Setting Mysql version : 5.2 Eclipse ■ 01__Mysql 설치 및 접속하기 # [[content/9. IT_DB/Mysql|Mysql]] 참조&#xA;■ 02__Web Application Directory # ![[assets/Pasted image 20231216151515.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/springframe_basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/springframe_basic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/springboot_vs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/springboot_vs/</guid>
+      <description>01__Extension Pack # 설치 Spring Boot Extension Pack 02__Project Create # CTRL + SHIFT + P 명령어 입력 입력창에 Spring init입력 프로그래밍 언어를 선택합니다. # (저는 Java를 선택하였습니다.)&#xA;Group Id와 Artifact Id를 입력합니다. # 기본적으로 com.example로 되어있지만 이 부분은 나중에 패키지의 기본 경로가 되기 때문에 연관 있는 것으로 설정해주시는 것이 좋습니다.&#xA;마찬가지로, 관련있는 것으로 변경해줍니다.&#xA;스프링 부트 버전 및 의존성을 설정해줍니다. # 스프링 부트 버전같은 경우에는 특별한 경우가 아니라면 기본적으로 설정되어 있는 버전을 선택하시면 됩니다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/springboot_basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/springboot_basic/</guid>
+      <description>SpringBoot 2.7.6 # Test Setting Mysql version : 8.2 01__SpringBoot # SpringFramework 기반으로 tomcat이 내장되어 있으며 다양한 라이브러리 및 어노테이션이 추가된 프레임워크를 말한다. (@RestController, @Configuration, @Mapper, @Bean, &amp;hellip;)&#xA;__ 1.1_SpringBoot Feature # tomcat이 내장되어 있어 별도의 tomcat 설치가 필요 없다.&#xA;Spring Framework 프로젝트의 배포는 WAS에서 읽을 수 있는 WAR 파일로 만들어서 배포를 진행했는데 Spring Boot 프로젝트는 JDK에서 바로 실행할 수 있는 JAR 파일로 만들어서 배포한다.&#xA;Spring Boot Starter 패키지를 제공해서 빠른 라이브러리 의존성을 설정할 수 있다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/springboot_security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/springboot_security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/springboot_error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/springboot_error/</guid>
+      <description>__ 01_JSP error # SpringBoot 2.7.6 # __ 01_JSP error # SpringBoot는 JSP를 권장하지 않는다라는 구글에서 보았지만 살포시 무시했다. 그결과 JSP error가 떴다. 이 문제로 2일을 소비했다.&#xA;다음부터는 SpringBoot에서 JSP를 절대 안 쓰는 걸로 하고, 이를 해결하기 위해 검색을 했다. (GPT4에게 아무리 물어봐도 똑같은 답변만 나오고 딱히 이상이 없다고 한다.) ![[assets/Pasted image 20240118144632.png]] 처음에는 위와 같은 경로에서 JSP가 정상적으로 작동했다. 하지만 dependency injection을 하면서 갑자기 jsp가 작동하지 않았다. ![[assets/Pasted image 20240118144755.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/4.-it_backend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/4.-it_backend/</guid>
+      <description> TCP Transmission Control Protocol IP 데이터를 전달하는 동안 데이터 패킷을 추적 관리 UDP User Datagram Protocol 단문 메시지를 교환하는 프로토콜 ICMP Internet Control Message Protocol 호스트 서버와 인터넷게이트웨이 사이에서 IP패킷 전송 중 발생한 오류를 보고하고 발생원인을 알려주거나 네트워크 상태를 진단해주는 프로토콜 IP Internet Protocol 송수신 호스트와 수신 호스트 간의 패킷 교환시 정보를 주고 받는데 사용하는 프로토콜 IGMP Internet Group Management Protocol 호스트 컴퓨터와 인접 라우터가 멀티캐스트 구릅 멤버십을 구성하는데 사용하는 통신 프로토콜 ARP Address Resolution Protocol 네트워크 상에서 IP주소를 물리적 주소(MAC로 바인딩 시켜주는 주소 결정 프로토콜 DNS Domanin Name Space 도메인 네임과 IP 주소의 대응 관계를 데이터베이스로 구축해 사용하는 인터넷 프로토콜 DHCP Dynamic Host Configuration Protocol 네트워크 안의 컴퓨터 IP와 네임서버 주소, 게이트웨이 주소를 동적으로 할당하기 위한 프로토콜 RTP Real-time Transport Protocol 시간 음성과 영상 및 데이터를 IP 네트워크로 전송하는 표준 프로토콜 SNMP Simple Network Management Protocol 제한된 네트워크 자원을 효율적으로 운영하기 위한 프로토콜 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/jlst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/jlst/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/4.-it_backend/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4.-it_backend/nodejs/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

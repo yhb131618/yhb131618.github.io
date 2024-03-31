@@ -1,0 +1,3011 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:title" content="" />
+<meta property="og:description" content="대면시험 강남 네이버클라우드 11층
+NCA 공부시간 1시간이면 충분 NCP 공부시간 3시간이면 충분
+하지만 NCE는 좀 어렵다고 하니 차근차근 정리하자.
+Chap 01 # Compute_301 # Xen : 리눅스 50g or 윈도우 100g
+스토리지 10G-2TB 볼륨 암호화 서버에서 대해서 볼륨 암호화 디스크만 추가 가능 최대 16개 사용 가능 kvm : 리눅스 10-2TB, 윈도우 30-2TB
+기본 스토리지 사이즈 변경 가능(정지 후) 스토리지 10-16TB 생성 최대 20개 사용 가능 CLI
+java 어플리케이션으로 제작된 CLI, API를 통해서 네이버 클라우드 플랫폼의 다양한 리소스 제어 서버, Object Storage, Archive Storage CLI가 별도로 존재 Object Storage aws cli, aws api를 이용 Archive Storage keystone, swift의 cli, api를 이용 Compute 요금 : 컴퓨팅 , 네트워크, 스토리지(스토리지는 서버 정지에도 계속 발생)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" /><meta property="article:section" content="2.-it_cloud" />
+
+<meta property="og:site_name" content="Git Blog" />
+<title>Nce Expert 자격증 요약정리 | Git Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e5a4ee9a243030a91171ce18f7e11496b494f473e92c853a539fdcbf09c1481b.css" integrity="sha256-5aTumiQwMKkRcc4Y9&#43;EUlrSU9HPpLIU6U5/cvwnBSBs=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  
+
+
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="대면시험 강남 네이버클라우드 11층
+NCA 공부시간 1시간이면 충분 NCP 공부시간 3시간이면 충분
+하지만 NCE는 좀 어렵다고 하니 차근차근 정리하자.
+Chap 01 # Compute_301 # Xen : 리눅스 50g or 윈도우 100g
+스토리지 10G-2TB 볼륨 암호화 서버에서 대해서 볼륨 암호화 디스크만 추가 가능 최대 16개 사용 가능 kvm : 리눅스 10-2TB, 윈도우 30-2TB
+기본 스토리지 사이즈 변경 가능(정지 후) 스토리지 10-16TB 생성 최대 20개 사용 가능 CLI
+java 어플리케이션으로 제작된 CLI, API를 통해서 네이버 클라우드 플랫폼의 다양한 리소스 제어 서버, Object Storage, Archive Storage CLI가 별도로 존재 Object Storage aws cli, aws api를 이용 Archive Storage keystone, swift의 cli, api를 이용 Compute 요금 : 컴퓨팅 , 네트워크, 스토리지(스토리지는 서버 정지에도 계속 발생)"
+/>
+<title>
+  Git Blog
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+  
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+
+
+
+ 
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+
+    const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+       true 
+    )
+    
+
+    
+    const footer = document.getElementById("footer")
+    if (footer) {
+      const container = document.getElementById("graph-container")
+      
+      if (!container) return requestAnimationFrame(render)
+      
+      container.textContent = ""
+
+      const drawGlobal = isHome &&  true ;
+      drawGraph(
+          "http://localhost:1313",
+          drawGlobal,
+          [{"/moc":"#4388cc"}],
+          drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+        );
+
+      }
+    
+
+    
+      var els = document.getElementsByClassName("mermaid");
+      if (els.length > 0) {
+        import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+          (obj) => {
+            
+            
+            obj.default.init();
+          }
+        )
+      }
+    
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError : false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => {},
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<header class="book-header">
+    
+    <label for="menu-control">
+      <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="http://localhost:1313/">Git Blog</a></h1>
+    <div class="spacer"></div>
+    <div id="search-icon" class="quartz-search">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<div class="menu-search">
+  <div id="search-icon" class="quartz-search">
+    <p>Search</p>
+    <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+      <title id="title">Search Icon</title>
+      <desc id="desc">Icon to open search</desc>
+      <g class="search-path" fill="none">
+        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+        <circle cx="8" cy="8" r="7" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153dcb2edf2dfb6c49e014a45804f177" class="toggle"  />
+    <label for="section-153dcb2edf2dfb6c49e014a45804f177" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">0. 아이디어</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/" class="">01 Erp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/" class="">02 데이터센터와 Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/" class="">03 구독형 여행 패키지</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="">04 비주얼 노벨 플랫폼</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d347cef9a59040356404c47ebd644ec3" class="toggle"  />
+    <label for="section-d347cef9a59040356404c47ebd644ec3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">1. It Os</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_storage/" class="">Linux Storage</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_lvm/" class="">Linux Lvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_kvm/" class="">Linux Kvm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_console/" class="">Linux Console</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_keepalived/" class="">Linux Keepalived</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-483aaee2f493dd580f02a44b859234e7" class="toggle" checked />
+    <label for="section-483aaee2f493dd580f02a44b859234e7" class="flex justify-between">
+      <a href="/2.-it_cloud/" class="book-collapse-toggle ">2. It Cloud</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cloud/" class="">Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/common_%EC%BB%A4%EB%84%90/" class="">Common 커널</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_01_server/" class="">Nca 01 Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_02_loadblancer/" class="">Nca 02 Load Blancer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_03_dns--cdn/" class="">Nca 03 DNS &amp; Cdn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_04_autoscaling/" class="">Nca 04 Auto Scaling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nca_05_storage-/" class="">Nca 05 Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__harbor/" class="">Ci Harbor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__jenkins/" class="">Ci Jenkins</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__ansible/" class="">Ci Ansible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__mino/" class="">Ci Mino</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/" class="">Cicd 배포방법</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/" class="active">Nce Expert 자격증 요약정리</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cd_k8s/" class="">Cd K8 S</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/ci__docker/" class="">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/dns/" class="">DNS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
+    <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">3. It Front End</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">01 HTML</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">02 Css</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/02_selector/" class="">02 Selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/03_text-styling/" class="">03 Text Styling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
+    <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">04 React</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/01_install/" class="">01 Install</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/02_/" class="">02</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/0_redux-/" class="">0 Redux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/04_react/vite/" class="">Vite</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_eclipse/" class="">Java Mvc Eclipse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/java-mvc_basic/" class="">Java Mvc Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_vs/" class="">Spring Boot Vs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_basic/" class="">Spring Boot Basic</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/springboot_error/" class="">Spring Boot Error</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/4.-it_backend/" class="">4. It Back End</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74aaa0e283d8126a57b33abbc656794e" class="toggle"  />
+    <label for="section-74aaa0e283d8126a57b33abbc656794e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">5. It Language</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-it_language/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c74807d3436868cd372637acd5af2dba" class="toggle"  />
+    <label for="section-c74807d3436868cd372637acd5af2dba" class="flex justify-between">
+      <a href="/6.-it_algorithm/" class="book-collapse-toggle ">6. It Algorithm</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c446a12005bc9ed30f6b7e91be8abb5" class="toggle"  />
+    <label for="section-7c446a12005bc9ed30f6b7e91be8abb5" class="flex justify-between">
+      <a href="/7.-it_network/" class="book-collapse-toggle ">7. It Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/osi-7-layler/" class="">OSI 7 Layler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/virtual-netork/" class="">Vitual</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_vpn/" class="">etc_VPN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_sdn/" class="">etc_SDN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/etc_nfvo/" class="">etc_NFVO</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/dnsdomain/" class="">Dns( Domain)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/7.-it_network/restful-api/" class="">Restful API</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b0e397d116c54175597466adaf7d85b" class="toggle"  />
+    <label for="section-5b0e397d116c54175597466adaf7d85b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">8. It</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28c6883dc50af055b01aaaa577b2946b" class="toggle"  />
+    <label for="section-28c6883dc50af055b01aaaa577b2946b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">9. It Db</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mysql/" class="">Mysql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/mongodb/" class="">Mongodb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/" class="">데이터베이스 모델링</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9257fb28edd395bf6d345e93b47a5ae3" class="toggle"  />
+    <label for="section-9257fb28edd395bf6d345e93b47a5ae3" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Economy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/" class="">국내증권 용어정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da812e6e78780d587f8a1b76a9c8709d" class="toggle"  />
+    <label for="section-da812e6e78780d587f8a1b76a9c8709d" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Reading</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5466df07314482f0084fc37e434754e" class="toggle"  />
+    <label for="section-d5466df07314482f0084fc37e434754e" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">23년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/" class="">23년 12월</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a69fe9c18850d1568beb991168e1d6" class="toggle"  />
+    <label for="section-08a69fe9c18850d1568beb991168e1d6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">24년</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 1월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 2월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 3월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-789b2fd35de1b3ffa108c4cc388583a2" class="toggle"  />
+    <label for="section-789b2fd35de1b3ffa108c4cc388583a2" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Writer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/" class="">꿈속의 천재소년</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/" class="">심장과 피로</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/" class="">내면과 아이디어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/" class="">사람의 본성</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/" class="">가치부여</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/" class="">죽음과 카르마</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/" class="">경쟁사회</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/" class="">열등감을 없애는 법</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/" class="">걷기와 자기암시</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/" class="">고통의 가치</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/" class="">비교문화</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/" class="">생각의 전환</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/" class="">쉬운 해고와 고용</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="toggle"  />
+    <label for="section-94dd41dc24dfa6ebd4cf9769eb70a21b" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">Blog Install Guide</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/01-install-guide/" class="">01) Install Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/03-obsidian-guide/" class="">03) Obsidian Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/04-mermaid/" class="">04) Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/blogguide/05-hugo/" class="">05) Hugo</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+      
+  <article class="markdown">
+    <h1 class="title">Nce Expert 자격증 요약정리</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+
+
+
+
+
+
+<blockquote>
+<p>대면시험
+강남 네이버클라우드 11층</p>
+</blockquote>
+<blockquote>
+<p>NCA 공부시간 1시간이면 충분
+NCP 공부시간 3시간이면 충분</p>
+<p>하지만 NCE는 좀 어렵다고 하니 차근차근 정리하자.</p>
+</blockquote>
+<hr>
+<h2 id="chap-01">
+  Chap 01
+  <a class="anchor" href="#chap-01">#</a>
+</h2>
+<hr>
+<h3 id="compute_301">
+  Compute_301
+  <a class="anchor" href="#compute_301">#</a>
+</h3>
+<ul>
+<li>
+<p>Xen : 리눅스 50g or  윈도우 100g</p>
+<ul>
+<li>스토리지
+<ul>
+<li>10G-2TB</li>
+<li>볼륨 암호화 서버에서 대해서 볼륨 암호화 디스크만 추가 가능</li>
+<li>최대 16개 사용 가능</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>kvm : 리눅스 10-2TB, 윈도우 30-2TB</p>
+<ul>
+<li>기본 스토리지 사이즈 변경 가능(정지 후)</li>
+<li>스토리지
+<ul>
+<li>10-16TB 생성</li>
+<li>최대 20개 사용 가능</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>CLI</p>
+<ul>
+<li>java 어플리케이션으로 제작된 CLI, API를 통해서 네이버 클라우드 플랫폼의 다양한 리소스 제어</li>
+<li>서버, Object Storage, Archive Storage CLI가 별도로 존재</li>
+<li>Object Storage
+<ul>
+<li>aws cli, aws api를 이용</li>
+</ul>
+</li>
+<li>Archive Storage
+<ul>
+<li>keystone, swift의 cli, api를 이용</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Compute 요금 : 컴퓨팅 , 네트워크, 스토리지(스토리지는 서버 정지에도 계속 발생)</p>
+<ul>
+<li>예외적으로 GPU, Bare 서버는 서버 정지시에도 표준 요금 발생</li>
+<li>서버타입(NCP 시험) : standard(1:4), high cpu(1:2), high memory(1:8), cpu(1:2)</li>
+</ul>
+</li>
+<li>
+<p>Bare Metal : 고성능 물리 서버</p>
+<ul>
+<li>RAID 1+0, RAID5 제공</li>
+<li>WINDOWS 2016,2019</li>
+<li>사용불가 : 내 서버 이미지, 스냅샷, 추가스토리지</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>내 서버 이미지</p>
+<ul>
+<li>서버 운영중에서 생성 가능</li>
+<li>서버의 모든 스토리지를 이미지로 생성</li>
+<li>추가 스토리지까지 이미지로 생성
+<ul>
+<li>Classic 서버는 정지 상태로 변경이 필요</li>
+<li>내 서버 이미지는 다른 계정과 공유가 가능</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>쿠버네티스</p>
+<ul>
+<li>배포(scheduling)</li>
+<li>운영(Ha, failover)</li>
+<li>확장(scalinig)</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Docker</p>
+<ul>
+<li>Dockerfile - build container Registry - run</li>
+<li>동일한 OS 커널을 공유하며 시스템의 나머지 부분으로 프로세스를 격리</li>
+<li>Layered Image 특징</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Container Registry</p>
+<ul>
+<li>private/publice 모두 제공</li>
+<li>object storage 기반 서비스</li>
+<li>sub account를 사용하여 사용자와 역할별로 서로 다른 권한을 지정할 수 있음</li>
+<li>저장소를 다른 사용자와 공유 가능</li>
+<li>컨테이너 취약점 분석</li>
+<li>도커 레지스트리 HTTP API V2를 지원하며</li>
+</ul>
+</li>
+<li>
+<p>쿠버네티스</p>
+<ul>
+<li>Automatic Binpacking : 스스로 스케줄링하며 컨테이너 배포</li>
+<li>Storage Orchestraion : 로컬 저장소 및, nfs, iscsi 등과 같은 공유 네트워크 스토리지를 컨테이너에 할당/마운트하여 사용 가능함</li>
+<li>Secret &amp; Configuration Management</li>
+<li>Horizontal Scaling : 오토스케일링</li>
+<li>Service Discovery &amp; Load Balancing</li>
+<li>Self Healing</li>
+<li>Batch Execution</li>
+<li>Automatic Rollbacks &amp; Rollouts</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>쿠버네티스 컴포넌트</p>
+<ul>
+<li>컨트롤 플레인</li>
+<li>쿠버네티스 api 서버</li>
+<li>스케줄러</li>
+<li>컨트롤 매니저 : 구성 요소 복제, 워커 노드 추적, 노드 장애 처리</li>
+<li>데이터 스토리지 : etcd는 클러스터 구성을 지속적으로 저장하는 안정적인 분산</li>
+<li>워커노드</li>
+<li>kubelet : API 서버와 통신하고 노드에서 컨테이너를 관리</li>
+<li>kubeproxy : 애플리케이션 간에 네트워크 트래픽을 분산 및 연결</li>
+</ul>
+</li>
+<li>
+<p>파드(POD)</p>
+<ul>
+<li>컨테이너 그룹</li>
+<li>기본 실행 단위</li>
+<li>하나 이상의 밀접하게 관련된 컨테이너로 구성 된 그룹</li>
+<li>각 포드는 애플리케이션을 실행하는 자체 ip, 호스트 이름, 프로세스 등이 있는 별도의 논리적인 시스템</li>
+</ul>
+</li>
+<li>
+<p>Deployment : pod 배포</p>
+<ul>
+<li>기대상태를 유지하도록 하는 것</li>
+<li>replicaset에 대한 update를 담당</li>
+<li>replicaset의 수를 지속적으로 확인하며 유지시킴</li>
+<li>replicaz컨트로럴 : 특정 라벨을 포함하는 포드가 일치하는지 확인</li>
+<li>replicaset: 주어진 시간에 실행되는 안정적인 복제 포드 세트를 유지할 것</li>
+<li>다운타임 없이 업데이트 가능하도록 지원해줌</li>
+<li>Desired State를 유지하도록 하는 컨트롤러</li>
+<li>레플리카셋과 레플리케이션컨트롤러 상위에 배포되는 리소스
+<ul>
+<li>리플리카셋 :  주어진 시간에 실행되는 안정적인 복제 포드 세트를 유지</li>
+<li>레플리케이션컨트롤 : 특정 라벨을 포함하는 포드가 일치하는지 확인</li>
+<li>라플리카셋이 더 풍부한 표현식의 포드 셀럭터가 가능함</li>
+</ul>
+</li>
+<li>구성
+<ul>
+<li>라벨셀렉터</li>
+<li>원하는 복주 수</li>
+<li>포드 템플릿 구성</li>
+</ul>
+</li>
+<li>모든 노드에서 pod의 복제본을 실행하도록 한다.</li>
+<li>Deployment 동작원리
+<ul>
+<li>kubenetes 관리자는 매니페스트 파일 내용을 api 서버에 제출</li>
+<li>api 서버는 스켈줄러 배포에서 정의한 포드를 호스팅할 노드를 찾도록 알리고, 스케줄러가 포드의 요구 사항을 충족하는 노드를 찾는다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Demonset : pod의 복제본을 실행하도록 함</p>
+<ul>
+<li>모든 노드에서 pod의 복제본을 실행하도록 한다.</li>
+<li>클러스터에 노드가 추가되면 pod도 추가되고,</li>
+<li>노트가 삭제되면 해당 노드에서 기동되던 pod도 삭제된다.</li>
+<li>nodeSelector, podAffinity와 같은 조건을 명시하면 데몬셋 컨트롤러는 조건에 일치하는 노드에만 POD를 생성한다.</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Service : pod에 접근</p>
+<ul>
+<li>클러스터 내 POD들에게 접근하기 위한 방법으로 사용</li>
+<li>여러 POD를 묶어 Healthy한 pod로 Traffic 라우팅하는 로드 밸런싱 기능 제공</li>
+<li>서비스 이름은 클러스터 내 고유한 DNS로 동작</li>
+<li>클러스터 내부 ip : 클러스터ip</li>
+<li>클러스터 외부 ip : 로드밸런서</li>
+<li>클러스터 외부 ip : 노드포트 (포트포워딩, 노드 자체의 이름을 사용함)</li>
+<li>Ingress : 외부에서 오는 Traffic들을 클러스터 내부의 Service로 라우팅하기 위한 규칙 집합</li>
+<li>kube-proxy가 Listen을 담당하여 요청을 분산되어 있는 pod로 전달</li>
+</ul>
+</li>
+<li>
+<p>Ingress</p>
+<ul>
+<li>외부에서 오는 Traffic들을 클러스터 내부의 Service로 라우팅하기 위한 집합</li>
+<li>NCR은 HOST 기반 및 URL Path기반 라우팅에 대한 규칙 사용</li>
+<li>INgress에 대한 Service 타입 지정은 외부 Traffic 수신을 위해, nodeport 혹은 loadbalancer 지정 필요</li>
+</ul>
+</li>
+<li>
+<p>Ingressyaml 파일 예시 내용</p>
+<ul>
+<li>n ncr.ncloud.com이라는 호스트 명으로 접근하는 네트워크 요청에 대하여</li>
+<li>/ncr/api라는 경로로 접근하는 요청을</li>
+<li>n ServiceA라는 이름의 서비스 객체의 80포트로 전달</li>
+</ul>
+</li>
+<li>
+<p>워커노드 수 최대 50개까지 생성 가능</p>
+</li>
+</ul>
+<hr>
+<h3 id="storage_301">
+  Storage_301
+  <a class="anchor" href="#storage_301">#</a>
+</h3>
+<ul>
+<li>
+<p>Raid</p>
+<ul>
+<li>RAID 0 : 스트라이핑방식, 데이터를 분할하여 동시에 여러 개의디스크에 저장하는 방식</li>
+<li>RAID 1 : 미러링방식, 하나의 디스크를 완벽하게 똑같이 거울처럼 복하해서 저장하는 방식</li>
+<li>RAID 0+1 : 스트라이핑 후 미러링 진행함</li>
+<li>RAID 1+0 : 미러링 후 스트라이핑 진행함</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>File System</p>
+<ul>
+<li>연속 할당 방식 : 데이터 공간 낭비가 심하다.</li>
+<li>비연속 할당 방식
+<ul>
+<li>링크 구조로 구성</li>
+<li>색인 할당 방식  ( 많이 사용)</li>
+</ul>
+</li>
+<li>로컬 파일 시스템</li>
+<li>네트워크 파일 시스템</li>
+<li>분산 파일 시스템 : HDFS, ADF, CODA</li>
+<li>분산 파일 시스템 : Object Storage (파일 쪼개지 않고 그대로 복제)</li>
+</ul>
+</li>
+<li>
+<p>Object Storage</p>
+<ul>
+<li>객체 기반의 무제한 파일 저장 스토리지</li>
+<li>정적 웹 사이트 호스팅 가능</li>
+<li>각 파일마다 고유한 접근  URL이 부여되어 인터넷상에서 여러 사용자가 쉽게 접근 가능</li>
+<li>Object Storage 특징
+<ul>
+<li>S3 Compatiility API 지원</li>
+<li>DATA Lifecycle 지원(Lifecycle Management)</li>
+<li>sub Account와의 연동으로 접근 제어 가능</li>
+</ul>
+</li>
+<li> Object Storage 제공 리전 : 한국, 미국서부, 싱가포르, 일본, 독일, (주의) 홍콩X</li>
+<li>Object Storage의 주요 특징 4가지<br>
+ - S3 호환 API 지원<br>
+ - Data LifeCycle 지원 (Lifecycle Management)
+ - SubAccount와의 연동으로 접근제어가능<br>
+ - CDN, Transcoder, Image Optimizer, Cloud Hadoop, CLA등과 같은 NCP내 상품과 통합/연계 지원
+ </li>
+</ul>
+</li>
+<li>
+<p>Archive Storage</p>
+<ul>
+<li>데이터 아카이빙 및 장기 백업에 최적화된 스토리지</li>
+<li>데이터 저장 비용은 저렴하나 데이터 처리 API 비용은 비싸다</li>
+<li>데이터 최소 보관 기간없이 사용할 수 있음</li>
+</ul>
+</li>
+<li>
+<p>NAS</p>
+<ul>
+<li>최소 500G-최대 10TB, 추가는 100g 단위</li>
+<li>프로토콜
+<ul>
+<li>NFS : 리눅스끼리</li>
+<li>CIFS : 윈도우끼리</li>
+</ul>
+</li>
+<li>공유 가능 (추가스토리지 비교)</li>
+<li>자동 스냅샷 기능 (추가스토리지 비교)</li>
+<li>모니터링 및 이벤트 알림 기능 (추가스토리지 비교)</li>
+<li>mount -t nfs 네이버_NFS /mnt/nas</li>
+</ul>
+</li>
+<li>
+<p>Block Storage</p>
+<ul>
+<li>저장단위가 Block</li>
+<li>데이터를 block 단위로 쪼개고 OS의 파일시스템을 기반으로 파일을 계층화하여 저장</li>
+<li>데이터 접근 위해서 OS내부에 마운트 필요</li>
+<li>10g~2TB까지 선택 가능</li>
+<li>최대 16개(기본 os 1개 포함)</li>
+<li>Detach 할 수 있는 VM상태는 VM shutdown상태 또는 VM내부에서 볼륨 umount</li>
+<li> upsizing이 가능한 상태는
+<ul>
+<li>볼륨 available 상태(즉, VM에 할당되지 않은 상태)</li>
+<li>볼륨이 할당된 VM의 상태가 shutdown 일때</li>
+</ul>
+</li>
+<li> VM대상의 내서버이미지와 볼륨대상의 스냅샷 구분 제공</li>
+<li>1GB당 40 Max IOPS</li>
+<li>리눅스에서 여러 개의 스토리지를 하나의 논리적인 볼륨그룹으로 구성할 수 있는 것은 LVM이다</li>
+<li> Zone간 스토리지 팜이 분리되어, 다른 존 간의 공유불가능(스냅샷기능을 이용하여 해결가능)</li>
+</ul>
+</li>
+<li></li>
+<li>
+<p>Backup</p>
+<ul>
+<li>서버 내 파일 및 Preinstall DB에 대한 백업 설정
+<ul>
+<li>최소 7일 - 최대 52주까지 백업 파일 보관 가능</li>
+<li>소산 및 존 분산 가능</li>
+<li>full backup / 증분 backup / 차등 backup</li>
+</ul>
+</li>
+<li>백업 유형
+<ul>
+<li>파일시스템 백업 : 서버의 데이터 백업(디렉터리 단위로 백업 기능)</li>
+<li>데이터베이스 백업 : 서버 이미지로 제공하는 MSSQL, MYSQL, Postresql 온라인 백업</li>
+</ul>
+</li>
+<li>백업수행 주기
+<ul>
+<li>8가지 옵션</li>
+<li>1회성</li>
+<li>1일 1회 전체 백업</li>
+<li>1주 1회 전체 백업</li>
+<li>1주 1회 전체 백업 &amp; 매일 증분 백업</li>
+</ul>
+</li>
+<li>단일 서버 하루 백업 최대 용량
+<ul>
+<li>1tb</li>
+</ul>
+</li>
+<li>소산 백업(이중화 백업)</li>
+<li> 파일, DBMS(설치형DB만됨, MS-SQL, MySQL, PostgreSQL)에 대한 백업서비스</li>
+<li>한국 리전에서만 제공</li>
+<li>기존 신청방식에서 콘솔에서 백업 및 복구 하도록 변경되었음</li>
+<li>Server 생성 시 DBMS 이미지로 선택하여 설치된 설치형 DB 이외에 CloudDB(Cloud DB for PostgreSQL, Cloud DB for MySQL 등)는 지원이 불가합니다</li>
+</ul>
+</li>
+<li>
+<p>Data Teleporter</p>
+<ul>
+<li>대용량 데이터 이전을 위한 효과적인 솔루션</li>
+<li>대용량 데이터(최대 100T) 이전을 위한 전용 어플라이선스 대여 서비스</li>
+<li>지원속도 : 1Gbps, 10Gbps, 40Gbps</li>
+<li>지원프로토콜 : FTP, NFS, CIFS, Direct</li>
+</ul>
+</li>
+</ul>
+<h2 id="chap-02">
+  Chap 02
+  <a class="anchor" href="#chap-02">#</a>
+</h2>
+<hr>
+<h3 id="network_302media_302">
+  Network_302/Media_302
+  <a class="anchor" href="#network_302media_302">#</a>
+</h3>
+<ul>
+<li>
+<p>주의: SSL VPN은 Security 상품군에 속함</p>
+</li>
+<li>
+<p>하나의 계정에서는 최대 3개의 VPC 생성 가능</p>
+</li>
+<li>
+<p>VPC : Virtual Private Cloud</p>
+<ul>
+<li>10.0.0.0/8,  172.16.0.0/12,  192.168.0.0/16 중에서 선택가능</li>
+<li>클라우드상에서 논리적으로 격리된 고객 전용 네트워크 공간
+<ul>
+<li>계정 당 최대 3개의 vpc 생성 가능</li>
+<li>최소 /28, 최대 /16 서브넷 지원</li>
+</ul>
+</li>
+<li>Peering
+<ul>
+<li>VPC간 연결을 위한 네트워크 구성</li>
+<li>내 VPC간 연결 뿐만 아니라 다른 계정과의 VPC 연결도 가능</li>
+<li>타계정 VPC 연결시 로그인 ID, VPC ID, VPC명 입력 필요</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>subnet</p>
+<ul>
+<li>zone 지정 가능 동일한 zone 내 여러 subet 생성 가능</li>
+<li>VPC당 최대 200개의 subnet 생성 가능</li>
+<li>public subnet: 서버만을 위치시킬 수 있으며 서버에 공인 IP를 부여할 수 있다.</li>
+<li>private subnet: 서버 혹은 로드 밸런서를 위치시킬 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>ACG : Access Control Group</p>
+<ul>
+<li>VPC에 의존적</li>
+<li>서버 NIC 단위로 적용</li>
+<li>Allow 규칙에 한하여 지원</li>
+<li>모든 규칙을 확인하여 판단</li>
+<li>stateful</li>
+<li>Default All Deny이며, Allow 규칙에 한하여 지원 (white list)</li>
+<li>Response 트래픽 자동허용</li>
+<li>프로토콜은 TCP, UDP, ICMP중 선택</li>
+<li>VPC당 최대 500개의 ACG생성가능</li>
+<li>NIC당 3개 ACG가능하며</li>
+<li>나의 ACG에는 100개까지의 Rule설정가능(In 50개, Out 50개</li>
+<li>ACG (Access Control Group)은 서버방화벽 역할을 함, 프로토콜은 TCP, UDP, ICMP만 가능.</li>
+</ul>
+</li>
+<li>
+<p>NIC
+ - 서버생성시 최대 3개의 NIC 생성가능<br>
+ - 각 NIC에는 Secondary IP 부여가능하며 하나의 NIC에는 최대 5개 까지의 Secondary IP 부여가능 즉 하나의 NIC에는 최대 6개의 IP 가능(Primary IP1개 + Secondary IP 5개)</p>
+</li>
+<li>
+<p>NACL : Network ACL</p>
+<ul>
+<li>subnet 단위로 적용</li>
+<li>Allow, Deny 규칙 모두 지원</li>
+<li>우선 순위에 따라 규칙을 반영</li>
+<li>stateless</li>
+<li>Default All Permit이며 Allow, Deny 규칙 모두 적용</li>
+<li>Response 트래픽에 대한 Allow 규칙이 추가적으로 필요</li>
+<li>우선순위에 따라 규칙반영</li>
+</ul>
+</li>
+<li>
+<p>NAT Gateway</p>
+<ul>
+<li>각 zone마다 1개씩 생성 가능</li>
+</ul>
+</li>
+<li>
+<p>로드밸런서(CPS)</p>
+<ul>
+<li>small / medium / large</li>
+<li>application : 각 30,000 / 60,000 / 90,000 개의 분산처리 보장</li>
+<li>network : 각 100,000/ 200,000 / 400,000 개의 분산처리 보장</li>
+<li>netwokr proxy: 각 30,000 / 60,000 / 90,00 개의 분산처리 보장</li>
+</ul>
+</li>
+<li>
+<p>로드밸런싱 알고리즘</p>
+<ul>
+<li>round robin</li>
+<li>least connectio</li>
+<li>source ip hash</li>
+</ul>
+</li>
+<li>
+<p>애플리케이션 로드밸런서</p>
+<ul>
+<li>http,https를 사용하는 웹 애플리케이션에 보다 유연한 구성이 가능</li>
+<li>고정 IP 제공</li>
+<li>URL 기반 분기 가능</li>
+<li>알고리즘 3가지 제공</li>
+<li>기본 모니터링 기능 제공</li>
+<li>1분, 5분, 2시간, 1일 단위로 모니터링 제공</li>
+</ul>
+</li>
+<li>
+<p>네트워크 로드밸런서</p>
+<ul>
+<li>TCP 레벨 고성능 분산처리 (100,000개 에서 최대 400,000개까지 성능을 보장함)</li>
+<li>고성능의 분산처리 가능</li>
+<li>client ip가 그대로 로깅</li>
+<li>알고리즘은 hash, rr만 제공</li>
+</ul>
+</li>
+<li>
+<p>네트워크 프록시 로드밸런서</p>
+<ul>
+<li>TCP 세션 관리</li>
+<li>세션 유지가 필요한 TCP 기반 애플리케이션에 이용할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>SSL 인증 및 암호화 설정</p>
+<ul>
+<li>애플리케이션 로드밸런서</li>
+<li>네트워크 프록시 로드밸런서</li>
+</ul>
+</li>
+<li>
+<p>Target Group</p>
+<ul>
+<li>요청을 처리할 대상에 대한 집합</li>
+<li>동일한 VPC내에 있는 서버들에 대해 타켓 그룹 생성</li>
+<li>프로토콜에 따라 L4/l7으로 구분</li>
+<li>헬스체크 5-300초
+<ul>
+<li>vpc 플랫폼 : 기본 30초, 주기 변경 가능</li>
+<li>clasic 플랫폼 : 기본 6초</li>
+</ul>
+</li>
+<li>기본 알고리즘 : 라운드 로빈, 생성 후 변경이 가능함</li>
+</ul>
+</li>
+<li>
+<p>Global DNS</p>
+<ul>
+<li>대량 업로드 기능 제공 및 설정 반영 단계 추가</li>
+<li>모니터링 제공 최소 1분 - 최대 1일</li>
+<li>다양한 레코드 타입 지원</li>
+<li>.A, NS, PTR, AAAA, MX, CNAME, SPF, TXT, SRV, CAA</li>
+<li>DNS는 TCP 53번 UDP 53번 프로토콜을 사용</li>
+<li><strong>GTM : Global Traffic Manager</strong>
+(예전 Global Route Manager)는
+- 글로벌 규모의 DNS기반 네트워크 트래픽 분산처리 서비스<br>
+- GTM지원 알고리즘 : RR, Weighted, Geolocation, Fail-over 제공<br>
+- 제공리전 : 한국, 미국, 홍콩, 싱가포르, 일본, 독일  (글로벌이니까.. 당연히 모든 리전제공됨)<br>
+글로벌 규모의 DNS 기반 트래픽 분산 처리
+<ul>
+<li>DNS를 기반으로 네트워크 트래픽을 다수의 서버로 분산(로드밸런싱)해 주는 서비스</li>
+<li>네이버 클라우드 플랫폼이 보유한 글로벌 인프라와 기술력을 결집하여 전 세계 어디서든 서비스 연속성을 유지할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>IPSEC VPN</p>
+<ul>
+<li>ipsec 프로토콜</li>
+</ul>
+</li>
+<li>
+<p>CDN+</p>
+<ul>
+<li>Caching 기능</li>
+<li>국내 전용 : CDN+</li>
+<li>국외 전용 : GCDN</li>
+<li>서비스 요금 : 월 전송량 + 월 요청수</li>
+<li>pure : cdn 캐시서버의 컨테츠 삭제 기능</li>
+<li>cache expiry : cdn에서 캐시된 콘텐츠가 원본서버에서 변경되었는지 여부를 확인하는 주기를 지정</li>
+<li>Streaming : 네트워크 기반으로 사용자들에게 멀티미디어 정보를 실시간으로 제공하는 기능</li>
+<li>secure token : 토큰 기반의 인증으로 허용된 접근에만 콘텐츠를 전달</li>
+<li>ignore query string : cdn 서비스가 원본 서비스에 요청할 때 Get파라미터를 제거한 후에 요청</li>
+<li>referrer domain</li>
+<li>access log</li>
+<li>hit</li>
+<li>miss</li>
+<li>bypass</li>
+</ul>
+</li>
+<li>
+<p>Caching Status</p>
+<ul>
+<li>hit</li>
+<li>miss</li>
+</ul>
+</li>
+<li>
+<p>Live Station</p>
+<ul>
+<li>실시간 방송을 위한 플랫폼</li>
+<li>트랜스코딩을 통해 여러 화질로 변환 후, 송출</li>
+<li>스트림 상태를 볼 수 있는 모니터링 기능 제공</li>
+<li>Thumbnail image 추출</li>
+<li>CDN 연동을 통해 안정적인 송출 가능 및 동시 송출</li>
+<li>녹화 저장(mP4, HLS)</li>
+<li>타임머신 기능으로 놓치지 않는 라이브 방송 서비스 구현 가능</li>
+</ul>
+</li>
+<li>
+<p>VOD station</p>
+<ul>
+<li>Object Storage에 보관된 영상 파일</li>
+<li>CDN 연동을 통해 안정적인 송출 가능</li>
+<li>DRM 적용 기능 제공</li>
+</ul>
+</li>
+<li>
+<p>Image Optimizer</p>
+<ul>
+<li>이미지를 다양한 사이즈로 변환하여 CDN을 통해 제공</li>
+<li>리사이즈, 크롭시 자동회전, 얼굴인식 제공</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Media
+<ul>
+<li>IoT Video
+<ul>
+<li>미디어 콘텐츠를 전송/저장/재생 할 수 있는 통합 플랫폼</li>
+<li>RTSP 스트림 전송</li>
+<li>HTTP LIVE Streaming으로 패킷화하여 재생</li>
+<li>섬네일 : 섬네일 추출 및 제공</li>
+<li>영상 송출하기 위해선 채널 생성
+<ul>
+<li>채널명, 채널그룹(계정별 최대 100개), Secure Token 설정 필수</li>
+<li>Ingest Protocol, Playback Protocol, 채널 Flag 설정 필수</li>
+</ul>
+</li>
+<li>Group Management
+<ul>
+<li>IOT Video Stream의 모든 채널은 그룹에 속해 있음</li>
+<li>그룹은 CDN 도메인과 연결되 어있음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Image Optimizer
+<ul>
+<li>다양한 기기의 해상도에 맞게 손쉽게 리사이징 할 수 있는 실시간 이미지 변환 서비스</li>
+<li>스토리지 - 이미지 변환 - CDN - 로그 분석까지 이미지 변환 각 서비스를 편리하게 연동 이용이 가능하다.</li>
+<li>쿼리 스트링
+<ul>
+<li>리사이즈 및 크롭 f</li>
+<li>리아사이즈 m</li>
+<li>워터마크 wm</li>
+<li>필터 sh, bl</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Live Station
+<ul>
+<li>Live Short Clip: 송출 중인 라이브 방송의 DVR을 이용해 실시간으로 Short Clip 생성 가능</li>
+<li>Live Curtain: 송출 중인 라이브 방송 채널의 재생 화면을 관리자 권한으로 임시 대체 가능</li>
+<li>VOD2LIVE: 녹화된 동영상 파일을 실시간 라이브로 송출 가능</li>
+<li>RTMP 송출 이중화: Main 송출 단말기 또는 Main 채널에 문제 발 생시 Backup 채널로 자동 전환되어 안정적인 방송 송출 가능</li>
+<li>편리한 동시 송출(Re-Stream) 기능: Youtube, 아프리카 TV 등 각종 SNS 방송 플랫폼으로 동시에 방송 송출 가능</li>
+<li>General Channel: 디바이스와 채널이 1:1로 연결되는 일반적인 라이브 방송 송출 가능</li>
+<li>쉬운 사용성: CDN 자동 생성 옵션을 통해 복잡한 설정 없이 채널 생성과 화질 설정만으로 바로 방송을 서비스 가능</li>
+<li>LL-HLS: 클라우드 최초 CMAF 기반 3초대의 초저지연 HLS 서비스를 제공</li>
+</ul>
+</li>
+<li>VOD Station
+<ul>
+<li>VOD Station은 저장된 영상을 다양한 디바이스에서 시청할 수 있도록 변환하는 인코딩 기능과 동영상 파일을 패킷타이징하여 네트워크를 효율적으로 사용할 수 있는 스트리밍 기능을 제공하는 VOD 전용 서비스</li>
+<li> Media Connect Center(MCC)와 함께 사용하면 더 효과적인 미디어 파일 관리와 배포를 통해 안정적인 서비스
+<ul>
+<li>하나의 서비스로 인코딩과 송출 가능: 여러 가지 VOD 서비스를 고민할 필요 없이 VOD Station 하나로 인코딩과 스트리밍이 가능합니다.</li>
+<li>영상의 길이와 해상도에 따른 합리적 과금: 영상의 길이와 코딩 후 변환된 해상도에 따라 요금이 책정되므로 합리적인 비용으로 서비스를 이용할 수 있습니다.</li>
+<li>고품질의 안정적인 스트리밍: Progressive Download 방식이 아닌 영상을 패킷타이징하여 송출하는 방식이므로 안정적인 품질로 스트리밍을 제공할 수 있습니다.</li>
+<li>간편한 CDN 생성: CDN(Content Delivery Network) 선택 옵션을 통해 VOD 스트리밍 서비스에 최적화된 CDN을 쉽게 생성할 수 있습니다.</li>
+<li>서비스 간의 유연한 연동: 인코딩, 보안, 비디오 플레이어와의 연동 등 VOD 서비스에 필요한 유연한 연동을 제공합니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Media Connect Center
+<ul>
+<li>Media Connect Center는 네이버 클라우드 플랫폼의 다양한 미디어 서비스 및 Object Storage와 결합하여 미디어 파일 관리를 위한 그룹화에서부터 인코딩, CDN+ 연동, 채널 생성, 배포까지 미디어 서비스 전체를 한 화면에서 통합 관리하고 운영 서비스</li>
+</ul>
+</li>
+<li></li>
+<li>Video Player Enhancement
+<ul>
+<li>Video Player Enhancement 서비스는 웹/앱에서 비디오 또는 오디오와 같은 미디어를 재생할 수 있는 네이버 클라우드 플랫폼의 서비스입니다. Video Player Enhancement 서비스를 통해 손쉽고 빠르게 고객의 미디어 서비스에 미디어 플레이어를 적용할 수 있습니다.</li>
+</ul>
+</li>
+<li>One Click Multi DRM
+<ul>
+<li>One Click Multi DRM은 동영상 콘텐츠의 불법 복제 및 유통을 방지하기 위해 동영상을 암호화하여 저장하고 전송하는 네이버 클라우드 플랫폼의 서비스입니다. 주요 디지털 저작권 관리(DRM) 시스템을 모두 지원하여 기기와 플랫폼에 상관없이 동영상 콘텐츠를 안전하게 재생할 수 있으며, 암호화/복호화 키를 발급하고 관리할 수 있습니다.</li>
+<li>다양한 플랫폼 및 기기 호환: 구글 와이드바인, 마이크로소프트 플레이레디, 애플 페어플레이 등 주요 DRM을 지원하는 멀티 DRM 서비스로 여러 운영 체제와 브라우저에서 동영상을 재생할 수 있습니다.</li>
+<li>원클릭 DRM 적용: 네이버 클라우드 플랫폼의 Live Station, VOD Station, Video Player Enhancement와 결합하여 단 한 번의 클릭으로 간편하게 영상을 암호화 및 복호화할 수 있습니다.</li>
+<li>DRM 전용 SDK 제공: DRM CLI 패키저 및 복호화 전용 SDK를 제공하여 다양한 운영 체제에서 DRM 환경을 손쉽게 구현할 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<h2 id="b2b-prism-live-studio">
+  B2B PRISM Live Studio
+  <a class="anchor" href="#b2b-prism-live-studio">#</a>
+</h2>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="chap-03">
+  Chap 03
+  <a class="anchor" href="#chap-03">#</a>
+</h2>
+<ol start="5">
+<li>Database_303</li>
+<li>Management_303</li>
+</ol>
+<h3 id="7-analytics_303">
+  7. Analytics_303
+  <a class="anchor" href="#7-analytics_303">#</a>
+</h3>
+<ul>
+<li>ElasticSearch, Solr, Next 모두 Lucene이라는 검색 엔진을 기본으로 함</li>
+<li>Cloud Search
+<ul>
+<li>도메인 관리</li>
+<li>섹션 관리</li>
+<li>색인 관리</li>
+<li>검색 관리</li>
+<li>랭킹 관리</li>
+<li>자동완성</li>
+<li>불용어 관리</li>
+<li>모니터링</li>
+<li>쿼리분석</li>
+<li>API</li>
+</ul>
+</li>
+<li>INDEX</li>
+</ul>
+<h3 id="8-security_303">
+  8. Security_303
+  <a class="anchor" href="#8-security_303">#</a>
+</h3>
+<hr>
+<ul>
+<li>시스템, 네트워크 공격
+<ul>
+<li>DDOS, BruteForce 등의 Tool들이 더욱 강력해지고 교묘</li>
+<li>OS의 보안 취약점이 지속적으로 발생</li>
+</ul>
+</li>
+<li>Application 공격
+<ul>
+<li>Sql Injection, XSS를 비롯하여 어플리케이션의 헛점을 이용한 공격이 지속적으로 진화</li>
+</ul>
+</li>
+<li>관리자 PC 권한 취득
+<ul>
+<li>파밍, 스미싱, 피싱 등을 이용하여 관리자 PC 혹은 모바일 권한을 취득</li>
+</ul>
+</li>
+<li>App Safer
+<ul>
+<li>고객의 APP 실행 모바일 환경에 대한 보안 위협 여무를 실시간으로 탐지</li>
+<li>치팅 프롸그램, 핵 등으로 APP 무결성 검사</li>
+</ul>
+</li>
+<li>Android 앱 보호 기능
+<ul>
+<li>난독화
+<ul>
+<li>java 코드의 클래스명, 메서드명에 대한 난독화 및 STring 난독화를 적용</li>
+</ul>
+</li>
+<li>암호화
+<ul>
+<li>Dex, So, Unity 관련 바이너리를 암호화하여 코드 분석을 위한 Decompile 행위를 방어할 수 있음</li>
+</ul>
+</li>
+<li>실시간 환경 탐지
+<ul>
+<li>루팅 탐지</li>
+<li>가상머신 탐지</li>
+<li>디버깅 탐지</li>
+<li>앱변조 탐지</li>
+<li>메모리 변조 탐지</li>
+<li>스피드핵 탐지</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>IOS 앱 보호 기능
+<ul>
+<li>탈옥 탐지</li>
+<li>가상 머신 탐지</li>
+<li>디버깅 탐지</li>
+<li>우회 툴 탐지</li>
+</ul>
+</li>
+<li>File Safer
+<ul>
+<li>업로드/다운로드 되는 파일의 악성코드 여부를 탐지
+<ul>
+<li>고객의 웹페이지에 업/다운로드 되는 파일에 대한 체크</li>
+<li>RestAPI 방식</li>
+<li>Hash Filter와 File Filter로 구분</li>
+</ul>
+</li>
+<li>Hash Filter
+<ul>
+<li>의심되는 파일 또는 URL의 스트링에서 추출한 HASH 값을 이용하여 악성 여부 확인</li>
+<li>빠른 확인 가능</li>
+</ul>
+</li>
+<li>File Filter
+<ul>
+<li>파일 전체를 업로드하여 악성 여부 확인</li>
+<li>Hash Filter로 확인 안 되는 파일에 대해 악성 여부 확인</li>
+<li>파일에 대한 검사가 진행되는만큼 느린 검사 속도</li>
+</ul>
+</li>
+<li>우선적으로 파일을 전송하고 확인은 Hash Filter로 악성 여부 확인</li>
+<li>File Filter에 업로드되면 악성코드 여부를 확인하고 악성코드로 확인되는  Hash 값을 업데이트</li>
+</ul>
+</li>
+<li>Web Security Checker
+<ul>
+<li>고객의 웹사이트 보안 취약점 진단
+<ul>
+<li>고객의 웹페이지에 취약점이 없는지 체크</li>
+<li>현재 18가지 주요 웹 취약점에 대해 점검</li>
+<li>취약점에 대한 진단 뿐만 아니라 대응방안도 함께 제공</li>
+</ul>
+</li>
+<li>SQL injetion</li>
+<li>XSS : 공격자가 웹 페이지에 악성 스크립트 삽입</li>
+<li>Cross-site scripting : 웹 페이지에서 사용자로부터 입력받은 값을 제대로 검사하지 않을 때, 해커가 사용자의 정보 탈취 및 자동으로 비정상적인 기능을 수행하게 함</li>
+<li>LFI : 웹 서버 내부에 위치한 악의적인 파일을</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Cloud DB for mysql
+<ul>
+<li>자동 페일오버</li>
+<li>최대 32cpu, 256메모리, 6TB까지 자동 디스크 확장</li>
+<li>Slave 복제는 최대 10대까지 복제 확장 가능(Read Only)</li>
+<li>Private Load Balnacer를 이용해서 Read 부하분산 가능</li>
+<li>최대 30일 백업 파일 보관</li>
+<li>원하는 시간을 선택하여 DB 자동 복원</li>
+<li>성능 모니터링 및 알람 기능 제공</li>
+<li>Mutil-Zone 구성을 통해 가용성 유지</li>
+</ul>
+</li>
+<li>DB Process 모니터링
+<ul>
+<li>DB Sever 연결하여 수행중인 Query를 확인할 수 있다.</li>
+</ul>
+</li>
+<li>Stand Alone 백업
+<ul>
+<li>Stand Alone 서버도 DB 백업을 사용할 수 있다.</li>
+<li>데이터가 삭제되어도 백업 보관일 설정 내에서 백업으로 데이터를 복구 할 수 있다.</li>
+<li>Stand Alone의 경우 Slave 서버 생성 불가능</li>
+<li>고가용성에서만 Slave 서버 생성 가능</li>
+</ul>
+</li>
+<li>DB Process List
+<ul>
+<li>서버에 접속한 세션 리스트 확인</li>
+<li>확인 할 수 있는 것들
+<ul>
+<li>Session ID</li>
+<li>User</li>
+<li>DB</li>
+<li>Host</li>
+<li>Time</li>
+<li>Command</li>
+<li>State</li>
+</ul>
+</li>
+<li>Kil session
+<ul>
+<li>선택된 Session ID를 강제로 종료</li>
+<li>강제로 종료한 세션은 복구 불가능</li>
+<li>하나의 세션만 선택 가능</li>
+</ul>
+</li>
+<li>백업은 하루 한 번 매일 수행, 최대 30일까지 보관</li>
+<li>백업 파일 복원시 신규 VM 생성후 Recover 모드로 복원되며 데이터 조회만 가능하다.</li>
+<li>시점 복원 기능을 제공하여 복원 가능한 시간 범위 내에서 사용자가 원하는 시간대로 데이터 복원이 가능하다. (분 단위까지 지원)</li>
+</ul>
+</li>
+<li>DB config 관리
+<ul>
+<li>Default 값은 3000</li>
+<li>online 중에 설정 및 저장 가능</li>
+</ul>
+</li>
+<li>General Log
+<ul>
+<li>언제, 누가, 어디서 쿼리르 수행했는지 여부를 확인이 가능하다.</li>
+</ul>
+</li>
+<li>Cloud DB for MS-SQL
+<ul>
+<li>MSsql 2019 Standard Edition 제공</li>
+<li>설치 후 즉시 MSSQL과 OS 모니터링을 이용 가능</li>
+</ul>
+</li>
+<li>Cloud DB for Redis
+<ul>
+<li>클러스터 구성</li>
+<li>shard 최대 3-10개</li>
+<li>slave node 구성은 최대 4개</li>
+<li>cpu 최대 4코어</li>
+<li>자동 백업 최대 7일</li>
+</ul>
+</li>
+<li>Cloud DB for MongoDB
+<ul>
+<li>완전관리형 서비스 (VPN Only)</li>
+<li>Sharing과 Replica Set 방식으로 선택</li>
+<li>2TB 자동 디스크 확장</li>
+<li>최대 7대까지 Replica set 확장 가능</li>
+<li>읽기 부하분산 기능 제공</li>
+<li>설치 후 장애 또는 이벤트 발생시 사용자의 메일, SMS로 장애 알림</li>
+</ul>
+</li>
+<li>Cloud DB for PostgreSQL
+<ul>
+<li>10GB부터 10GB씩 6TB까지 데이터 저장 공간 확장</li>
+<li>최대 5대 Replicat 확장</li>
+<li>멀티존 구성</li>
+<li>자동 페일오버 지원</li>
+</ul>
+</li>
+<li>SubAccount
+<ul>
+<li>Role Based 기반의 권한 관리 서비스</li>
+<li>내부 사용자를 서브 계정으로 등록하고, 특정 서비스에 대한 권한을 부여</li>
+</ul>
+</li>
+<li>WMS</li>
+<li>Network Traffic Moitoring
+<ul>
+<li>데이터 저장 기간은 최대30일</li>
+<li>Nat Gateway, SSL VPN, IPsec 네트워크는 수집 되지 않은다.</li>
+</ul>
+</li>
+<li>Cloud Activity Tracer</li>
+</ul>
+<hr>
+<ul>
+<li>Migration (완료)
+<ul>
+<li>Data Teleporter
+<ul>
+<li>대용량 데이터를 빠르고 간편하게 이용할 수 있는 서비스</li>
+<li>87TB 저장공간</li>
+<li>FTP, NFS, CIFS 지원</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="chap-04">
+  Chap 04
+  <a class="anchor" href="#chap-04">#</a>
+</h2>
+<hr>
+<h3 id="9-application_305--10-ai_305">
+  9. Application_305 &amp; 10. AI_305
+  <a class="anchor" href="#9-application_305--10-ai_305">#</a>
+</h3>
+<ul>
+<li>네이버클라우드플랫폼 AI
+<ul>
+<li>Clova</li>
+<li>Papago</li>
+<li>딥러닝을 위한 Tensorflow가 탑재된 서버 이미지 제공</li>
+</ul>
+</li>
+<li>네이버클라우드플랫폼 Application
+<ul>
+<li>네이버에서 사용하는 기술과 서비스를 API로 제공</li>
+<li>네이버 통합검색 서비스를 통해 수집되는 검색어 통계를 다양한 기준으로 조회하고 활용</li>
+<li>고객 대응에 활용할 수 있는 챗봇</li>
+<li>Geolocation, Maps, nShortURL, SENS, Search TRend 등 제공</li>
+<li>대량 메일 발송을 위한 Outbound Mailer</li>
+</ul>
+</li>
+<li>Sens
+<ul>
+<li>Simple&amp;Easy Notication Service
+<ul>
+<li>SMS와 APP push, biz Message를 손쉽게 전송</li>
+</ul>
+</li>
+<li>어플리케이션 개발을 쉽게 할 수 있는 Swagger 제공</li>
+<li>문자전송</li>
+<li>429 Too Many Requests</li>
+<li>Push : GCM/FCM과 APN을 통한 Push 메세지 전송</li>
+<li>사용자 관리를 위한 채널 생성</li>
+<li>Biz Message</li>
+</ul>
+</li>
+<li>Outbound Mailer
+<ul>
+<li>대량 메일 바송을 위한 메일 발송 상품</li>
+</ul>
+</li>
+<li>Clova Chatbot
+<ul>
+<li>Cs나 주문시스템과 같은 고객 대응 로봣으로 대체하는 상품</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<ol start="11">
+<li>Architect_305</li>
+<li>Advanced(Hybrid/Global)_305</li>
+</ol>
+
+
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      No backlinks found
+    </li>
+    
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
+        <ul>
+            
+            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="">Top</a></li><li><a href="https://github.com/yhb131618?tab=repositories">Github</a></li></ul>
+    </footer>
+</div>
+
+
+    
+  </article>
+ 
+      
+      
+      
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#chap-01">Chap 01</a>
+      <ul>
+        <li><a href="#compute_301">Compute_301</a></li>
+        <li><a href="#storage_301">Storage_301</a></li>
+      </ul>
+    </li>
+    <li><a href="#chap-02">Chap 02</a>
+      <ul>
+        <li><a href="#network_302media_302">Network_302/Media_302</a></li>
+      </ul>
+    </li>
+    <li><a href="#b2b-prism-live-studio">B2B PRISM Live Studio</a></li>
+    <li><a href="#chap-03">Chap 03</a>
+      <ul>
+        <li><a href="#7-analytics_303">7. Analytics_303</a></li>
+        <li><a href="#8-security_303">8. Security_303</a></li>
+      </ul>
+    </li>
+    <li><a href="#chap-04">Chap 04</a>
+      <ul>
+        <li><a href="#9-application_305--10-ai_305">9. Application_305 &amp; 10. AI_305</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

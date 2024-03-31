@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/9.-it_db/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <atom:link href="http://localhost:1313/9.-it_db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/9.-it_db/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/9.-it_db/mysql/</guid>
+      <description>Mysql 8.0 # __ Install # yum install https://dev.mysql.com/get/mysql80-community-release-el7-6.noarch.rpm yum install mysql-community-server -y 설치 에러시 vi /etc/yum.repos.d/mysql-community.repo gpgcheck=1 -&amp;raquo;&amp;gt; gpgcheck=0 [mysql80-community] name=MySQL 8.0 Community Server baseurl=http://repo.mysql.com/yum/mysql-8.0-community/el/7/$basearch enabled=1 gpgcheck=0 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql-2022 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql __ Replica # __ __ Master Mysql # MySQL에 로그인합니다 (초기 임시 비밀번호 사용).&#xA;mysql -u root -p&#xA;복제를 위한 별도의 사용자를 생성합니다.&#xA;CREATE USER &amp;#39;replica&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED WITH mysql_native_password BY &amp;#39;replica_password&amp;#39;; GRANT REPLICATION SLAVE ON *.* TO &amp;#39;replica&amp;#39;@&amp;#39;%&amp;#39;; FLUSH PRIVILEGES; my.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/9.-it_db/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/9.-it_db/mongodb/</guid>
+      <description> 01_install windows # 1-1. mongodb 경로 설정 # 몽고DB 경로 환경변수 등록&#xA;C:\Program Files\MongoDB\Server\7.0\bin 1-2. MongoDB 확인 # mongod --version 1-3. MongoDB DB 생성 # mongod --dbpath [db경로] --port 27017 1-4. 몽고DB Shell 설치 # MongoDB Shell Download&#xA;https://www.mongodb.com/try/download/shell&#xA;몽고shell Admin 계정&#xA;1-5. 몽고DB 커넥션 확인 # ![[assets/Pasted image 20240306155949.png]] ![[assets/Pasted image 20240306155945.png]]&#xA;1-6. 몽고DB 외부 접속 # &amp;ndash;bind_ip_all&#xA;mongod --bind_ip_all </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</guid>
+      <description>![[assets/Pasted image 20240320232936.png]]&#xA;__ Database Modeling # ![[assets/Pasted image 20240320140522.png]]&#xA;![[assets/Pasted image 20240320232149.png]]&#xA;__ DBMS # ![[assets/Pasted image 20240320232211.png]]&#xA;__ 1. 요구사항 분석 # __ 2.개념적 모델링 # DBMS에 독립적인 개념 스키마 설계 엔티티-관계 다이어그램(ERD) ![[assets/Pasted image 20240320232718.png]] ![[assets/Pasted image 20240320232741.png]] ![[assets/Pasted image 20240320232759.png]] ![[assets/Pasted image 20240320232826.png]] ![[assets/Pasted image 20240320232844.png]] ![[assets/Pasted image 20240320232910.png]] __ 3. 논리적 모델링 # DBMS에 적합한 노리적 스키마 설계 개념적 스키마를 논리적 데이터 모델을 이용해 논리적 구조로 표현 !</description>
+    </item>
+  </channel>
+</rss>

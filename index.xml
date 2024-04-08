@@ -23,6 +23,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</guid>
+      <description>CSS Style # 내부 스타일&#xA;외부 스타일&#xA;인라인 스타일&#xA;적용순서&#xA;1.인라인 &amp;gt; 2. 내부 &amp;gt; 3. 외부 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt; CSS style&amp;lt;/title&amp;gt; 내부 스타일 적용 &amp;lt;style&amp;gt; ul { color: blue; list-style-type: square; } 외부 스타일 적용 &amp;lt;/style&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style2.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;웹 개발 언어&amp;lt;/h1&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 인라인 스타일 적용 &amp;lt;ul style=&amp;#34;color: yellow; list-style-type: circle;&amp;#34;&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/3.-it_frontend/02_css/css-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3.-it_frontend/02_css/css-/</guid>
@@ -156,6 +163,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/04/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
@@ -177,6 +191,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/05/</guid>
+      <description> 목차__ # __ 중목차_1 # __ __ 소목차_2 # __ __ __ 세부목차_3 # </description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/blogguide/05-hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blogguide/05-hugo/</guid>
@@ -191,6 +212,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/06/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</guid>
@@ -198,10 +226,24 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/07_flex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/07_flex/</guid>
+      <description>![[assets/Pasted image 20240402161552.png]] ![[assets/Pasted image 20240402161420.png]]&#xA;Flex # display: flex; display: inline-flex; flex-direction: row #왼쪽에서 오른 flex-direction: column #위에서 알래 flex-direction: row-reverse; #역방향 flex-wrap : nowrap; #한줄에 넣기 flex-wrap : wrap; # 자동으로 여러줄에 넣기 justify-content: flex-end; # 역방향 justify-content: center; # 중앙배치 justify-content: space-around; #아이템 테두리 justify-content: space-evenly; #아이템 동일한 간격 justify-content: space-between; #중간 아이템만 테두 align-items: center; # 페이지의 세로 중앙 배치 align-items: baseline; # 아이템 베이스 라인 맞춰서 배치 #아이템의 크기가 줄어들고 늘어날때 지정하는 css flex-grow: 1; #지정한 특정 아이템 크기가 다른 아이템의 크기에 1배로 늘어난다.</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</guid>
       <description>각종 매체를 통해서 과도한 한국 경쟁문화가 문제라고 이야기한다.&#xA;더불어 각종 커뮤니티 및 책에서도 한국은 너무 과도한 경쟁 때문에 사회적 비용 낭비와 더불어 개인의 행복이 낮다고 한다.&#xA;하지만 그들은 말로는 한국의 경쟁사회 때문에 여러 문제가 일어난다고 하지만 그 근본적인 원인에 대해서는 말하거나 생각하지 않는다.&#xA;무조건적으로 한국 사회가 한국 문화가 잘못된 것이라고 이야기한다.&#xA;과도한 경쟁사회.&#xA;그 원인은 무엇일까?&#xA;천연자원의 부족. 작은 내수경제. 그리고 다른 나라와 수출경쟁.&#xA;대한민국은 통일이 되지 않은 이상 작은 내수 경제로 경쟁이 심할 수밖에 없다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/3.-it_frontend/02_css/08_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3.-it_frontend/02_css/08_grid/</guid>
+      <description>![[assets/Pasted image 20240402151818.png]] ![[assets/Pasted image 20240402153042.png]]&#xA;Grid # ![[assets/Pasted image 20240402145315.png]]&#xA;body{ padding: 5rem; background-color: black; } .container { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px grid-gap: 1rem; grid-template-areas: &amp;#39;a a a&amp;#39; &amp;#39;b c c&amp;#39; } .image { width: 100%; heigth: 100%; object-fit : cover; } .image1 { grid-area: b; } .iamge2 { grid-area: e; } &amp;lt;body&amp;gt; &amp;lt;header&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;main&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;/aside&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;/footer&amp;gt; &amp;lt;body&amp;gt; body { width: 100vw; height: 100vh; margin: 0; display: grid; grid-template-columns: 3fr 1fr; grid-template-rows : 100px atuo 50px; (header-main-footer) grid-template-areas: &amp;#39;header header&amp;#39; &amp;#39;main side&amp;#39; &amp;#39;footer footer&amp;#39; } header { grid-area: header; } aside { grid-area: side; } footer { grid-area: footer; } </description>
     </item>
     <item>
       <title></title>
@@ -450,6 +492,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/2.-it_cloud/cd_argo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2.-it_cloud/cd_argo/</guid>
+      <description>1. Argo CD 설치 # kubectl과 연동하여 사용할 Kubernetes 클러스터에 접속되어 있는지 확인한 후, 아래 명령어로 Argo CD를 설치합니다:&#xA;bashCopy code&#xA;kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml&#xA;이 명령어는 argocd 네임스페이스를 생성하고, Argo CD의 최신 안정 버전을 설치합니다.&#xA;2. Argo CD 서버에 접속 # Argo CD API 서버는 기본적으로 클러스터 내부에서만 접근 가능합니다. 외부에서 접근하기 위해, 다음 명령어로 Argo CD 서버를 포트포워딩할 수 있습니다:&#xA;bashCopy code</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/2.-it_cloud/cd_istio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/cd_istio/</guid>
@@ -460,7 +509,7 @@
       <link>http://localhost:1313/2.-it_cloud/cd_k8s/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/cd_k8s/</guid>
-      <description>Kubernetes # ![[assets/Pasted image 20240319145726.png]]&#xA;__ Kubernetes Install # __ __ Reset # 클러스터 초기화: sudo kubeadm reset 모든 클러스터 서버에서 위의 명령어를 실행한다. 클러스터 노드 제거 kubectl drain &amp;lt;노드 이름&amp;gt; --delete-emptydir-data --force --ignore-daemonsets`` __ __ Common # Set SELinux to permissive mode:&#xA;These instructions are for Kubernetes 1.29.&#xA;# Set SELinux in permissive mode (effectively disabling it) sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config Add the Kubernetes yum repository</description>
+      <description>Kubernetes # ![[assets/Pasted image 20240319145726.png]]&#xA;__ Kubernetes Install # __ __ Reset # 클러스터 초기화 sudo kubeadm reset 모든 클러스터 서버에서 위의 명령어를 실행한다. sudo kubeadm init &amp;ndash;pod-network-cidr=10.96.0.0/12 &amp;ndash;ignore-preflight-errors=Swap&#xA;클러스터 노드 제거 kubectl drain &amp;lt;노드 이름&amp;gt; --delete-emptydir-data --force --ignore-daemonsets __ __ Common # Set SELinux to permissive mode:&#xA;These instructions are for Kubernetes 1.29.&#xA;# Set SELinux in permissive mode (effectively disabling it) sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config Add the Kubernetes yum repository</description>
     </item>
     <item>
       <title></title>
@@ -468,6 +517,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/ci__docker/</guid>
       <description>Dockerfile&#xA;FROM jenkins/jenkins USER root root 접속&#xA;docker exec -u 0 -it mycontainer bash 컨테이너 격리 기술&#xA;네임 스페이스 각 프로세스가 파일 시스템 마운트, 네트워크, 유저, 호스트 네임등에 대해 시스템에 독립 뷰를 제공 컨트롤 그룹 프로세스로 소비할 수 있는 리소스의 양을 제한 Docker&#xA;Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containerd: OCI 구현체(주로 runC)를 이용해 container를 관리해주는 daemon 두 프로그램은 독립 실행하기 때문에 각 이미지에 영향이 없음 ![[assets/Pasted image 20240325153944.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/2.-it_cloud/cicd_grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2.-it_cloud/cicd_grafana/</guid>
+      <description>1. Grafana Helm 차트 리포지토리 추가 # bashCopy code&#xA;helm repo add grafana https://grafana.github.io/helm-charts&#xA;2. Helm 리포지토리 업데이트 # bashCopy code&#xA;helm repo update&#xA;이 단계는 최신 차트 목록을 받아오기 위해 필요합니다.&#xA;3. Grafana 설치 # bashCopy code&#xA;helm install my-grafana grafana/grafana&#xA;my-grafana는 이 Helm 릴리스(배포)의 이름입니다. 원하는 이름으로 변경할 수 있습니다. 이 명령어는 Grafana를 기본 설정으로 설치합니다. 4. Grafana 관리자 비밀번호 얻기 # Grafana에 로그인하기 위해 생성된 관리자 비밀번호를 확인합니다:</description>
     </item>
     <item>
       <title></title>
@@ -489,13 +545,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</guid>
-      <description>CSS Style # 내부 스타일&#xA;외부 스타일&#xA;인라인 스타일&#xA;적용순서&#xA;1.인라인 &amp;gt; 2. 내부 &amp;gt; 3. 외부 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt; CSS style&amp;lt;/title&amp;gt; 내부 스타일 적용 &amp;lt;style&amp;gt; ul { color: blue; list-style-type: square; } 외부 스타일 적용 &amp;lt;/style&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style2.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;웹 개발 언어&amp;lt;/h1&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 인라인 스타일 적용 &amp;lt;ul style=&amp;#34;color: yellow; list-style-type: circle;&amp;#34;&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!</description>
     </item>
     <item>
       <title></title>

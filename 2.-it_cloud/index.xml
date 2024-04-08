@@ -107,6 +107,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/2.-it_cloud/cd_argo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2.-it_cloud/cd_argo/</guid>
+      <description>1. Argo CD 설치 # kubectl과 연동하여 사용할 Kubernetes 클러스터에 접속되어 있는지 확인한 후, 아래 명령어로 Argo CD를 설치합니다:&#xA;bashCopy code&#xA;kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml&#xA;이 명령어는 argocd 네임스페이스를 생성하고, Argo CD의 최신 안정 버전을 설치합니다.&#xA;2. Argo CD 서버에 접속 # Argo CD API 서버는 기본적으로 클러스터 내부에서만 접근 가능합니다. 외부에서 접근하기 위해, 다음 명령어로 Argo CD 서버를 포트포워딩할 수 있습니다:&#xA;bashCopy code</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/2.-it_cloud/cd_istio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/cd_istio/</guid>
@@ -117,7 +124,7 @@
       <link>http://localhost:1313/2.-it_cloud/cd_k8s/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/cd_k8s/</guid>
-      <description>Kubernetes # ![[assets/Pasted image 20240319145726.png]]&#xA;__ Kubernetes Install # __ __ Reset # 클러스터 초기화: sudo kubeadm reset 모든 클러스터 서버에서 위의 명령어를 실행한다. 클러스터 노드 제거 kubectl drain &amp;lt;노드 이름&amp;gt; --delete-emptydir-data --force --ignore-daemonsets`` __ __ Common # Set SELinux to permissive mode:&#xA;These instructions are for Kubernetes 1.29.&#xA;# Set SELinux in permissive mode (effectively disabling it) sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config Add the Kubernetes yum repository</description>
+      <description>Kubernetes # ![[assets/Pasted image 20240319145726.png]]&#xA;__ Kubernetes Install # __ __ Reset # 클러스터 초기화 sudo kubeadm reset 모든 클러스터 서버에서 위의 명령어를 실행한다. sudo kubeadm init &amp;ndash;pod-network-cidr=10.96.0.0/12 &amp;ndash;ignore-preflight-errors=Swap&#xA;클러스터 노드 제거 kubectl drain &amp;lt;노드 이름&amp;gt; --delete-emptydir-data --force --ignore-daemonsets __ __ Common # Set SELinux to permissive mode:&#xA;These instructions are for Kubernetes 1.29.&#xA;# Set SELinux in permissive mode (effectively disabling it) sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config Add the Kubernetes yum repository</description>
     </item>
     <item>
       <title></title>
@@ -125,6 +132,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2.-it_cloud/ci__docker/</guid>
       <description>Dockerfile&#xA;FROM jenkins/jenkins USER root root 접속&#xA;docker exec -u 0 -it mycontainer bash 컨테이너 격리 기술&#xA;네임 스페이스 각 프로세스가 파일 시스템 마운트, 네트워크, 유저, 호스트 네임등에 대해 시스템에 독립 뷰를 제공 컨트롤 그룹 프로세스로 소비할 수 있는 리소스의 양을 제한 Docker&#xA;Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containerd: OCI 구현체(주로 runC)를 이용해 container를 관리해주는 daemon 두 프로그램은 독립 실행하기 때문에 각 이미지에 영향이 없음 ![[assets/Pasted image 20240325153944.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/2.-it_cloud/cicd_grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2.-it_cloud/cicd_grafana/</guid>
+      <description>1. Grafana Helm 차트 리포지토리 추가 # bashCopy code&#xA;helm repo add grafana https://grafana.github.io/helm-charts&#xA;2. Helm 리포지토리 업데이트 # bashCopy code&#xA;helm repo update&#xA;이 단계는 최신 차트 목록을 받아오기 위해 필요합니다.&#xA;3. Grafana 설치 # bashCopy code&#xA;helm install my-grafana grafana/grafana&#xA;my-grafana는 이 Helm 릴리스(배포)의 이름입니다. 원하는 이름으로 변경할 수 있습니다. 이 명령어는 Grafana를 기본 설정으로 설치합니다. 4. Grafana 관리자 비밀번호 얻기 # Grafana에 로그인하기 위해 생성된 관리자 비밀번호를 확인합니다:</description>
     </item>
     <item>
       <title></title>

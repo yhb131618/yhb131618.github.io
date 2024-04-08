@@ -10,6 +10,8 @@
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/01_html/</loc>
   </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</loc>
+  </url><url>
     <loc>http://localhost:1313/3.-it_frontend/02_css/css-/</loc>
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/04_react/01_install/</loc>
@@ -56,6 +58,8 @@
   </url><url>
     <loc>http://localhost:1313/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</loc>
   </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/04/</loc>
+  </url><url>
     <loc>http://localhost:1313/3.-it_frontend/04_react/</loc>
   </url><url>
     <loc>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</loc>
@@ -66,19 +70,27 @@
   </url><url>
     <loc>http://localhost:1313/4.-it_backend/</loc>
   </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/05/</loc>
+  </url><url>
     <loc>http://localhost:1313/5.-it_language/</loc>
   </url><url>
     <loc>http://localhost:1313/blogguide/05-hugo/</loc>
   </url><url>
     <loc>http://localhost:1313/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/</loc>
   </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/06/</loc>
+  </url><url>
     <loc>http://localhost:1313/6.-it_algorithm/</loc>
   </url><url>
     <loc>http://localhost:1313/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</loc>
   </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/07_flex/</loc>
+  </url><url>
     <loc>http://localhost:1313/7.-it_network/</loc>
   </url><url>
     <loc>http://localhost:1313/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</loc>
+  </url><url>
+    <loc>http://localhost:1313/3.-it_frontend/02_css/08_grid/</loc>
   </url><url>
     <loc>http://localhost:1313/8.-it/</loc>
   </url><url>
@@ -168,19 +180,21 @@
   </url><url>
     <loc>http://localhost:1313/2.-it_cloud/2.-it_cloud/</loc>
   </url><url>
+    <loc>http://localhost:1313/2.-it_cloud/cd_argo/</loc>
+  </url><url>
     <loc>http://localhost:1313/2.-it_cloud/cd_istio/</loc>
   </url><url>
     <loc>http://localhost:1313/2.-it_cloud/cd_k8s/</loc>
   </url><url>
     <loc>http://localhost:1313/2.-it_cloud/ci__docker/</loc>
   </url><url>
+    <loc>http://localhost:1313/2.-it_cloud/cicd_grafana/</loc>
+  </url><url>
     <loc>http://localhost:1313/2.-it_cloud/dns/</loc>
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/01_html/01_html/</loc>
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</loc>
-  </url><url>
-    <loc>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</loc>
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/02_css/02_css/</loc>
   </url><url>

@@ -700,6 +700,19 @@ Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containe
   
 
   
+    <a href="/2.-it_cloud/cd_argo/" class="">Cd Argo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/2.-it_cloud/cd_istio/" class="">Cd Istio</a>
   
 
@@ -727,6 +740,19 @@ Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containe
 
   
     <a href="/2.-it_cloud/ci__docker/" class="active">Ci Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/2.-it_cloud/cicd_grafana/" class="">Cicd Grafana</a>
   
 
         </li>
@@ -808,6 +834,19 @@ Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containe
   
 
   
+    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/3.-it_frontend/02_css/css-/" class="">Css</a>
   
 
@@ -841,13 +880,43 @@ Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containe
       
     
       
+    
+      
         <li>
           
   
   
 
   
-    <a href="/3.-it_frontend/02_css/01_css-style/" class="">01 Css Style</a>
+    <a href="/3.-it_frontend/02_css/05/" class="">5th</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/07_flex/" class="">07 Flex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/02_css/08_grid/" class="">08 Grid</a>
   
 
         </li>
@@ -1819,6 +1888,10 @@ Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containe
   
     
   
+    
+  
+    
+  
 
   
 
@@ -1930,8 +2003,36 @@ USER root
 </ul>
 </li>
 </ul>
+<hr>
+<p>문제사항</p>
 </li>
 </ul>
+<p>Docker 이미지가 여러 레포지토리에서 참조되고 있다는 메시지는 일반적으로 동일한 이미지에 여러 태그가 붙어 있을 때 발생합니다. Jenkins를 사용하여 Docker 이미지를 빌드하고 관리하는 과정에서 이런 상황이 발생할 수 있는 몇 가지 시나리오를 살펴보겠습니다:</p>
+<h3 id="1-동일-이미지에-여러-태그-부여">
+  1. <strong>동일 이미지에 여러 태그 부여</strong>
+  <a class="anchor" href="#1-%eb%8f%99%ec%9d%bc-%ec%9d%b4%eb%af%b8%ec%a7%80%ec%97%90-%ec%97%ac%eb%9f%ac-%ed%83%9c%ea%b7%b8-%eb%b6%80%ec%97%ac">#</a>
+</h3>
+<p>빌드 과정에서 동일한 이미지에 여러 태그를 부여할 수 있습니다. 예를 들어, 빌드 번호, 커밋 해시, 브랜치 이름 등으로 태그를 다르게 하여 같은 이미지에 여러 태그를 붙이는 경우가 있습니다. 이렇게 되면, 이미지 ID는 동일하지만, 태그 이름은 다른 여러 이미지가 생성됩니다.</p>
+<h3 id="2-이미지-태그-재사용">
+  2. <strong>이미지 태그 재사용</strong>
+  <a class="anchor" href="#2-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%83%9c%ea%b7%b8-%ec%9e%ac%ec%82%ac%ec%9a%a9">#</a>
+</h3>
+<p>특정 태그(예: <code>latest</code>, <code>stable</code> 등)를 반복해서 사용하여 이전에 사용된 태그를 새로운 이미지에 다시 부여하는 경우도 있습니다. 이 과정에서 동일한 태그가 여러 이미지에 사용될 수 있으며, 이전 이미지를 오버라이드하지만 Docker는 기존 이미지를 완전히 삭제하지 않고 남겨둡니다.</p>
+<h3 id="3-자동화된-빌드-및-태그-생성">
+  3. <strong>자동화된 빌드 및 태그 생성</strong>
+  <a class="anchor" href="#3-%ec%9e%90%eb%8f%99%ed%99%94%eb%90%9c-%eb%b9%8c%eb%93%9c-%eb%b0%8f-%ed%83%9c%ea%b7%b8-%ec%83%9d%ec%84%b1">#</a>
+</h3>
+<p>Jenkins 파이프라인에서 자동화된 빌드 및 태그 생성 로직이 포함되어 있을 때, 예상치 못한 태그가 생성되고 이미지가 예상하는 방식으로 관리되지 않을 수 있습니다. 특히, 동적으로 생성된 태그(예: 빌드 날짜나 시간을 포함)는 관리가 어려워질 수 있습니다.</p>
+<h3 id="해결-방법-및-베스트-프랙티스">
+  해결 방법 및 베스트 프랙티스
+  <a class="anchor" href="#%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95-%eb%b0%8f-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ed%94%84%eb%9e%99%ed%8b%b0%ec%8a%a4">#</a>
+</h3>
+<ul>
+<li><strong>태그 관리</strong>: 이미지를 태그할 때는 명확한 규칙을 세워 관리합니다. 가능하다면, 태그를 재사용하기보다는 고유한 태그(예: 빌드 번호, 커밋 해시)를 사용하는 것이 좋습니다.</li>
+<li><strong>불필요한 이미지 정리</strong>: 정기적으로 사용하지 않는 이미지나 태그를 정리합니다. Jenkins 파이프라인에 이미지 정리 단계를 포함시키는 것도 한 방법입니다.</li>
+<li><strong>이미지 레포지토리 관리</strong>: 이미지 레포지토리를 정기적으로 검토하여 불필요한 이미지를 삭제하고, 필요에 따라 이미지를 아카이빙합니다.</li>
+</ul>
+<p>Docker 이미지와 태그가 예상치 못한 방식으로 관리되는 문제는 대부분 태그 관리와 이미지 라이프사이클 정책에서 기인합니다. 이러한 관리 정책을 명확히 하여 운영 중인 문제를 최소화할 수 있습니다.</p>
 
 
     
@@ -2020,7 +2121,18 @@ USER root
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-동일-이미지에-여러-태그-부여">1. <strong>동일 이미지에 여러 태그 부여</strong></a></li>
+        <li><a href="#2-이미지-태그-재사용">2. <strong>이미지 태그 재사용</strong></a></li>
+        <li><a href="#3-자동화된-빌드-및-태그-생성">3. <strong>자동화된 빌드 및 태그 생성</strong></a></li>
+        <li><a href="#해결-방법-및-베스트-프랙티스">해결 방법 및 베스트 프랙티스</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

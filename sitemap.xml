@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/setup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/setup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/editing/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/obsidian/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/preview-changes/</loc>
+  </url><url>
     <loc>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</loc>
   </url><url>
     <loc>http://localhost:1313/2.-it_cloud/cloud/</loc>
@@ -26,6 +36,10 @@
   </url><url>
     <loc>http://localhost:1313/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/</loc>
   </url><url>
+    <loc>http://localhost:1313/example/</loc>
+  </url><url>
+    <loc>http://localhost:1313/example/table-of-contents/with-toc/</loc>
+  </url><url>
     <loc>http://localhost:1313/1.-it_os/</loc>
   </url><url>
     <loc>http://localhost:1313/3.-it_frontend/02_css/02_selector/</loc>
@@ -41,6 +55,8 @@
     <loc>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/</loc>
   </url><url>
     <loc>http://localhost:1313/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/</loc>
+  </url><url>
+    <loc>http://localhost:1313/example/table-of-contents/without-toc/</loc>
   </url><url>
     <loc>http://localhost:1313/2.-it_cloud/</loc>
   </url><url>
@@ -100,6 +116,8 @@
   </url><url>
     <loc>http://localhost:1313/economy/</loc>
   </url><url>
+    <loc>http://localhost:1313/example/table-of-contents/</loc>
+  </url><url>
     <loc>http://localhost:1313/7.-it_network/virtual-netork/</loc>
   </url><url>
     <loc>http://localhost:1313/1.-it_os/linux_storage/</loc>
@@ -131,6 +149,8 @@
     <loc>http://localhost:1313/about-me/</loc>
   </url><url>
     <loc>http://localhost:1313/4.-it_backend/springboot_error/</loc>
+  </url><url>
+    <loc>http://localhost:1313/example/collapsed/</loc>
   </url><url>
     <loc>http://localhost:1313/1.-it_os/linux_kvm/</loc>
   </url><url>
@@ -268,17 +288,59 @@
   </url><url>
     <loc>http://localhost:1313/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/</loc>
   </url><url>
+    <loc>http://localhost:1313/example/collapsed/3rd-level/4th-level/</loc>
+  </url><url>
+    <loc>http://localhost:1313/example/collapsed/3rd-level/</loc>
+  </url><url>
+    <loc>http://localhost:1313/example/hidden/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/buttons/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/columns/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/details/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/expand/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/mermaid/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/section/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/section/first-page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/section/second-page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/tabs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/aws/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/callouts/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/features/languages/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/cloud/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/custom-domain/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/config/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/hosting/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/error/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/gcp/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/guide/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/ignore-notes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/features/latex/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
   </url><url>
@@ -288,16 +350,22 @@
   </url><url>
     <loc>http://localhost:1313/tags/obsidian/</loc>
   </url><url>
+    <loc>http://localhost:1313/setup/search/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/security/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/setup/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/springboot/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
+    <loc>http://localhost:1313/setup/troubleshooting/</loc>
+  </url><url>
+    <loc>http://localhost:1313/setup/updating/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/virtual/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/vscode/</loc>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
   </url>
 </urlset>

@@ -2,65 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/1.-it_os/</link>
+    <link>https://yhb131618.github.io/1.-it_os/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/1.-it_os/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/1.-it_os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_storage/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_storage/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_storage/</guid>
       <description>02__Storage # RAID # Redudant Array of Inexpensive Disks 디스크를 병렬연결하여 사용하며 여러 개의 디스크를 중복된 데이터로 분산하여 저장하는 방식 RAID 0 : 데이터를 분할하여 동시에 여러 개의 디스크에 저장하는 방식 (스트라이핑 방식, 줄무늬 옷처럼 여러 개의 디스크에 저장) ![[assets/Pasted image 20240122163247.png]] RAID 1 : 하나의 디스크를 완벽하게 똑같이 거울처럼 복사해서 저장하는 방식(미러링 방식, 거울에 서 있는 |(1)의 모습) ![[assets/Pasted image 20240122163252.png]]&#xA;RAID 4: 스프라이프 볼륨 + 전용 패리티 비트 디스크 (4: 혼자 4망 하면 나머지는 산다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_network/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_network/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_network/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_lvm/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_lvm/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_lvm/</guid>
       <description>Linux_LVM # LVM(Logical Volume Manager)는 리눅스의 저장 공간을 효율적이고 유연하게 관리하기 위한 커널의 한 부분이다.&#xA;LVM이 아닌 기존 방식의 경우, 하드 디스크를 파티셔닝 한 후 OS 영역에 마운트하여 read/wirte를 수행했다.&#xA;이 경우 저장 공간의 크기가 고정되어서 증설/축소가 어렵다. 이를 보완하기 위한 방법으로 LVM을 구성할 수 있다.&#xA;LVM은 파티션 대신에 volume이라는 단위로 저장 장치를 다룬다.&#xA;스토리지의 확장,변경에 유연하며, 크기를 변경할 때 기존 데이터의 이전이 필요 없다.&#xA;512g nvme 단일 ssd vs 256g nvme 2개 ssd</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_kvm/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_kvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_kvm/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_kvm/</guid>
       <description>KVM이란? (Ubuntu 20.04) # __ 1.1_KVM 패키지 설명 # qemu-kvm KVM 하이퍼바이저에 대한 하드웨어 에뮬레이션을 제공 Kernel Space - KVM User Space - QEMU libvirt-daemon-system libvirt 데몬을 시스템 서비스로 실행하는 구성 파일 리눅스에서 Hypervisor 기반 가상화 관리 및 제어도구 libvirt-clients 가상화 플랫폼을 관리하기위한 소프트웨어 bridge-utils 이더넷 브리지를 구성하기위한 명령 줄 도구 세트 virtinst 가상 머신을 만들기위한 명령 줄 도구 집합 virt-manager 사용하기 쉬운 GUI 인터페이스와 libvirt를 통해 가상 머신을 관리하기위한 명령 줄 유틸리티 __ 1.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_console/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_console/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_console/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_console/</guid>
       <description> Console 가상 콘솔 tty0, tty1, tty2 &amp;hellip;tty6 pts/7은 X-윈도우 ttyS0, ttyS1은 시리얼 콘솔을 말함 GRUB </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/1.-it_os/</link>
+      <link>https://yhb131618.github.io/1.-it_os/1.-it_os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/1.-it_os/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/1.-it_os/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_keepalived/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_keepalived/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_certbot/</guid>
+      <description>Harbor를 설치하고 운영할 때 HTTPS를 사용하여 통신을 보호하는 것은 중요합니다. 이를 위해 유효한 SSL/TLS 인증서를 발급받고 Harbor에 적용해야 합니다. Let&amp;rsquo;s Encrypt는 무료로 SSL/TLS 인증서를 발급해주는 CA(Certificate Authority) 중 하나입니다. 다음은 Let&amp;rsquo;s Encrypt를 사용하여 Harbor에 HTTPS 인증서를 발급하고 적용하는 기본적인 방법입니다.&#xA;1. Certbot 설치 # Let&amp;rsquo;s Encrypt에서 제공하는 Certbot을 사용하여 인증서를 자동으로 발급받고 갱신할 수 있습니다. Certbot의 설치 방법은 운영 체제에 따라 다릅니다.&#xA;Ubuntu/Debian 기반 시스템의 경우: # bashCopy code&#xA;sudo apt update sudo apt install certbot</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/linux_keepalived/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_keepalived/</guid>
       <description>#keepalived #linux&#xA;Keepalived # [링크](4장. Keepalived를 사용한 초기 로드 밸런서 구성 Red Hat Enterprise Linux 7 | Red Hat Customer Portal]( https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/7/html/load_balancer_administration/ch-initial-setup-vsa) ![[assets/Pasted image 20240322161734.png]]&#xA;Keepalived는 가상 IP를 기반으로 작동하며, 마스터 노드를 모니터링하다 해당 노드에 장애가 발생했을 시, 스탠바이 서버로 페일오버되도록 지원 기본 구성 # 이 기본 예에서는 두 개의 시스템이 로드 밸런서로 구성됩니다. LB1(Active) 및 LB2(Backup)는 실제 IP 주소 192.168.1.20에서 192.168.1.24로 번호가 지정된 httpd 웹 서버 풀에 대한 라우팅 요청으로, 가상 IP 주소를 10.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_ntp/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_ntp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_ntp/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_ntp/</guid>
       <description>1. Chrony 설치 확인 # 1. Chrony 설치 확인 # 먼저, chronyd 서비스가 시스템에 설치되어 있는지 확인합니다. 설치되어 있지 않다면 설치합니다:&#xA;bashCopy code&#xA;sudo yum install chrony&#xA;2. Chrony 서비스 시작 및 활성화 # chronyd 서비스를 시작하고 부팅 시 자동으로 실행되도록 설정합니다:&#xA;bashCopy code&#xA;sudo systemctl start chronyd sudo systemctl enable chronyd&#xA;3. 시간 동기화 확인 # 시스템 시계가 NTP 서버와 정확히 동기화되었는지 확인합니다:&#xA;bashCopy code&#xA;chronyc tracking&#xA;이 명령은 현재 시간 소스와 그 정확도에 대한 정보를 보여줍니다.</description>
     </item>
   </channel>

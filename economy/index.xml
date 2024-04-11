@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/economy/</link>
+    <link>https://yhb131618.github.io/economy/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/economy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/economy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/economy/economy/</link>
+      <link>https://yhb131618.github.io/economy/economy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/economy/economy/</guid>
+      <guid>https://yhb131618.github.io/economy/economy/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</link>
+      <link>https://yhb131618.github.io/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://yhb131618.github.io/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</guid>
       <description>주식투자의 수급주체 # 기관투자자 # 기관투자자는 일반인이나 법인 등 타인으로부터 모은 자금을 운용하는 투자자를 말합니다&#xA;외국인 # 외국인은 금융감독원에 외국인투자등록을 마친 외국인과 6개월 이상 국내 거주 등의 요건에 따라 투자 등록이 면제된 기타외국인으로 구분할 수 있습니다. 금융투자 # 금융투자는 증권사, 투자자문사, 자산운용사 등에서 직접 투자할 때 잡히는 수급을 의미합니다.&#xA;투신 # 투신은 투자신탁의 줄임말로 자산운용사 수급입니다. 일반 개인이 은행이나 증권사 등을 통해 펀드에 가입하면 그 펀드는 자산운용사의 펀드매니저를 통해 운용됩니다.</description>
     </item>
   </channel>

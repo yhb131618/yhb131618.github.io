@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/8.-it/</link>
+    <link>https://yhb131618.github.io/8.-it/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/8.-it/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/8.-it/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/8.-it/8.-it/</link>
+      <link>https://yhb131618.github.io/8.-it/8.-it/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/8.-it/8.-it/</guid>
+      <guid>https://yhb131618.github.io/8.-it/8.-it/</guid>
       <description></description>
     </item>
   </channel>

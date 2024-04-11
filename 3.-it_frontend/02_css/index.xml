@@ -2,79 +2,79 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/3.-it_frontend/02_css/</link>
+    <link>https://yhb131618.github.io/3.-it_frontend/02_css/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/3.-it_frontend/02_css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/3.-it_frontend/02_css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/01_css-style/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/01_css-style/</guid>
       <description>CSS Style # 내부 스타일&#xA;외부 스타일&#xA;인라인 스타일&#xA;적용순서&#xA;1.인라인 &amp;gt; 2. 내부 &amp;gt; 3. 외부 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt; CSS style&amp;lt;/title&amp;gt; 내부 스타일 적용 &amp;lt;style&amp;gt; ul { color: blue; list-style-type: square; } 외부 스타일 적용 &amp;lt;/style&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style2.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;웹 개발 언어&amp;lt;/h1&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 인라인 스타일 적용 &amp;lt;ul style=&amp;#34;color: yellow; list-style-type: circle;&amp;#34;&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/css-/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/css-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/css-/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/css-/</guid>
       <description>CSS(Cascading Style Sheet) # __ CSS란? # CSS는 HTML과 함께 웹 표준의 기본 개념 HTML이 웹 문서의 구조와 뼈대를 담당하고 CSS 웹 문서의 디자인 요소를 담당 CSS를 정의하는 방식 - head 태그 안에 stlye 태그를 사용하여 정의하는 방식(내부 스타일 시트) - body 안의 태그들에 style 속성으로 정의하는 방식(인라인 스타일 시트) - 외부 CSS파일을 작성해서 링크를 걸어주는 방식(외부 스타일 시트)&#xA;스타일을 정의하는 방식은 태그들을 선택할 수 있는 선택자들을 이용해서 스타일을 정의할 수 있다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/02_selector/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/02_selector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/02_selector/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/02_selector/</guid>
       <description>Selector(선택자) # __ 설명 # 1. Selecotr(선택자)란? # CSS 속성을 적용시킬 태그를 지칭하는 것을 말한다. 선택자에는 여러가지 종류가 있고 전체 선택자, 클래스 선택자, 아이디 선택자, 자손 선택자, 가상 선택자 .. 등이 존재한다. 스타일 적용 방식에서 중괄호 앞에 쓰는 것들이 선택자가 된다. 2. 전체 선택자 # 웹 문서에 존재하는 모든 태그에 스타일을 적용할 때 사용. 전체 선택자는 별표(*)로 지정 ``` * { 스타일1: 속성값1; 스타일2: 속성값2; &amp;hellip;. } ``` 3. 전체 선택자는 문서의 여백이나 글꼴 크기 등 기본 스타일을 초기화할 때 사용</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/03_text-styling/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/03_text-styling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/03_text-styling/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/03_text-styling/</guid>
       <description>TEXT # 1. font-family # 웹 문서에서 사용할 글꼴을 지정하는 속성 웹 문서에서 글꼴을 지정할 시 한 가지 글꼴만 지정할 때도 있지만 해당 글꼴이 없을 경우를 대비해서 두 번째, 세 번째 글꼴까지 지정하는게 일반적이다. font관련 스타일들은 상속되기 때문에 body에 지정해 놓으면 웹 문서의 통일성을 높일 수가 있어 body에 지정하고 특정 태그에서만 변경하는 경우가 많다. 글꼴 지정 방식 - font-family: 글꼴이름1, 글꼴이름2, 글꼴이름3, &amp;hellip; ex) font-family: &amp;lsquo;맑은 고딕&amp;rsquo;, 돋움, 굴림 =&amp;gt; 맑은 고딕으로 글꼴이 적용되는데 맑은 고딕이 없을 경우 돋움으로 돋움도 없을 경우에는 굴림이 적용 웹 글꼴 사용하기 - 웹 폰트 : 웹 문서 안에 글꼴에 대한 정보를 저장했다가 웹 문서를 여는 순간 해당 웹페이지에서 글꼴을 가져와서 사용하는 방식.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/04/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/04/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/04/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/05/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/05/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/05/</guid>
       <description> 목차__ # __ 중목차_1 # __ __ 소목차_2 # __ __ __ 세부목차_3 # </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/06/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/06/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/06/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/06/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/07_flex/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/07_flex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/07_flex/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/07_flex/</guid>
       <description>![[assets/Pasted image 20240402161552.png]] ![[assets/Pasted image 20240402161420.png]]&#xA;Flex # display: flex; display: inline-flex; flex-direction: row #왼쪽에서 오른 flex-direction: column #위에서 알래 flex-direction: row-reverse; #역방향 flex-wrap : nowrap; #한줄에 넣기 flex-wrap : wrap; # 자동으로 여러줄에 넣기 justify-content: flex-end; # 역방향 justify-content: center; # 중앙배치 justify-content: space-around; #아이템 테두리 justify-content: space-evenly; #아이템 동일한 간격 justify-content: space-between; #중간 아이템만 테두 align-items: center; # 페이지의 세로 중앙 배치 align-items: baseline; # 아이템 베이스 라인 맞춰서 배치 #아이템의 크기가 줄어들고 늘어날때 지정하는 css flex-grow: 1; #지정한 특정 아이템 크기가 다른 아이템의 크기에 1배로 늘어난다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/08_grid/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/08_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/08_grid/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/08_grid/</guid>
       <description>![[assets/Pasted image 20240402151818.png]] ![[assets/Pasted image 20240402153042.png]]&#xA;Grid # ![[assets/Pasted image 20240402145315.png]]&#xA;body{ padding: 5rem; background-color: black; } .container { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px grid-gap: 1rem; grid-template-areas: &amp;#39;a a a&amp;#39; &amp;#39;b c c&amp;#39; } .image { width: 100%; heigth: 100%; object-fit : cover; } .image1 { grid-area: b; } .iamge2 { grid-area: e; } &amp;lt;body&amp;gt; &amp;lt;header&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;main&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;/aside&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;/footer&amp;gt; &amp;lt;body&amp;gt; body { width: 100vw; height: 100vh; margin: 0; display: grid; grid-template-columns: 3fr 1fr; grid-template-rows : 100px atuo 50px; (header-main-footer) grid-template-areas: &amp;#39;header header&amp;#39; &amp;#39;main side&amp;#39; &amp;#39;footer footer&amp;#39; } header { grid-area: header; } aside { grid-area: side; } footer { grid-area: footer; } </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/02_css/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/02_css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/02_css/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/02_css/</guid>
       <description></description>
     </item>
   </channel>

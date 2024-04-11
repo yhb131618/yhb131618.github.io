@@ -2,800 +2,807 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://yhb131618.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cloud/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cloud/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cloud/</guid>
       <description>개요 # 01_클라우드의 역사 # 1960년대 가상화라는 용어를 사용하기 시작 당시에는 전 가상화 기법을 사용하여 구현 에뮬레이터도 존재 다양한 하이퍼바이저의 출현 IBM의 Logical Partition VMware Xen Hyper-V KVM 가상화란 물리적 하드웨어 리소스(CPU, RAM, STORAGE, NETWORK)들을 직접 공유하는 방식 또는 호스트 OS에 의해 제공받는 방식으로 만들어지는 하나의 Virtual PC이다.&#xA;IBM M44/44X 시스템에서 유래하였다.&#xA;flowchart LR BareMetal --&gt; 가상화; 가상화 --&gt; 유형1; 가상화 --&gt; 유형2; 유형1 --&gt; 커널_공유방식; 유형2 --&gt; Host_공유방식; 유형1 : 하이퍼바이저(KVM, GEN, ESXI) 유형2 : (Vmware)</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/common_%EC%BB%A4%EB%84%90/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/common_%EC%BB%A4%EB%84%90/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/common_%EC%BB%A4%EB%84%90/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/common_%EC%BB%A4%EB%84%90/</guid>
       <description>01_커널이란? # #커널 #쉘 #Shell&#xA;[[[content/7. IT_Network/가상화|가상화]]&#xA;커널은 운영체제 자체라 보기도 하고, 운영체제의 핵심이라고 말하기도 한다.&#xA;즉, 커널은 하드웨어의 자원을 관리하는 역할을 한다.&#xA;flowchart TD 컴퓨터--&gt;하드웨어; 컴퓨터--&gt;소프트웨어; 소프트웨어--&gt;운영체제; 소프트웨어--&gt;응용프로그램; 운영체제--&gt;커널; 운영체제--&gt;시스템프로그램; 시스템 프로그램은 사용자와 상호작용을 위한 역할을 한다.&#xA;대표적인 예로 쉴(shell)이라는 시스템 프로그램이 있으며,&#xA;쉴(shell)은 사용자가 컴퓨터에게 전달하는 명령어를 해석하는 프로그램으로 사용자와 컴퓨터간의 상호작용이 가능케 한다.&#xA;02_커널의 역할 # 컴퓨터의 물리적 자원과 추상화 자원을 관리하는 것이다.&#xA;여기서 추상화란 물리적으로 하나 뿐인 하드웨어를 여러 사용자들이 번갈아 사용하게 중재함으로서,</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/01_css-style/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/01_css-style/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/01_css-style/</guid>
       <description>CSS Style # 내부 스타일&#xA;외부 스타일&#xA;인라인 스타일&#xA;적용순서&#xA;1.인라인 &amp;gt; 2. 내부 &amp;gt; 3. 외부 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt; CSS style&amp;lt;/title&amp;gt; 내부 스타일 적용 &amp;lt;style&amp;gt; ul { color: blue; list-style-type: square; } 외부 스타일 적용 &amp;lt;/style&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style2.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/style.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;웹 개발 언어&amp;lt;/h1&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 인라인 스타일 적용 &amp;lt;ul style=&amp;#34;color: yellow; list-style-type: circle;&amp;#34;&amp;gt; &amp;lt;li&amp;gt;Java&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Html&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Css&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/css-/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/css-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/css-/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/css-/</guid>
       <description>CSS(Cascading Style Sheet) # __ CSS란? # CSS는 HTML과 함께 웹 표준의 기본 개념 HTML이 웹 문서의 구조와 뼈대를 담당하고 CSS 웹 문서의 디자인 요소를 담당 CSS를 정의하는 방식 - head 태그 안에 stlye 태그를 사용하여 정의하는 방식(내부 스타일 시트) - body 안의 태그들에 style 속성으로 정의하는 방식(인라인 스타일 시트) - 외부 CSS파일을 작성해서 링크를 걸어주는 방식(외부 스타일 시트)&#xA;스타일을 정의하는 방식은 태그들을 선택할 수 있는 선택자들을 이용해서 스타일을 정의할 수 있다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/01_install/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/01_install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/01_install/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/01_install/</guid>
       <description>1_설치 # Node.JS 설치 Node 터미널 ## project 폴더로 이동 cd src/main npx create-react-app FRONT cd FRONT npm start 정상적으로 React가 생성되면 다음과 같이 만들 수 있다. ![[assets/Pasted image 20240131161540.png]] 웹에서 localhost:3000을 호출하여 확인 2_프로젝트 연동 # 참조&#xA;3_초기 설정 # ![[assets/Pasted image 20240202145023.png]]&#xA;폴더 구조 설명 index.js&#xA;src 폴더에 메인 Script로 여기에서 HTML 템플릿 및 JavaScript의 컴포넌트를 조합하여 렌더링을 한다.&#xA;App.js&#xA;src 폴더에 컴포넌트를 정의하는 Script이다. 실제로 화면에 표시되는 내용 등은 여기에서 정의된다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/java-mvc_eclipse/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/java-mvc_eclipse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/java-mvc_eclipse/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/java-mvc_eclipse/</guid>
       <description> 01__인코딩 설정하기 # 02_Error # __ 2.1_Multiple Contexts have a path # 해당 문제는 Tomcat 서버에서 프로젝트 path가 중복되어 생기는 문제로 똑같은 경로를 가진 프로젝트를 불러와 실행해서 생긴 문제이다. 톰캣 더블클릭 Modules 탭으로 이동 중복된 Path를 삭제 </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/osi-7-layler/</link>
+      <link>https://yhb131618.github.io/7.-it_network/osi-7-layler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/osi-7-layler/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/osi-7-layler/</guid>
       <description>![[assets/Pasted image 20231225181003.png]]&#xA;OSI 7계층 # 참조 https://shlee0882.tistory.com/110&#xA;1계층 # 물리계층(Physical Layer)&#xA;이 계층에서는 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하게 된다. 이 계층에서 사용되는 통신 단위는 비트이며 이것은 1과 0으로 나타내어지는, 즉 전기적으로 On, Off 상태라고 생각하면 된다. 이 계층에서는 단지 데이터를 전달만 할 뿐 전송하려는(또는 받으려는)데이터가 무엇인지, 어떤 에러가 있는지 등에는 전혀 신경 쓰지 않는다. 단지 데이터 전기적인 신호로 변환해서 주고받는 기능만 할 뿐이다. 이 계층에 속하는 대표적인 장비는 통신 케이블, 리피터, 허브등이 있다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/01-install-guide/</link>
+      <link>https://yhb131618.github.io/blogguide/01-install-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/01-install-guide/</guid>
+      <guid>https://yhb131618.github.io/blogguide/01-install-guide/</guid>
       <description>Chap01_Hugo&amp;amp;GO Install # Hugo 공식 웹사이트&#xA;Go Install&#xA;Hugo Install&#xA;위 링크로 들어가 각각 Hugo&amp;amp;Go를 PC에 install 한다. ![[assets/Pasted image 20231223232713.png]]&#x9;- 터미널을 열고 hugo와 Go가 정상적으로 설치되었는지 확인한다. 만약 설치 확인이 안되면 환경 설정을 해준다. 이후 터미널로 들어가 원하는 곳의 저장 위치로 Site를 생성한다. 예) C://새폴더 -&amp;gt; 터미널 Hugo new site TEST_project Site가 생성되었으면, 터미널을 열고 Hugo server 명령어를 입력한다. 이후 웹을 열어 localhost:1313 입력하여 정상적으로 웹사이트가 작동하는지 확인한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
+      <link>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
+      <guid>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-1%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
       <description>1월 읽은 책 : 8권 # &amp;lt;1주차&amp;gt; # __ 조셉머피의 잠재의식 힘 # 1회독(반복해서 읽어야 할 도서) 도서 ![[assets/Pasted image 20240204182511.png|120]] 제목 조셉머피의 잠재의식 힘 작가 조셉머피 분류 자기계발 한줄평 잠재의식. 인간이라면 누구나 갖고 있는 빅데이터.나는 열등감이 없다고 생각했는데, 스스로가 생각해보니 열등감에 찌든 존재였다. 아니, 대한민국의 극소수 빼고는 모두 열등감에 빠졌다고 해도 과언이 아니었다.SNS와 TV 매체를 통해서 보여준 상위 1%의 모습이 많은 이들에게 열등감을 불어넣어 주었다.그리고 작금에 이르러 30평 인서울 아파트, 인서울 대학, 대기업 직장, 훈훈한 외모 등등 대한민국의 평균은 너무 높고, 이 평균에 오르지 못한 사람들은 실패자 또는 루저라고 부른다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/</link>
+      <link>https://yhb131618.github.io/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/</guid>
+      <guid>https://yhb131618.github.io/writer/%EA%BF%88%EC%86%8D%EC%9D%98-%EC%B2%9C%EC%9E%AC%EC%86%8C%EB%85%84/</guid>
       <description>나는 긴장하거나 급박한 순간이 찾아오면 머릿속이 새하얗게 변하곤 했다.&#xA;이는 중요한 시험 볼 때마다 그랬다. 특히 불안도 심했던 것 같다.&#xA;그 탓일까?&#xA;면접에서도 이미 아는 답도 막상 답변을 못하는 경우가 많았다.&#xA;그래서 나는 왜 이러는 걸까 하고 계속 고민하며 스스로의 모습을 싫어했다.&#xA;그러다가 꿈에서 답을 찾았다.&#xA;어느 날 아침 꿈을 꾸었는데, 14살 전후로 보이는 남자아이가 길거리에서 24개 국어를 유창하게 말하고 있었다.&#xA;나는 그 소년에게 다가가 물었다.&#xA;어떻게 24개 국어를 할 수 있는 거니?</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/02_selector/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/02_selector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/02_selector/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/02_selector/</guid>
       <description>Selector(선택자) # __ 설명 # 1. Selecotr(선택자)란? # CSS 속성을 적용시킬 태그를 지칭하는 것을 말한다. 선택자에는 여러가지 종류가 있고 전체 선택자, 클래스 선택자, 아이디 선택자, 자손 선택자, 가상 선택자 .. 등이 존재한다. 스타일 적용 방식에서 중괄호 앞에 쓰는 것들이 선택자가 된다. 2. 전체 선택자 # 웹 문서에 존재하는 모든 태그에 스타일을 적용할 때 사용. 전체 선택자는 별표(*)로 지정 ``` * { 스타일1: 속성값1; 스타일2: 속성값2; &amp;hellip;. } ``` 3. 전체 선택자는 문서의 여백이나 글꼴 크기 등 기본 스타일을 초기화할 때 사용</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/02_/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/02_/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/02_/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/02_/</guid>
       <description>중괄호 문법 # ![[assets/Pasted image 20240202162725.png]]&#xA;스타일문법 # ![[assets/Pasted image 20240202162942.png]]&#xA;![[assets/Pasted image 20240202173253.png]]![[assets/Pasted image 20240202174023.png]]![[assets/Pasted image 20240202175720.png]]</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/java-mvc_basic/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/java-mvc_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/java-mvc_basic/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/java-mvc_basic/</guid>
       <description>GIT 보러가기&#xA;![[assets/Pasted image 20231216212554.png]]&#xA;강의 후기 ★★★★★ 기초개념 설명이 너무 좋았다. 기본틀 하나씩 쌓아 올라가는 식의 강의여서 초보자가 듣기에 적합했다. 주변에 자바를 처음 공부하는 사람이 있다면 이 강의 부터 들으라고 하고 싶다. 시간 낭비하지 말고, 이 강의를 돈을 내고 들을 것을 추천한다.&#xA;Java Web # Test Setting Mysql version : 5.2 Eclipse ■ 01__Mysql 설치 및 접속하기 # [[content/9. IT_DB/Mysql|Mysql]] 참조&#xA;■ 02__Web Application Directory # ![[assets/Pasted image 20231216151515.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/9.-it_db/mysql/</link>
+      <link>https://yhb131618.github.io/9.-it_db/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/9.-it_db/mysql/</guid>
+      <guid>https://yhb131618.github.io/9.-it_db/mysql/</guid>
       <description>Mysql 8.0 # __ Install # yum install https://dev.mysql.com/get/mysql80-community-release-el7-6.noarch.rpm yum install mysql-community-server -y 설치 에러시 vi /etc/yum.repos.d/mysql-community.repo gpgcheck=1 -&amp;raquo;&amp;gt; gpgcheck=0 [mysql80-community] name=MySQL 8.0 Community Server baseurl=http://repo.mysql.com/yum/mysql-8.0-community/el/7/$basearch enabled=1 gpgcheck=0 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql-2022 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql __ Replica # __ __ Master Mysql # MySQL에 로그인합니다 (초기 임시 비밀번호 사용).&#xA;mysql -u root -p&#xA;복제를 위한 별도의 사용자를 생성합니다.&#xA;CREATE USER &amp;#39;replica&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED WITH mysql_native_password BY &amp;#39;replica_password&amp;#39;; GRANT REPLICATION SLAVE ON *.* TO &amp;#39;replica&amp;#39;@&amp;#39;%&amp;#39;; FLUSH PRIVILEGES; my.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
+      <link>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
+      <guid>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-2%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
       <description>2월 읽은 책 : # &amp;lt;1주차&amp;gt; # __ 브레이브 # 도서 ![[assets/Pasted image 20240204180031.png|120]] 제목 브레이브 작가 라이언 홀리데이 분류 자기계발 한줄평 용기에 관한 책이다. 사람은 생물적 본능으로 누구나 공포와 두려움을 지니고 있다. 그렇다면 이 두려움과 공포를 이길 수 있는 용기는 어떻게 훈련하고 기를 수 있을까?참으로 어려운 일이다. 그래서 이 책의 제목에 끌려 읽어보았다.딱히, 책 내용이 내 마음에 와 닿지는 않았다. 내용도 이미 아는 내용이었다.첫째. 스스로가 느끼는 공포와 두려움을 구체적으로 공책에 적는 것이다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/</link>
+      <link>https://yhb131618.github.io/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%8B%AC%EC%9E%A5%EA%B3%BC-%ED%94%BC%EB%A1%9C/</guid>
       <description>요새 피로를 많이 느낀다.&#xA;체질이 피로 체질로 변한 느낌이다.&#xA;그래서 두 달 동안 매일 7,8km 달리기 해서 체질 변화를 꾀했지만 피로 체질이 쉽게 바뀌지 않았다. 오히려 몸 상태가 나빠지는 것 같았다.&#xA;그래서 스스로에게 물었다. 왜 피로를 많이 느끼는지.&#xA;그러자 어느날 꿈속에서 누군가 말했다.&#xA;심장이 문제라고.&#xA;그래서 예전에 봤던 집중력에 대한 책의 이야기가 떠올랐다.&#xA;그 책은 포커스존이란 책이었는데, 10년 전에 읽었던 것으로 기억한다. 그 당시 집중력에 대해서 궁금해서 책을 읽었는데, 그 책의 저자는 집중력에는 2가지가 있다고 했다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/03_text-styling/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/03_text-styling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/03_text-styling/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/03_text-styling/</guid>
       <description>TEXT # 1. font-family # 웹 문서에서 사용할 글꼴을 지정하는 속성 웹 문서에서 글꼴을 지정할 시 한 가지 글꼴만 지정할 때도 있지만 해당 글꼴이 없을 경우를 대비해서 두 번째, 세 번째 글꼴까지 지정하는게 일반적이다. font관련 스타일들은 상속되기 때문에 body에 지정해 놓으면 웹 문서의 통일성을 높일 수가 있어 body에 지정하고 특정 태그에서만 변경하는 경우가 많다. 글꼴 지정 방식 - font-family: 글꼴이름1, 글꼴이름2, 글꼴이름3, &amp;hellip; ex) font-family: &amp;lsquo;맑은 고딕&amp;rsquo;, 돋움, 굴림 =&amp;gt; 맑은 고딕으로 글꼴이 적용되는데 맑은 고딕이 없을 경우 돋움으로 돋움도 없을 경우에는 굴림이 적용 웹 글꼴 사용하기 - 웹 폰트 : 웹 문서 안에 글꼴에 대한 정보를 저장했다가 웹 문서를 여는 순간 해당 웹페이지에서 글꼴을 가져와서 사용하는 방식.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/springframe_basic/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/springframe_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/springframe_basic/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/springframe_basic/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/02-hugo_features/</link>
+      <link>https://yhb131618.github.io/blogguide/02-hugo_features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/02-hugo_features/</guid>
+      <guid>https://yhb131618.github.io/blogguide/02-hugo_features/</guid>
       <description>01_Details # Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.&#xA;Title Markdown content # Lorem markdownum insigne&amp;hellip;&#xA;02_Columns # Columns help organize shorter pieces of content horizontally for readability.&#xA;Left Content # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/03-obsidian-guide/</link>
+      <link>https://yhb131618.github.io/blogguide/03-obsidian-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/03-obsidian-guide/</guid>
+      <guid>https://yhb131618.github.io/blogguide/03-obsidian-guide/</guid>
       <description>옵시디언 유튜브 강좌&#xA;브라이언의 브레인 트리니티( https://www.youtube.com/watch?v=u2UfMCH42Tk) 01_단축키&amp;amp;링크 # 단축키 # 보기/편집 : Ctrl+E 커맨드 : Ctrl+P 최근파일 : Ctrl+r 링크 # 메모 링크&#xA;기존에 존재하는 메모에 링크 [[file]] 현재 존재하지 않는 메모에 링크 [[no-file]] 미래에 작성할 노트 이름을 미리 추가 해당 링크, 노드를 클릭하면 해당 이름을 가진 노트가 생성된다. 특정 부분 링크&#xA;메모의 섹션 링크 [[filename#section]] 메모의 부분 링크 [[filename^linehash]] 임베드 ![[name]]&#xA;파일 임베드(이미지, 오디오) 메모를 직접 임베드 02_Callout # [!</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
+      <link>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
+      <guid>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84-3%EC%9B%94-%EB%8F%85%EC%84%9C/</guid>
       <description>3월 읽은 책 : # &amp;lt;1주차&amp;gt; # __ 질서의 너머 # 도서 ![[assets/Pasted image 20240331194159.png]] 제목 질서의 너머 작가 조던 B. 피터슨 분류 자기계발 한줄평 작가는 확실히 보수주의 가치관을 가졌다고 말 할 수 있었다. 하지만 그렇다고 전통의 가치를 고수하는게 아니다. 진보적인 가치관도 받아들이는 포용적인 보수였다.그런 의미에서 정치적 중립적인 글에서 느낄 수 있어 참으로 좋았다. 항상 이데올로기에 사로잡혀 자신의 입맛대로 정보와 통계를 이용하려는 작가들이 많아서 실망이었는데, 이 책은 그런 면이 전혀 없었다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
+      <link>https://yhb131618.github.io/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
+      <guid>https://yhb131618.github.io/writer/%EB%82%B4%EB%A9%B4%EA%B3%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
       <description>앤드류 카네기. 미국 철강왕의 시조인 그의 자서전에 이르길. 진정한 부는 정신과 마음에서 나온다고 했다.&#xA;더불어 일본의 교세라의 창업주 이즈모리 가즈오도 책에서 이렇게 말했다. 성공의 실패는 모두 마음에 달렸다고 말이다.&#xA;그리고 뒤를 이어 데일 카네기, 나폴레온 힐 수많은 자기계발 전문가들이 책에 저술했다. 부는 내면 깊은 곳에 있다고 말이다.&#xA;나는 지금까지 이들의 책을 읽으며 그들의 말을 머리로는 이해했지, 마음 깊이까지 이 말을 이해하지 못했던 것 같다.&#xA;하지만 요즘 들어서 마음 깊은 곳에서 그들이 말하는 부의 원천을 이해하기 시작했다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/04/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/04/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/04/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/04-mermaid/</link>
+      <link>https://yhb131618.github.io/blogguide/04-mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/04-mermaid/</guid>
+      <guid>https://yhb131618.github.io/blogguide/04-mermaid/</guid>
       <description>03_[[04) Mermaid |다이어그램]] # 다이어그램 라이브에디터&#xA;hugo.html # config 파일에 아래 코드 추가 [[module.imports]] path = &amp;#34;github.com/hugomods/mermaid&amp;#34; [params] [params.mermaid] js_url = &amp;#39;https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs&amp;#39; flowchart TD&#xA;A&amp;ndash;&amp;gt;B;&#xA;A&amp;ndash;&amp;gt;C; C&amp;ndash;&amp;gt;D;&#xA;flowchart TD A--&gt;B; A--&gt;C; C--&gt;D; classDiagram Animal &amp;lt;|&amp;ndash; Duck Animal &amp;lt;|&amp;ndash; Fish Animal &amp;lt;|&amp;ndash; Zebra Animal : +int age Animal : +String gender Animal: +isMammal() Animal: +mate() class Duck{ +String beakColor +swim() +quack() } class Fish{ -int sizeInFeet -canEat() } class Zebra{ +bool is_wild +run() }</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/</link>
+      <link>https://yhb131618.github.io/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%82%AC%EB%9E%8C%EC%9D%98-%EB%B3%B8%EC%84%B1/</guid>
       <description>사람 보는 눈은 과연 어떻게 기를 수 있을까?&#xA;유튜브 한 컨텐츠를 보았다.&#xA;서울대를 나왔고, 대기업에 다니며 연봉 1억 받는 엘리트의 삶을 말이다. 하지만 그는 불행하다고 했다. 배우자가 애를 낳는 동시에 일을 하지 않고 밖으로 나돌며 과소비를 한다고 말이다.&#xA;나는 그 이야기를 보며 과연 사람이란 공부 머리만 좋아서 될게 아니라는 것을 느꼈다. 오히려 사람 보는 안목이 가장 중요한 능력이 아닐까 싶었다.&#xA;전문직을 제외하고 기업에 근무하는 근로자의 직업 수명은 최대 30년을 바라본다. 하지만 배우자는 길면 죽을 때까지 봐야 한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/05/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/05/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/05/</guid>
       <description> 목차__ # __ 중목차_1 # __ __ 소목차_2 # __ __ __ 세부목차_3 # </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/05-hugo/</link>
+      <link>https://yhb131618.github.io/blogguide/05-hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/05-hugo/</guid>
+      <guid>https://yhb131618.github.io/blogguide/05-hugo/</guid>
       <description>Hugo Logic 예정</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/</link>
+      <link>https://yhb131618.github.io/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/</guid>
+      <guid>https://yhb131618.github.io/writer/%EA%B0%80%EC%B9%98%EB%B6%80%EC%97%AC/</guid>
       <description>자신에게 주어진 일이나 공부를 좋아하고 사랑하기란 쉽지 않다.&#xA;더욱이 먹고 살기 위해 하는 일과 내가 좋아하는 일을 일치 시키기도 쉽지 않다.&#xA;많은 사람들이 취미가 생계가 되면 더 이상 취미가 아니게 되고 좋아하는 마음이 사라진다고 한다.&#xA;이렇듯 자신이 좋아하는 일을 해도 생계가 걸리면 좋아하고 사랑하는 마음을 유지하기 어렵다.&#xA;그렇다면 어떻게 해야 자신의 일을 사랑하고 좋아할 수 있을까?&#xA;이는 내 자신에게 묻고 싶은 말이었다.&#xA;일론 머스크, 빌 게이츠, 스티븐 잡스.&#xA;당대 유명한 자수성가들은 사업가로서 스스로가 하는 일을 사랑했다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/06/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/06/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/06/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/06/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</link>
+      <link>https://yhb131618.github.io/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%A3%BD%EC%9D%8C%EA%B3%BC-%EC%B9%B4%EB%A5%B4%EB%A7%88/</guid>
       <description>인간은 언젠가 죽는다. 아니, 인간뿐만 아니라 모든 생물은 태어남과 동시에 죽음을 피할 수 없는 숙명이다.&#xA;나는 고등학교 졸업 후 많은 번뇌가 찾아왔다.&#xA;진정으로 내가 하고 싶은 일은 무엇이고, 내가 원하는 삶은 어떤 삶일까하는 번뇌 말이다. 그리고 더 나아가 언젠가 찾아올 죽음에 대해서도 생각했다.&#xA;죽음.&#xA;솔직히 나는 죽음을 좋은 현상이라고 생각한다.&#xA;수많은 질병과 고통, 트라우마로 고통 받는 인간과 동물들에게 죽음은 유일한 안식처라고 생각하기 때문이다.&#xA;물론, 많은 사람들은 이런 내 생각을 공감하지 못할 것이다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/07_flex/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/07_flex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/07_flex/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/07_flex/</guid>
       <description>![[assets/Pasted image 20240402161552.png]] ![[assets/Pasted image 20240402161420.png]]&#xA;Flex # display: flex; display: inline-flex; flex-direction: row #왼쪽에서 오른 flex-direction: column #위에서 알래 flex-direction: row-reverse; #역방향 flex-wrap : nowrap; #한줄에 넣기 flex-wrap : wrap; # 자동으로 여러줄에 넣기 justify-content: flex-end; # 역방향 justify-content: center; # 중앙배치 justify-content: space-around; #아이템 테두리 justify-content: space-evenly; #아이템 동일한 간격 justify-content: space-between; #중간 아이템만 테두 align-items: center; # 페이지의 세로 중앙 배치 align-items: baseline; # 아이템 베이스 라인 맞춰서 배치 #아이템의 크기가 줄어들고 늘어날때 지정하는 css flex-grow: 1; #지정한 특정 아이템 크기가 다른 아이템의 크기에 1배로 늘어난다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</link>
+      <link>https://yhb131618.github.io/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</guid>
+      <guid>https://yhb131618.github.io/writer/%EA%B2%BD%EC%9F%81%EC%82%AC%ED%9A%8C/</guid>
       <description>각종 매체를 통해서 과도한 한국 경쟁문화가 문제라고 이야기한다.&#xA;더불어 각종 커뮤니티 및 책에서도 한국은 너무 과도한 경쟁 때문에 사회적 비용 낭비와 더불어 개인의 행복이 낮다고 한다.&#xA;하지만 그들은 말로는 한국의 경쟁사회 때문에 여러 문제가 일어난다고 하지만 그 근본적인 원인에 대해서는 말하거나 생각하지 않는다.&#xA;무조건적으로 한국 사회가 한국 문화가 잘못된 것이라고 이야기한다.&#xA;과도한 경쟁사회.&#xA;그 원인은 무엇일까?&#xA;천연자원의 부족. 작은 내수경제. 그리고 다른 나라와 수출경쟁.&#xA;대한민국은 통일이 되지 않은 이상 작은 내수 경제로 경쟁이 심할 수밖에 없다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/08_grid/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/08_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/08_grid/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/08_grid/</guid>
       <description>![[assets/Pasted image 20240402151818.png]] ![[assets/Pasted image 20240402153042.png]]&#xA;Grid # ![[assets/Pasted image 20240402145315.png]]&#xA;body{ padding: 5rem; background-color: black; } .container { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px grid-gap: 1rem; grid-template-areas: &amp;#39;a a a&amp;#39; &amp;#39;b c c&amp;#39; } .image { width: 100%; heigth: 100%; object-fit : cover; } .image1 { grid-area: b; } .iamge2 { grid-area: e; } &amp;lt;body&amp;gt; &amp;lt;header&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;main&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;/aside&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;/footer&amp;gt; &amp;lt;body&amp;gt; body { width: 100vw; height: 100vh; margin: 0; display: grid; grid-template-columns: 3fr 1fr; grid-template-rows : 100px atuo 50px; (header-main-footer) grid-template-areas: &amp;#39;header header&amp;#39; &amp;#39;main side&amp;#39; &amp;#39;footer footer&amp;#39; } header { grid-area: header; } aside { grid-area: side; } footer { grid-area: footer; } </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/</link>
+      <link>https://yhb131618.github.io/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%97%B4%EB%93%B1%EA%B0%90%EC%9D%84-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95/</guid>
       <description>TV 매체 나오는 진로 전문가들은 말한다. 자신이 사랑하고 좋아하는 일을 찾으라고.&#xA;하지만 그런 일을 찾는 것은 매우 어렵다.&#xA;과연 지구상에 자신이 사랑하고 좋아하는 일을 하는 사람은 얼마나 될까?&#xA;10%?&#xA;1%?&#xA;설령 자신이 진정으로 좋아하는 일을 찾더라도 그 일을 통해서 먹고 사는 것은 또다른 별개의 문제이다. 더욱이 사회에는 여러 제약이 존재하기에 자신이 사랑하는 일을 찾더라도 그것을 직업으로 삼는 것은 매우 어렵다.&#xA;예를 들어 농구를 사랑하더라도 신체적으로 제약이 존재하고, 춤을 좋아하더라도 외모의 제약이 존재한다.</description>
     </item>
     <item>
       <title>Vitual</title>
-      <link>http://localhost:1313/7.-it_network/virtual-netork/</link>
+      <link>https://yhb131618.github.io/7.-it_network/virtual-netork/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/virtual-netork/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/virtual-netork/</guid>
       <description>[[content/2. IT_Cloud/Common_커널|Common_커널]]&#xA;CPU의 인스트럭션 실행 ![[assets/Untitled 14.png]]&#xA;- Ring 0에 가까울 수록 높은 권한을 가진 명령을 실행할 수 있다. - 응용프로그램은 Ring 3에서 실행되고, 운영체제는 Ring 0에서 특권 명령 (privileged mode)을 사용하여 필요한 컴퓨팅 자원에 접근이 가능하다. 가상화의 종류 # </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_storage/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_storage/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_storage/</guid>
       <description>02__Storage # RAID # Redudant Array of Inexpensive Disks 디스크를 병렬연결하여 사용하며 여러 개의 디스크를 중복된 데이터로 분산하여 저장하는 방식 RAID 0 : 데이터를 분할하여 동시에 여러 개의 디스크에 저장하는 방식 (스트라이핑 방식, 줄무늬 옷처럼 여러 개의 디스크에 저장) ![[assets/Pasted image 20240122163247.png]] RAID 1 : 하나의 디스크를 완벽하게 똑같이 거울처럼 복사해서 저장하는 방식(미러링 방식, 거울에 서 있는 |(1)의 모습) ![[assets/Pasted image 20240122163252.png]]&#xA;RAID 4: 스프라이프 볼륨 + 전용 패리티 비트 디스크 (4: 혼자 4망 하면 나머지는 산다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nca_01_server/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nca_01_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nca_01_server/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nca_01_server/</guid>
       <description>![[assets/Pasted image 20240122152923.png]] ![[assets/Pasted image 20240122154924.png]]&#xA;Server # Server를 생성하려면 VPC와 Subnet을 만들고 난 이후 서버를 만들 수 있다. __ 1.1_VPC Create # IP private 대역(10.0.0.0/8,172.16.0.0/12,192.168.0.0/16) 내에서 /16~/28 범위여야 합니다. 예) 10.0.0.0/16 ![[assets/Pasted image 20240122165000.png]] __ 1.2_Network ACL # ![[assets/Pasted image 20240122165121.png]] ![[assets/Pasted image 20240122165330.png]] ![[assets/Pasted image 20240122165207.png]]&#xA;*Inbound 규칙 설정 우선순위: 0, 프로토콜: ICMP, 접근 소스: 0.0.0.0/0, 허용여부: 허용 우선순위: 10, 프로토콜: TCP, 접근 소스: 0.0.0.0/0, 포트: 80, 허용여부: 허용 우선순위: 15, 프로토콜: TCP, 접근 소스: 10.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/springboot_vs/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/springboot_vs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/springboot_vs/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/springboot_vs/</guid>
       <description>01__Extension Pack # 설치 Spring Boot Extension Pack 02__Project Create # CTRL + SHIFT + P 명령어 입력 입력창에 Spring init입력 프로그래밍 언어를 선택합니다. # (저는 Java를 선택하였습니다.)&#xA;Group Id와 Artifact Id를 입력합니다. # 기본적으로 com.example로 되어있지만 이 부분은 나중에 패키지의 기본 경로가 되기 때문에 연관 있는 것으로 설정해주시는 것이 좋습니다.&#xA;마찬가지로, 관련있는 것으로 변경해줍니다.&#xA;스프링 부트 버전 및 의존성을 설정해줍니다. # 스프링 부트 버전같은 경우에는 특별한 경우가 아니라면 기본적으로 설정되어 있는 버전을 선택하시면 됩니다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_network/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_network/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_network/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nca_02_loadblancer/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nca_02_loadblancer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nca_02_loadblancer/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nca_02_loadblancer/</guid>
       <description>Load Balancer # Target Group 요청을 처리할 대상에 대한 집합 동일 VPC 내에 있는 서버들에 대해 타켓 그룹 생성 가능 타넷 그룹 안에 있는 서버를 다른 타켓 그룹에 속하게 할 수 있지만 타켓 그룹을 다수의 로드밸런서에 연결할 수 없음. 서비스를 수행하는 대상의 프로토콜에 따라 L4와 L7으로 구분 헬스체크 주기(5-300초) 및 임계값 설정 VPC 플랫폼: 헬스체크 주기 Default 30초, 주기 변경 가능 Classic 플랫폼: 헬스체크 주기 Default 6초, 주기 변경 불가능 기본은 Round Robin 설정 알고리즘 및 Sticky, ProxyProtocol 설정 변경은 생성 이후에 진행 !</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/springboot_basic/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/springboot_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/springboot_basic/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/springboot_basic/</guid>
       <description>SpringBoot 2.7.6 # Test Setting Mysql version : 8.2 01__SpringBoot # SpringFramework 기반으로 tomcat이 내장되어 있으며 다양한 라이브러리 및 어노테이션이 추가된 프레임워크를 말한다. (@RestController, @Configuration, @Mapper, @Bean, &amp;hellip;)&#xA;__ 1.1_SpringBoot Feature # tomcat이 내장되어 있어 별도의 tomcat 설치가 필요 없다.&#xA;Spring Framework 프로젝트의 배포는 WAS에서 읽을 수 있는 WAR 파일로 만들어서 배포를 진행했는데 Spring Boot 프로젝트는 JDK에서 바로 실행할 수 있는 JAR 파일로 만들어서 배포한다.&#xA;Spring Boot Starter 패키지를 제공해서 빠른 라이브러리 의존성을 설정할 수 있다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_lvm/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_lvm/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_lvm/</guid>
       <description>Linux_LVM # LVM(Logical Volume Manager)는 리눅스의 저장 공간을 효율적이고 유연하게 관리하기 위한 커널의 한 부분이다.&#xA;LVM이 아닌 기존 방식의 경우, 하드 디스크를 파티셔닝 한 후 OS 영역에 마운트하여 read/wirte를 수행했다.&#xA;이 경우 저장 공간의 크기가 고정되어서 증설/축소가 어렵다. 이를 보완하기 위한 방법으로 LVM을 구성할 수 있다.&#xA;LVM은 파티션 대신에 volume이라는 단위로 저장 장치를 다룬다.&#xA;스토리지의 확장,변경에 유연하며, 크기를 변경할 때 기존 데이터의 이전이 필요 없다.&#xA;512g nvme 단일 ssd vs 256g nvme 2개 ssd</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nca_03_dns--cdn/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nca_03_dns--cdn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nca_03_dns--cdn/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nca_03_dns--cdn/</guid>
       <description>DNS # ![[assets/Pasted image 20240124150541.png]] ![[assets/Pasted image 20240124150817.png]] ![[assets/Pasted image 20240124150951.png]]&#xA;IANA&#xA;Internet assigned numbers authority의 약어. 인터넷 할당 번호 관리 기관. IANA는 인터넷 소사이어티(ISOC)의 산하기관으로, 인터넷에 접속하기 위한 인터넷 프로토콜(IP)의 전 세계적 주소에 대하여 최종적인 조정과 관리를 하는 기관. ICANN&#xA;1998년 미국 상무부가 만들었다. 한국을 나타내는 ‘.kr’ 같은 국가별 인터넷 주소(도메인)와 회사를 뜻하는 ‘.com’ 같은 일반 최상위 도메인(Domain)의 생성 여부를 결정했다. TLD&#xA;최상위도메인(top level domain)은 그 도메인이 나타내는 기관분류 또는 국가, 그리고 등록처를 보여주는 것.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/springboot_security/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/springboot_security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/springboot_security/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/springboot_security/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nca_04_autoscaling/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nca_04_autoscaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nca_04_autoscaling/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nca_04_autoscaling/</guid>
       <description>Auto Scale # Auto Scaling Group&#xA;여러 개의 서버 인스턴스들을 Auto Scaling Group 이라는 하나의 그룹으로 묶어 놓게 된다. Launch Configuration&#xA;가상 서버를 시작하는데 사용하는 템플릿 Auto Scaling Group을 생성할 때는 Launch Configuration을 지정해야 한다. ![[assets/Pasted image 20240122164759.png]] ![[assets/Pasted image 20240122164747.png]] 모리터링 기반 ![[assets/Pasted image 20240122163757.png]]&#xA;스케줄링 기반 ![[assets/Pasted image 20240122163814.png]]&#xA;매뉴얼 기반 ![[assets/Pasted image 20240122163830.png]]&#xA;01_Launch Configuration # ![[assets/Pasted image 20240124162735.png]]&#xA;Auto Scaling &amp;gt; Launch Configuration 선택 후 Launch Configuration 생성 !</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nca_05_storage-/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nca_05_storage-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nca_05_storage-/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nca_05_storage-/</guid>
       <description>Auto Scale # Auto Scaling Group&#xA;여러 개의 서버 인스턴스들을 Auto Scaling Group 이라는 하나의 그룹으로 묶어 놓게 된다. Launch Configuration&#xA;가상 서버를 시작하는데 사용하는 템플릿 Auto Scaling Group을 생성할 때는 Launch Configuration을 지정해야 한다. ![[assets/Pasted image 20240122164759.png]] ![[assets/Pasted image 20240122164747.png]] 모리터링 기반 ![[assets/Pasted image 20240122163757.png]]&#xA;스케줄링 기반 ![[assets/Pasted image 20240122163814.png]]&#xA;매뉴얼 기반 ![[assets/Pasted image 20240122163830.png]]&#xA;01_Object Storage # ![[assets/Pasted image 20240124171448.png]] ![[assets/Pasted image 20240124171600.png]] ![[assets/Pasted image 20240124171648.png]] ![[assets/Pasted image 20240124171758.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/springboot_error/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/springboot_error/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/springboot_error/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/springboot_error/</guid>
       <description>__ 01_JSP error # SpringBoot 2.7.6 # __ 01_JSP error # SpringBoot는 JSP를 권장하지 않는다라는 구글에서 보았지만 살포시 무시했다. 그결과 JSP error가 떴다. 이 문제로 2일을 소비했다.&#xA;다음부터는 SpringBoot에서 JSP를 절대 안 쓰는 걸로 하고, 이를 해결하기 위해 검색을 했다. (GPT4에게 아무리 물어봐도 똑같은 답변만 나오고 딱히 이상이 없다고 한다.) ![[assets/Pasted image 20240118144632.png]] 처음에는 위와 같은 경로에서 JSP가 정상적으로 작동했다. 하지만 dependency injection을 하면서 갑자기 jsp가 작동하지 않았다. ![[assets/Pasted image 20240118144755.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_kvm/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_kvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_kvm/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_kvm/</guid>
       <description>KVM이란? (Ubuntu 20.04) # __ 1.1_KVM 패키지 설명 # qemu-kvm KVM 하이퍼바이저에 대한 하드웨어 에뮬레이션을 제공 Kernel Space - KVM User Space - QEMU libvirt-daemon-system libvirt 데몬을 시스템 서비스로 실행하는 구성 파일 리눅스에서 Hypervisor 기반 가상화 관리 및 제어도구 libvirt-clients 가상화 플랫폼을 관리하기위한 소프트웨어 bridge-utils 이더넷 브리지를 구성하기위한 명령 줄 도구 세트 virtinst 가상 머신을 만들기위한 명령 줄 도구 집합 virt-manager 사용하기 쉬운 GUI 인터페이스와 libvirt를 통해 가상 머신을 관리하기위한 명령 줄 유틸리티 __ 1.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/ci__harbor/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/ci__harbor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/ci__harbor/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/ci__harbor/</guid>
       <description>Harbor # Docker Image Registry 01__ Outline # Harbor와 관련된 주요 기능은 다음과 같습니다.&#xA;Helm 차트 관리: 프로젝트별로 격리되고 RBAC에 의해 제어되는 Helm 차트를 관리하는 데 도움이 됩니다. LDAP 그룹별 역할 관리: 관리자는 LDAP/AD 그룹을 Harbor로 가져와 프로젝트 역할을 할당할 수 있습니다. 프로젝트 복제: 이미지 복제를 지원합니다. 하나의 Harbor 인스턴스에서 다른 Harbor 인스턴스로 저장소를 복제할 수 있습니다. 역할 기반 액세스 제어: 사용자와 저장소는 프로젝트로 구성됩니다. 사용자는 다양한 프로젝트의 이미지에 대해 다양한 권한을 가질 수 있습니다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_console/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_console/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_console/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_console/</guid>
       <description> Console 가상 콘솔 tty0, tty1, tty2 &amp;hellip;tty6 pts/7은 X-윈도우 ttyS0, ttyS1은 시리얼 콘솔을 말함 GRUB </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/ci__jenkins/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/ci__jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/ci__jenkins/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/ci__jenkins/</guid>
       <description>https://myminju.tistory.com/115 블로그 참조&#xA;01__Install &amp;amp; Start # 시스템에 젠킨스 레포지토리 추가 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \ /usr/share/keyrings/jenkins-keyring.asc &amp;gt; /dev/null echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \ https://pkg.jenkins.io/debian binary/ | sudo tee \ /etc/apt/sources.list.d/jenkins.list &amp;gt; /dev/null apt 업데이트 sudo apt update 젠킨스 설치 sudo apt install jenkins 접속 http://{인스턴스 IP}:8080&#xA;⚠️ 접속이 안 된다면 ?&#xA;보안그룹에 8080 포트 열어주었는지 확인 jenkins status 확인 # jenkins status 확인 sudo systemctl status jenkins # jenkins 시작 sudo systemctl start jenkins 8080 포트 열려있는지 확인 sudo ufw status # Status: inactive 라면 sudo ufw allow 8080 sudo ufw allow OpenSSH sudo ufw enable sudo ufw status 설정 초기 비밀번호 위치 : cat /var/lib/jenkins/secrets/initialAdminPassword 완료 설정 단계를 차례대로 진행하다 보면.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/ci__ansible/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/ci__ansible/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/ci__ansible/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/ci__ansible/</guid>
       <description>Ansible # Ansible Install # (ubuntu 20.04)&#xA;설치&#xA;apt install python3-pip apt install ansible ansible -h apt-get install -y sshpass IP 등록&#xA;Guest Server 등록 및 python 경로 지정 vi /etc/ansible/hosts [all:vars]&#xA;ansible_python_interpreter=/usr/bin/python3 파이썬 경로 미지정 에러 ![[assets/Pasted image 20240221161139.png]]&#xA;Ping 테스트 ![[assets/Pasted image 20240221161125.png]]&#xA;Ansible PlayBook # Ansible은 기본적으로 PlayBook을 기준으로 스크립트를 작성한다. 또, 이 스크립트를 여러번 재실행하여도 이미 한번 적용된 패키지는 재설치하지 않고 건너뛰기 때문에 중복 실행에 대하여 안정성을 제공한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/ci__mino/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/ci__mino/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/ci__mino/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/ci__mino/</guid>
       <description>MinIO 바이너리 다운로드 # MinIO 서버 바이너리를 다운로드&#xA;bashCopy code&#xA;wget https://dl.min.io/server/minio/release/linux-amd64/minio chmod +x minio&#xA;MinIO 실행 # MinIO를 실행하기 전에, MinIO가 사용할 스토리지 디렉토리를 생성해야 합니다. 예를 들어, /data 디렉토리를 사용하려면 다음과 같이 디렉토리를 생성하세요:&#xA;bashCopy code&#xA;mkdir /data&#xA;그런 다음, 다음 명령어를 사용하여 MinIO 서버를 실행&#xA;bashCopy code&#xA;./minio server /data --console-address &amp;quot;:9001&amp;quot;&#xA;이 명령은 /data 디렉토리에 데이터를 저장하고, MinIO 콘솔을 9001 포트에서 사용할 수 있도록 설정합니다. MinIO 서버는 기본적으로 9000 포트에서 실행됩니다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cicd---%EB%B0%B0%ED%8F%AC%EB%B0%A9%EB%B2%95/</guid>
       <description>1_CI/CD # 2_Deploy # (SpringBoot&amp;amp;React 기준) __ 2.1_One Deploy # Docker 방식 스프링부트와 리엑트 함께 빌드해서 배포하는 방법 Build시 스프링부트 안의 Jar 안의 Static 폴더에 리엑트 빌드가 들어가 있다. __ 2.2_Two Deploy # Docker-compose 방식/ K8s 방식 스프링부트와 리엑트 각각 빌드해서 배포하는 방법 Build시 스프링부트와 리엑트를 각각 빌드 한 뒤 nginx 프록시를 이용하여 연동한다. 컨테이너 관리가 쉬운 이 방법이 테스트할 때 배포하기 가장 좋았고, 코드 수정이 용이 한 것 같다.</description>
     </item>
     <item>
       <title>etc_VPN</title>
-      <link>http://localhost:1313/7.-it_network/etc_vpn/</link>
+      <link>https://yhb131618.github.io/7.-it_network/etc_vpn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/etc_vpn/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/etc_vpn/</guid>
       <description>VPN # Virtual Private Network&#xA;VPN이란 서울역에서 부산역까지 한번에 연결하는 터널을 의미한다. 그러므로 서울역에서 근무하는 근로자는 부산역으로 바로 이동하여 일을 할 수 있다. ![[assets/Untitled.png]]&#xA;사설망: 특정 지역에서만 통신이 되는 네트워크를 말한다. 보통 보안이 철저한 군용 통신망과 기업 통신망을 가리켜 사설망이라고 부른다. 또는 폐쇄망이라고도 부른다.&#xA;공중망: 전세계적으로 통신이 가능한 인터넷을 공중망이라고 부른다.&#xA;PN의 핵심은 바로 서울역과 부산역을 잇는 ‘터널링’ 기술이라고 볼 수 있다.&#xA;예를 들어, 한국에서 한국식 전화번호 형식 192.168.0.X을 가지고 통화가 가능하지만, 미국에서는 미국식 전화번호 형식 10.</description>
     </item>
     <item>
       <title>etc_SDN</title>
-      <link>http://localhost:1313/7.-it_network/etc_sdn/</link>
+      <link>https://yhb131618.github.io/7.-it_network/etc_sdn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/etc_sdn/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/etc_sdn/</guid>
       <description>SDN # SDN(Software-Defined Networking)&#xA;처음 SDN 개념을 접했을 때는 너무 개념이 어려웠다.&#xA;하지만, 실무로 겪어보니 굉장히 쉬운 개념이었다.&#xA;![[assets/Untitled 9.png]]&#xA;![[assets/Untitled 4 1.png]] 한마디로 하드웨어 인프라(네트워크 장비) 와 통신하기 위해서 소프트웨어 기반 컨트롤러 또는 ==애플리케이션 프로그래밍 인터페이스(API)==를 활용하는 네트워킹에 대한 접근 방법이었다.&#xA;SDN과 NFVO 개념이 혼동되긴 한다.&#xA;SDN # 네트워크를 프로그래밍 하는 것이 중점으로, 네트워크를 프로비저닝하고 관리하기 위한 외부적인 수단(중앙 애플리케이션 컨트롤러)이 핵심이다. (검색 자료를 보면 L2~L3 중심이다) 네트워크 추상화 (Network Abstraction)</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/0_slide/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/0_slide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/0_slide/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/0_slide/</guid>
       <description></description>
     </item>
     <item>
       <title>etc_NFVO</title>
-      <link>http://localhost:1313/7.-it_network/etc_nfvo/</link>
+      <link>https://yhb131618.github.io/7.-it_network/etc_nfvo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/etc_nfvo/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/etc_nfvo/</guid>
       <description>NFVO # Network Function Virtualization Occhestration&#xA;![[assets/Untitled 1 4.png]] ![[assets/Untitled 2 6.png]]&#xA;이테크시스템의 재직 당시 처음 접했던 기술.&#xA;5G 무선 통신 코어망을 구축당시 NFVO 기술을 활용하여 각 KT의 지사에 구축했었다.&#xA;아래는 MANO의 기본적인 아키텍처이다.&#xA;한 달 내내 아래 그림이 어떤 의미인지 공부하는데, 꽤 애를 먹었다. 더불어 그 당시에는 NFVO 관련 자료가 없었던 것으로 기억한다.&#xA;![[assets/Untitled 3 5.png]]![[assets/Untitled 13.png]]&#xA;재직 당시에는 위의 아키텍처 기반으로 openstack 기술을 활용하여 Cisco의 무선 네트워크 이미지를 배포하고, 구축하는 작업을 했었다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/nce_expert_%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%9A%94%EC%95%BD%EC%A0%95%EB%A6%AC/</guid>
       <description>대면시험 강남 네이버클라우드 11층&#xA;NCA 공부시간 1시간이면 충분 NCP 공부시간 3시간이면 충분&#xA;하지만 NCE는 좀 어렵다고 하니 차근차근 정리하자.&#xA;Chap 01 # Compute_301 # Xen : 리눅스 50g or 윈도우 100g&#xA;스토리지 10G-2TB 볼륨 암호화 서버에서 대해서 볼륨 암호화 디스크만 추가 가능 최대 16개 사용 가능 kvm : 리눅스 10-2TB, 윈도우 30-2TB&#xA;기본 스토리지 사이즈 변경 가능(정지 후) 스토리지 10-16TB 생성 최대 20개 사용 가능 CLI&#xA;java 어플리케이션으로 제작된 CLI, API를 통해서 네이버 클라우드 플랫폼의 다양한 리소스 제어 서버, Object Storage, Archive Storage CLI가 별도로 존재 Object Storage aws cli, aws api를 이용 Archive Storage keystone, swift의 cli, api를 이용 Compute 요금 : 컴퓨팅 , 네트워크, 스토리지(스토리지는 서버 정지에도 계속 발생)</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
+      <link>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
+      <guid>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/</link>
+      <link>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/</guid>
+      <guid>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/01_erp/</guid>
       <description>All-IN-ONE ERP # 01_Idea # AI 시대가 도래했다.&#xA;이제는 단순 반복 작업은 점차 사라지고, 창의적인 아이디어나 비즈니스, 컨텐츠를 만들어 내야 살아남을 수 있는 시대로 변하고 있다.&#xA;즉, 마이크로 비즈니스 시대가 도래하여 1인 또는 3~5명의 팀 단위 전문 기업이 우후죽순으로 생길 것으로 예상한다.&#xA;로봇으로 24시간 운영하는 치킨 편의점이나, 마케팅 또는 인사와 같은 부서가 없는 게임 개발 회사가 그 예이다.&#xA;물론, 지금도 코인 노래방이나 인디 게임 개발자들이 있다.&#xA;하지만, 미래에는 이들의 숫자가 폭발적으로 늘어날 것이라 생각한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/</link>
+      <link>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/</guid>
+      <guid>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/02_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EC%99%80-ai/</guid>
       <description>데이터센터와 AI # AI와 자율주행은 뗄래야 뗄 수 없는 관계인 것처럼 데이터센터와 AI 또한 접목시키면 큰 효과가 있지 않을까?&#xA;AI 데이터센터의 네트워크 및 서버 인프라를 학습시킨다. 그렇게 AI는 데이터 센터의 관제탑이 되어 사용하지 않은 네트워크와 서버 인프라는 종료시키고, 빅데이터에 따라 네트워크 및 리소스 사용량이 많아질 것 같으면 종료 시켰던 네트워크와 서버를 다시 활성화 시키는 것이다.&#xA;더불어 네트워크 트래픽의 경우 수많은 네트워크 장비를 거치는데, AI가 마치 네비게이션 역할을 하게 하여 가장 빠른 경로로 자동 항해하게끔 하는 것이다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/</link>
+      <link>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/</guid>
+      <guid>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/03_%EA%B5%AC%EB%8F%85%ED%98%95-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80/</guid>
       <description>구독 여행 패키지 서비스&#xA;국내 여행을 기준으로 월 29,900원을 납부하면 6개월 기준으로 국내 여행 2박 3일 패키지 상품 1회 이용할 수 있게 해주는 것이다. (단 일시불로 20만원~22만원 정도)&#xA;여행 일정은 매주 금토일, 일월화, 화수목, 목금토 사이에 정할 수 있으며, 규모는 20-40명 단위의 인원 제한으로 1곳 지역의 국내 여행을 시작하고, (첫 시작은 10곳으로 시작하고, 점차 늘려가는 방식으로 준비)&#xA;각 지역마다 여행 테마를 가지고 여행 패키지를 준비한다.&#xA;등산, 꽃, 호수, 바다, 명상, 음악 등등</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
+      <link>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/</guid>
+      <guid>https://yhb131618.github.io/0.-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/04_%EB%B9%84%EC%A3%BC%EC%96%BC-%EB%85%B8%EB%B2%A8-%ED%94%8C%EB%9E%AB%ED%8F%BC/</guid>
       <description>Open AI를 이용하여 작가의 소설을 비주얼 노벨화 시키는 플랫폼.&#xA;해당 플랫폼에서는 이미지, 무료음악, 시나리오 분기점 처리 등등 여러 요소 기능을 지원하고&#xA;독자는 마치 게임을 하듯이 시나리오를 읽고 시나리오 분기 선택을 통해서 마치 소설 속 주인공을 된 듯한 느낌을 받게 한다.&#xA;또한, 독자는 자 시나리오에 추가 브랜치를 만들어 if 시나리오를 이어나갈 수 있게 만들 수 있게 한다.&#xA;추가적으로 여러 이미지 요소를 ai로 생성 및 백엔드 기술을 통하여 해당 소설 정보를 가지고 시나리오 기반 웹 게임을 구현한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/1.-it_os/</link>
+      <link>https://yhb131618.github.io/1.-it_os/1.-it_os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/1.-it_os/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/1.-it_os/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_keepalived/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_keepalived/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_certbot/</guid>
+      <description>Harbor를 설치하고 운영할 때 HTTPS를 사용하여 통신을 보호하는 것은 중요합니다. 이를 위해 유효한 SSL/TLS 인증서를 발급받고 Harbor에 적용해야 합니다. Let&amp;rsquo;s Encrypt는 무료로 SSL/TLS 인증서를 발급해주는 CA(Certificate Authority) 중 하나입니다. 다음은 Let&amp;rsquo;s Encrypt를 사용하여 Harbor에 HTTPS 인증서를 발급하고 적용하는 기본적인 방법입니다.&#xA;1. Certbot 설치 # Let&amp;rsquo;s Encrypt에서 제공하는 Certbot을 사용하여 인증서를 자동으로 발급받고 갱신할 수 있습니다. Certbot의 설치 방법은 운영 체제에 따라 다릅니다.&#xA;Ubuntu/Debian 기반 시스템의 경우: # bashCopy code&#xA;sudo apt update sudo apt install certbot</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/linux_keepalived/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_keepalived/</guid>
       <description>#keepalived #linux&#xA;Keepalived # [링크](4장. Keepalived를 사용한 초기 로드 밸런서 구성 Red Hat Enterprise Linux 7 | Red Hat Customer Portal]( https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/7/html/load_balancer_administration/ch-initial-setup-vsa) ![[assets/Pasted image 20240322161734.png]]&#xA;Keepalived는 가상 IP를 기반으로 작동하며, 마스터 노드를 모니터링하다 해당 노드에 장애가 발생했을 시, 스탠바이 서버로 페일오버되도록 지원 기본 구성 # 이 기본 예에서는 두 개의 시스템이 로드 밸런서로 구성됩니다. LB1(Active) 및 LB2(Backup)는 실제 IP 주소 192.168.1.20에서 192.168.1.24로 번호가 지정된 httpd 웹 서버 풀에 대한 라우팅 요청으로, 가상 IP 주소를 10.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/1.-it_os/linux_ntp/</link>
+      <link>https://yhb131618.github.io/1.-it_os/linux_ntp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1.-it_os/linux_ntp/</guid>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_ntp/</guid>
       <description>1. Chrony 설치 확인 # 1. Chrony 설치 확인 # 먼저, chronyd 서비스가 시스템에 설치되어 있는지 확인합니다. 설치되어 있지 않다면 설치합니다:&#xA;bashCopy code&#xA;sudo yum install chrony&#xA;2. Chrony 서비스 시작 및 활성화 # chronyd 서비스를 시작하고 부팅 시 자동으로 실행되도록 설정합니다:&#xA;bashCopy code&#xA;sudo systemctl start chronyd sudo systemctl enable chronyd&#xA;3. 시간 동기화 확인 # 시스템 시계가 NTP 서버와 정확히 동기화되었는지 확인합니다:&#xA;bashCopy code&#xA;chronyc tracking&#xA;이 명령은 현재 시간 소스와 그 정확도에 대한 정보를 보여줍니다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/2.-it_cloud/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/2.-it_cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/2.-it_cloud/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/2.-it_cloud/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cd_argo/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cd_argo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cd_argo/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cd_argo/</guid>
       <description>1. Argo CD 설치 # kubectl과 연동하여 사용할 Kubernetes 클러스터에 접속되어 있는지 확인한 후, 아래 명령어로 Argo CD를 설치합니다:&#xA;bashCopy code&#xA;kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml&#xA;이 명령어는 argocd 네임스페이스를 생성하고, Argo CD의 최신 안정 버전을 설치합니다.&#xA;2. Argo CD 서버에 접속 # Argo CD API 서버는 기본적으로 클러스터 내부에서만 접근 가능합니다. 외부에서 접근하기 위해, 다음 명령어로 Argo CD 서버를 포트포워딩할 수 있습니다:&#xA;bashCopy code</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cd_istio/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cd_istio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cd_istio/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cd_istio/</guid>
       <description>CD_</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cd_k8s/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cd_k8s/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cd_k8s/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cd_k8s/</guid>
       <description>Kubernetes # ![[assets/Pasted image 20240319145726.png]]&#xA;__ Kubernetes Install # __ __ Reset # 클러스터 초기화 sudo kubeadm reset 모든 클러스터 서버에서 위의 명령어를 실행한다. sudo kubeadm init &amp;ndash;pod-network-cidr=10.96.0.0/12 &amp;ndash;ignore-preflight-errors=Swap&#xA;클러스터 노드 제거 kubectl drain &amp;lt;노드 이름&amp;gt; --delete-emptydir-data --force --ignore-daemonsets __ __ Common # Set SELinux to permissive mode:&#xA;These instructions are for Kubernetes 1.29.&#xA;# Set SELinux in permissive mode (effectively disabling it) sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config Add the Kubernetes yum repository</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/ci__docker/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/ci__docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/ci__docker/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/ci__docker/</guid>
       <description>Dockerfile&#xA;FROM jenkins/jenkins USER root root 접속&#xA;docker exec -u 0 -it mycontainer bash 컨테이너 격리 기술&#xA;네임 스페이스 각 프로세스가 파일 시스템 마운트, 네트워크, 유저, 호스트 네임등에 대해 시스템에 독립 뷰를 제공 컨트롤 그룹 프로세스로 소비할 수 있는 리소스의 양을 제한 Docker&#xA;Docker Engine : 이미지, 네트워크, 디스크 등의 관리 역할 Containerd: OCI 구현체(주로 runC)를 이용해 container를 관리해주는 daemon 두 프로그램은 독립 실행하기 때문에 각 이미지에 영향이 없음 ![[assets/Pasted image 20240325153944.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cicd_grafana/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cicd_grafana/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cicd_grafana/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cicd_grafana/</guid>
       <description>1. Grafana Helm 차트 리포지토리 추가 # bashCopy code&#xA;helm repo add grafana https://grafana.github.io/helm-charts&#xA;2. Helm 리포지토리 업데이트 # bashCopy code&#xA;helm repo update&#xA;이 단계는 최신 차트 목록을 받아오기 위해 필요합니다.&#xA;3. Grafana 설치 # bashCopy code&#xA;helm install my-grafana grafana/grafana&#xA;my-grafana는 이 Helm 릴리스(배포)의 이름입니다. 원하는 이름으로 변경할 수 있습니다. 이 명령어는 Grafana를 기본 설정으로 설치합니다. 4. Grafana 관리자 비밀번호 얻기 # Grafana에 로그인하기 위해 생성된 관리자 비밀번호를 확인합니다:</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/dns/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/dns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/dns/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/dns/</guid>
       <description> 리소스 레코드 # 레코드 설명 A 레코드 가장 기본적인 유형으로 도메인 이름을 IP에 직접 매핑하는 레코드 소유 도메인 및 그 하위 도메인의 IP 주소(IPv4) 지정 가능 AAAA(IPv6) 레코드 A 레코드와 동일한 방식이나 A 레코드는 IPv4 주소 체계에서 사용되고 AAAA 레코드는 IPv6 주소 체계에서 사용 소유 도메인 및 그 하위 도메인의 IPv6 주소 지정 가능 CNAME(도메인 별명) 레코드 도메인 이름에 별명(alias)을 지정하는 레코드로 하나의 도메인 이름을 다른 도메인 이름으로 매핑 단, CNAME 레코드는 다른 레코드와 공존 불가 CNAME 레코드는 다른 모든 유형의 레코드와 충돌하므로 CNAME 레코드를 사용하려면 다른 레코드를 삭제 필요 MX(메일 서버) 레코드 사용자가 보유한 도메인과 하위 도메인 중 메일을 수신할 서버를 지정하는 레코드 Preference가 작을수록 높은 우선 순위를 가짐 SPF(스팸 처리 방지) 레코드 보안 정책을 지정하여 수신한 메일에 표시된 발송자 정보와 실제 메일 서버에 있는 정보가 일치하는지 확인하는 메일 검증 레코드 주로 스팸 메일을 방지하기 위해 스팸 메일을 송신한 서버의 IP 주소나 도메인 이름 등의 정보를 명시해 메일 주소 사칭 방지 TXT(도메인 설명) 레코드 도메인에 텍스트 정보를 추가하여 유효한 도메인인지 판단하는 레코드 SPF 레코드와 같은 용도로 사용 SRV 레코드 서비스를 호스팅 하는 서버의 위치(호스트 이름 및 포트 번호)를 저장하기 위해서 사용하는 레코드 CAA 레코드 특정 도메인에 대한 인증서를 발급한 인증 기관(Certificate Authority, CA)을 확인하는 레코드 잘못된 CA가 도메인에 대한 가짜 인증서를 발급하는 것 방지 DS 레코드 Delegation Signer(DS)는 위임에 대한 서명자(signer)라는 뜻으로 DNSSEC에서 서명이 있는 영역을 식별하는 데 필요한 데이터를 저장하는 레코드 </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/01_html/01_html/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/01_html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/01_html/01_html/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/01_html/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/01_html/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/02_css/02_css/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/02_css/02_css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/02_css/02_css/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/02_css/02_css/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/04_react/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/04_react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/04_react/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/04_react/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/0_redux-/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/0_redux-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/0_redux-/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/0_redux-/</guid>
       <description> __ Resons of Use # Props 문법을 사용하지 않기 위해서&#xA;state 변경 관리하기 위해서&#xA;기존 ![[assets/Pasted image 20240215022920.png]]&#xA;Redux ![[assets/Pasted image 20240215023007.png]] ![[assets/Pasted image 20240215023411.png]]&#xA;__ # </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/04_react/vite/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/vite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/04_react/vite/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/vite/</guid>
       <description>npm init vite # npm install # npm install -D vite-plugin-eslint eslint eslint-config-react-app # npm install react-router-dom # npm install -D tailwind autoprefixer postcss&#xA;npx tailwindcss init -p&#xA;npm install react-icons&#xA;npm install @reduxjs/toolkit react-redux&#xA;저장 npm i redux-persist&#xA;유효성 체크 검사 npm install react-hook-form&#xA;npm install axios&#xA;npm install -g react-devtools&#xA;npm install bcryptjs &amp;ndash;save</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/3.-it_frontend/3.-it_frontend/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/3.-it_frontend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3.-it_frontend/3.-it_frontend/</guid>
+      <guid>https://yhb131618.github.io/3.-it_frontend/3.-it_frontend/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/4.-it_backend/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/4.-it_backend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/4.-it_backend/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/4.-it_backend/</guid>
       <description> TCP Transmission Control Protocol IP 데이터를 전달하는 동안 데이터 패킷을 추적 관리 UDP User Datagram Protocol 단문 메시지를 교환하는 프로토콜 ICMP Internet Control Message Protocol 호스트 서버와 인터넷게이트웨이 사이에서 IP패킷 전송 중 발생한 오류를 보고하고 발생원인을 알려주거나 네트워크 상태를 진단해주는 프로토콜 IP Internet Protocol 송수신 호스트와 수신 호스트 간의 패킷 교환시 정보를 주고 받는데 사용하는 프로토콜 IGMP Internet Group Management Protocol 호스트 컴퓨터와 인접 라우터가 멀티캐스트 구릅 멤버십을 구성하는데 사용하는 통신 프로토콜 ARP Address Resolution Protocol 네트워크 상에서 IP주소를 물리적 주소(MAC로 바인딩 시켜주는 주소 결정 프로토콜 DNS Domanin Name Space 도메인 네임과 IP 주소의 대응 관계를 데이터베이스로 구축해 사용하는 인터넷 프로토콜 DHCP Dynamic Host Configuration Protocol 네트워크 안의 컴퓨터 IP와 네임서버 주소, 게이트웨이 주소를 동적으로 할당하기 위한 프로토콜 RTP Real-time Transport Protocol 시간 음성과 영상 및 데이터를 IP 네트워크로 전송하는 표준 프로토콜 SNMP Simple Network Management Protocol 제한된 네트워크 자원을 효율적으로 운영하기 위한 프로토콜 </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/jlst/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/jlst/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/jlst/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/jlst/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/4.-it_backend/nodejs/</link>
+      <link>https://yhb131618.github.io/4.-it_backend/nodejs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/4.-it_backend/nodejs/</guid>
+      <guid>https://yhb131618.github.io/4.-it_backend/nodejs/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/5.-it_language/5.-it_language/</link>
+      <link>https://yhb131618.github.io/5.-it_language/5.-it_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/5.-it_language/5.-it_language/</guid>
+      <guid>https://yhb131618.github.io/5.-it_language/5.-it_language/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/5.-it_language/c/</link>
+      <link>https://yhb131618.github.io/5.-it_language/c/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/5.-it_language/c/</guid>
+      <guid>https://yhb131618.github.io/5.-it_language/c/</guid>
       <description>C언어 기초</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/5.-it_language/python/</link>
+      <link>https://yhb131618.github.io/5.-it_language/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/5.-it_language/python/</guid>
+      <guid>https://yhb131618.github.io/5.-it_language/python/</guid>
       <description>Python 기초</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/6.-it_algorithm/6.-it_algorithm/</link>
+      <link>https://yhb131618.github.io/6.-it_algorithm/6.-it_algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/6.-it_algorithm/6.-it_algorithm/</guid>
+      <guid>https://yhb131618.github.io/6.-it_algorithm/6.-it_algorithm/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/7.-it_network/</link>
+      <link>https://yhb131618.github.io/7.-it_network/7.-it_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/7.-it_network/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/7.-it_network/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/dnsdomain/</link>
+      <link>https://yhb131618.github.io/7.-it_network/dnsdomain/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/dnsdomain/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/dnsdomain/</guid>
       <description> Domain # 01__Domain Purchase # 도메인 구입 이전 도메인 구입 사이트에서 회원가입 진행 ![[assets/Pasted image 20240111140259.png]] __ 1.1_Domain Name search # 사용할 도메인을 검색 후 선택 ![[assets/Pasted image 20240111141009.png]] __ 1.2_Domain Name Pay # 결제 진행 후 ![[assets/Pasted image 20240111141534.png]] __ 1.3_Domain Name Register # ![[assets/Pasted image 20240111142335.png]] ![[assets/Pasted image 20240111142845.png]] ![[assets/Pasted image 20240111142901.png]]&#xA;호스트 : WWW IP : 퍼블릭 IP 적용시간은 최소 몇 십분에서~최대 7일까지 소요된다. </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/http/</link>
+      <link>https://yhb131618.github.io/7.-it_network/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/http/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/http/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/network/</link>
+      <link>https://yhb131618.github.io/7.-it_network/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/network/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/network/</guid>
       <description>``&#xA;Chap01 Network # ![[assets/Pasted image 20231226074930.png]]&#xA;![[assets/Pasted image 20231225180724.png]]&#xA;네트워크가 동작하려면, 통신 규약(프로토콜)이 필요하다. 핸드폰 전화번호처럼 010-XXXX-XXXX와 같은 규칙을 통해 통신하는 것을 통신 규약이라고 하며, 네트워크는 이와 같은 규약을 7 계층으로 세부적으로 나누어 통신한다. 통신 규약을 7계층으로 나누는 것을 OSI 7계층 참조 모델이라고 한다. 컴퓨터 제조사나 네트워크 제조사, 어플리케이션은 이 OSI 7계층의 통신 규격에 따라 제품을 만들어 전세계와 인터넷 통신이 가능케 하고 있다. ![[assets/Pasted image 20231225181003.png]] TCP/IP 계층 모델은 OSI 7계층을 기능적으로 묶어서 표현했다고 말할 수 있다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/restful-api/</link>
+      <link>https://yhb131618.github.io/7.-it_network/restful-api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/restful-api/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/restful-api/</guid>
       <description>RESTful API # 그냥 데이터만 리턴한다고 RESTful API라고 부르지는 않는다. RESTful API는 몇 가지 원칙이 있는데 그 조건을 만족해야 RESTful API라고 부르게 된다.&#xA;Uniform Interface: 데이터를 식별 가능하게 해야한다는 원칙. url만 보고도 어떤 데이터를 어디로 전송하는 지 알아야 한다는 것이다. http://locahost:8090/board/insertBoard.do?boardNo=1 //boardNo=1인 데이터 입력 Client Server: 클라이언트와 서버는 분리되어 있어야 하며 클라이언트는 서버로 요청을 보내고 서버는 클라이언트에게 요청에 대한 응답을 보내줘야 한다는 원칙. Statless: Http 프로토콜을 사용해서 전송하기 때문에 상태를 저장하지 않으면 요청에 대한 모든정보가 한번에 담겨서 전송돼야 한다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/7.-it_network/swagger/</link>
+      <link>https://yhb131618.github.io/7.-it_network/swagger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/7.-it_network/swagger/</guid>
+      <guid>https://yhb131618.github.io/7.-it_network/swagger/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/8.-it/8.-it/</link>
+      <link>https://yhb131618.github.io/8.-it/8.-it/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/8.-it/8.-it/</guid>
+      <guid>https://yhb131618.github.io/8.-it/8.-it/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/9.-it_db/mongodb/</link>
+      <link>https://yhb131618.github.io/9.-it_db/mongodb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/9.-it_db/mongodb/</guid>
+      <guid>https://yhb131618.github.io/9.-it_db/mongodb/</guid>
       <description> 01_install windows # 1-1. mongodb 경로 설정 # 몽고DB 경로 환경변수 등록&#xA;C:\Program Files\MongoDB\Server\7.0\bin 1-2. MongoDB 확인 # mongod --version 1-3. MongoDB DB 생성 # mongod --dbpath [db경로] --port 27017 1-4. 몽고DB Shell 설치 # MongoDB Shell Download&#xA;https://www.mongodb.com/try/download/shell&#xA;몽고shell Admin 계정&#xA;1-5. 몽고DB 커넥션 확인 # ![[assets/Pasted image 20240306155949.png]] ![[assets/Pasted image 20240306155945.png]]&#xA;1-6. 몽고DB 외부 접속 # &amp;ndash;bind_ip_all&#xA;mongod --bind_ip_all </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</link>
+      <link>https://yhb131618.github.io/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</guid>
+      <guid>https://yhb131618.github.io/9.-it_db/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%AA%A8%EB%8D%B8%EB%A7%81/</guid>
       <description>![[assets/Pasted image 20240320232936.png]]&#xA;__ Database Modeling # ![[assets/Pasted image 20240320140522.png]]&#xA;![[assets/Pasted image 20240320232149.png]]&#xA;__ DBMS # ![[assets/Pasted image 20240320232211.png]]&#xA;__ 1. 요구사항 분석 # __ 2.개념적 모델링 # DBMS에 독립적인 개념 스키마 설계 엔티티-관계 다이어그램(ERD) ![[assets/Pasted image 20240320232718.png]] ![[assets/Pasted image 20240320232741.png]] ![[assets/Pasted image 20240320232759.png]] ![[assets/Pasted image 20240320232826.png]] ![[assets/Pasted image 20240320232844.png]] ![[assets/Pasted image 20240320232910.png]] __ 3. 논리적 모델링 # DBMS에 적합한 노리적 스키마 설계 개념적 스키마를 논리적 데이터 모델을 이용해 논리적 구조로 표현 !</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about-me/about-me/</link>
+      <link>https://yhb131618.github.io/about-me/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about-me/about-me/</guid>
+      <guid>https://yhb131618.github.io/about-me/about-me/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</link>
+      <link>https://yhb131618.github.io/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</guid>
+      <guid>https://yhb131618.github.io/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</guid>
       <description>![[assets/Pasted image 20240301023814.png]]&#xA;![[assets/Pasted image 20240301023848.png]]&#xA;![[assets/Pasted image 20231225050532.png]]&#xA;![[assets/Untitled 2 2.png]]&#xA;![[assets/Untitled 3 3.png]]&#xA;![[assets/Untitled 4 2.png]]&#xA;![[assets/Untitled 5 3.png]]&#xA;![[assets/Untitled 6 2.png]]&#xA;![[assets/Untitled 7 1.png]]&#xA;![[assets/Untitled 10.png]]</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/blogguide/blogguide/</link>
+      <link>https://yhb131618.github.io/blogguide/blogguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogguide/blogguide/</guid>
+      <guid>https://yhb131618.github.io/blogguide/blogguide/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/content/</link>
+      <link>https://yhb131618.github.io/content/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/content/</guid>
+      <guid>https://yhb131618.github.io/content/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/economy/economy/</link>
+      <link>https://yhb131618.github.io/economy/economy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/economy/economy/</guid>
+      <guid>https://yhb131618.github.io/economy/economy/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</link>
+      <link>https://yhb131618.github.io/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://yhb131618.github.io/economy/%EA%B5%AD%EB%82%B4%EC%A6%9D%EA%B6%8C-%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/</guid>
       <description>주식투자의 수급주체 # 기관투자자 # 기관투자자는 일반인이나 법인 등 타인으로부터 모은 자금을 운용하는 투자자를 말합니다&#xA;외국인 # 외국인은 금융감독원에 외국인투자등록을 마친 외국인과 6개월 이상 국내 거주 등의 요건에 따라 투자 등록이 면제된 기타외국인으로 구분할 수 있습니다. 금융투자 # 금융투자는 증권사, 투자자문사, 자산운용사 등에서 직접 투자할 때 잡히는 수급을 의미합니다.&#xA;투신 # 투신은 투자신탁의 줄임말로 자산운용사 수급입니다. 일반 개인이 은행이나 증권사 등을 통해 펀드에 가입하면 그 펀드는 자산운용사의 펀드매니저를 통해 운용됩니다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/</link>
+      <link>https://yhb131618.github.io/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/</guid>
+      <guid>https://yhb131618.github.io/reading/23%EB%85%84/23%EB%85%84-12%EC%9B%94/</guid>
       <description>12월 읽은 책 : 5권 # &amp;lt;1주차&amp;gt; # 역행자 # 1회독 도서 ![[assets/Pasted image 20240204202914.png|120]] 제목 역핵자 작가 자청 분류 자기계발 한줄평 작가의 진심이 느껴지지 않는다.읽는 내내 세일즈하는 느낌이 들었다. 뭐라고 할까? 지울수 업는 사기꾼 냄새가 난다. 평점 ★★ &amp;lt;2주차&amp;gt; # 데일 카네기 자기관리론 # 2회독 도서 ![[assets/Pasted image 20240204203249.png|120]] 제목 데일 카네기 자기 관리론 작가 데일 카네기 분류 자기계발 한줄평 괜히 고전 명작 아니다.예전에는 몰랐지만 다시 읽으니 새삼스레 가슴에 와 닿는 구절이 많았다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/23%EB%85%84/23%EB%85%84/</link>
+      <link>https://yhb131618.github.io/reading/23%EB%85%84/23%EB%85%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/23%EB%85%84/23%EB%85%84/</guid>
+      <guid>https://yhb131618.github.io/reading/23%EB%85%84/23%EB%85%84/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84/</link>
+      <link>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reading/24%EB%85%84/24%EB%85%84/</guid>
+      <guid>https://yhb131618.github.io/reading/24%EB%85%84/24%EB%85%84/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/writer/</link>
+      <link>https://yhb131618.github.io/writer/writer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/writer/</guid>
+      <guid>https://yhb131618.github.io/writer/writer/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/</link>
+      <link>https://yhb131618.github.io/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/</guid>
+      <guid>https://yhb131618.github.io/writer/%EA%B1%B7%EA%B8%B0%EC%99%80-%EC%9E%90%EA%B8%B0%EC%95%94%EC%8B%9C/</guid>
       <description>걷기를 하면</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/</link>
+      <link>https://yhb131618.github.io/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/</guid>
+      <guid>https://yhb131618.github.io/writer/%EA%B3%A0%ED%86%B5%EC%9D%98-%EA%B0%80%EC%B9%98/</guid>
       <description>어떤 사람은 태생부터 행복하고 축복 받는 삶을 사는 것을 보면 부러운 마음이 생긴다.&#xA;하지만 우리가 겪는 고통스런 삶은 아무런 가치가 없는가? 나는 그렇지 않다고 생각한다.&#xA;과거의 어리석었던 나는 고통과 방황으로 얼룩진 내 삶이 너무 싫었다. 그리고 왜 나는 이런 삶을 이어가는지 이유를 몰랐고, 또 이런 고통을 연이어 안겨주는 하늘이 원망스러웠다.&#xA;하지만 지금에이르러서야 나는 내 고통의 가치를 깨달았다.&#xA;왜냐하면 내 겪는 고통은 나와 같은 고통으로 힘들어하는 사람들에게 하나의 지침이 되어주기 위핸 하나의 이정표이기 때문이다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/</link>
+      <link>https://yhb131618.github.io/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/</guid>
+      <guid>https://yhb131618.github.io/writer/%EB%B9%84%EA%B5%90%EB%AC%B8%ED%99%94/</guid>
       <description>소셜미디어와 더불어 각종 인터넷 매체의 발전으로 인해 우리는 불행에 빠지고 말았다.&#xA;처음 인터넷과 소셜미디어가 나왔을 때는 인간과 인간을 연결해주는 네트워크의 기능에 열광했지만, 작금에 이르러서는 이로 인하여 타인과 자신을 비교하고 또 타인을 저주하고 비방하는 등 현대 사회의 나쁜 단면을 보여주고 있다.&#xA;더욱이 유교 문화의 잔재가 남아 있는 한국은 어느새 비교문화가 자리 잡고 말았다.&#xA;실제 각종 커뮤니티와 소셜미디에서 언급되는 비교문화는 매우 심하다. 아래 문장이 그 예이다.&#xA;인서울 대학을 나오지 못한 지잡대 멍청이. 대기업에 입사하지 못한 중소기업 청년은 도태남.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/</link>
+      <link>https://yhb131618.github.io/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%83%9D%EA%B0%81%EC%9D%98-%EC%A0%84%ED%99%98/</guid>
       <description>나는 내 생각을 바꾸기 위해 많은 노력을 하고 있다.&#xA;생각.&#xA;생각이란 참으로 오묘하다. 생각을 바꾸면 마음이 바뀌니 말이다.&#xA;누군가는 실패라고 생각해도, 누군가는 성공의 첫걸음이라고 생각한다.&#xA;인간의 가장 뛰어난 능력은 높은 IQ가 아니라 바로 이 생각을 바꾸는 힘과 마음을 바꾸는 힘이라고 나는 생각한다.&#xA;생각과 마음.&#xA;생각을 바꾸면 마음이 바뀌고, 마음을 바뀌면 행동이 바뀌며, 그리고 행동을 바뀌면, 삶이 바뀐다고 했던가?&#xA;나는 내 삶을 어떻게 해야 바꿀 수 있을지 몰라 20살 이후부터 지금에 이르기까지 10년이 넘는 세월을 방황했다.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/</link>
+      <link>https://yhb131618.github.io/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/</guid>
+      <guid>https://yhb131618.github.io/writer/%EC%89%AC%EC%9A%B4-%ED%95%B4%EA%B3%A0%EC%99%80-%EA%B3%A0%EC%9A%A9/</guid>
       <description>나는 정치인도 아니고 그렇다고 지식인도 아니다.&#xA;하지만 대한민국의 국민의 한 사람의 입장에서 대한민국이 서서히 무너져 내리는 것을 보면 너무 안타깝다.&#xA;미우나 고우나 내가 태어난 나라인데 너무나 많은 갈등과 분열로 치닫는 사회를 보면 답답하고 슬픈 마음이 든다.&#xA;왜 이렇게 되었을까?&#xA;도대체 왜 대한민국은 희망이 보이지 않는 것일까?&#xA;근본적인 이유는 대한민국의 경제가 저성장 기조로 가고 있다는 점이다.&#xA;저성장 기조의 원인은 주변 경쟁국인 중국과 일본도 있지만 대만과 같은 신흥 개발도상국이 대한민국의 뒤를 바짝 쫓아오면서 수출이 부진해졌기 때문이다.</description>
     </item>
   </channel>

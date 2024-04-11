@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/aws/</link>
+    <link>https://yhb131618.github.io/tags/aws/</link>
     <description>Recent content in Aws on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yhb131618.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/2.-it_cloud/cloud/</link>
+      <link>https://yhb131618.github.io/2.-it_cloud/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2.-it_cloud/cloud/</guid>
+      <guid>https://yhb131618.github.io/2.-it_cloud/cloud/</guid>
       <description>개요 # 01_클라우드의 역사 # 1960년대 가상화라는 용어를 사용하기 시작 당시에는 전 가상화 기법을 사용하여 구현 에뮬레이터도 존재 다양한 하이퍼바이저의 출현 IBM의 Logical Partition VMware Xen Hyper-V KVM 가상화란 물리적 하드웨어 리소스(CPU, RAM, STORAGE, NETWORK)들을 직접 공유하는 방식 또는 호스트 OS에 의해 제공받는 방식으로 만들어지는 하나의 Virtual PC이다.&#xA;IBM M44/44X 시스템에서 유래하였다.&#xA;flowchart LR BareMetal --&gt; 가상화; 가상화 --&gt; 유형1; 가상화 --&gt; 유형2; 유형1 --&gt; 커널_공유방식; 유형2 --&gt; Host_공유방식; 유형1 : 하이퍼바이저(KVM, GEN, ESXI) 유형2 : (Vmware)</description>
     </item>
   </channel>

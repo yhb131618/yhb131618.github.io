@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko-KR" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta property="og:title" content="" />
 <meta property="og:description" content="![[assets/Pasted image 20231225181003.png]]
 OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 1계층 # 물리계층(Physical Layer)
 이 계층에서는 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하게 된다. 이 계층에서 사용되는 통신 단위는 비트이며 이것은 1과 0으로 나타내어지는, 즉 전기적으로 On, Off 상태라고 생각하면 된다. 이 계층에서는 단지 데이터를 전달만 할 뿐 전송하려는(또는 받으려는)데이터가 무엇인지, 어떤 에러가 있는지 등에는 전혀 신경 쓰지 않는다. 단지 데이터 전기적인 신호로 변환해서 주고받는 기능만 할 뿐이다. 이 계층에 속하는 대표적인 장비는 통신 케이블, 리피터, 허브등이 있다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/7.-it_network/osi-7-layler/" /><meta property="article:section" content="7.-it_network" />
+<meta property="og:url" content="https://yhb131618.github.io/7.-it_network/osi-7-layler/" /><meta property="article:section" content="7.-it_network" />
 
 <meta property="og:site_name" content="📓 Amethyst" />
 <title>OSI 7 Layler | 📓 Amethyst</title>
@@ -42,7 +42,7 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 
 
 
-<link rel="shortcut icon" type="image/png"  href="http://localhost:1313//favicon.png" />
+<link rel="shortcut icon" type="image/png"  href="https://yhb131618.github.io//favicon.png" />
 
 
 
@@ -72,10 +72,10 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
   
 
 
-<link href="http://localhost:1313/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
+<link href="https://yhb131618.github.io/styles.e08ceb33360cec132feb69cfb982e2a4.min.css" rel="stylesheet" />
 
 
-<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+<link href="https://yhb131618.github.io/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
 
   
 
@@ -99,33 +99,33 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 
 
 
-<script src="http://localhost:1313/quartz/js/darkmode.5222f81439f46765b5d071db9df5495d.min.js"></script>
+<script src="https://yhb131618.github.io/quartz/js/darkmode.042058fbc2e215acaed9e31a77e7fede.min.js"></script>
 
 
 
-<script src="http://localhost:1313/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
+<script src="https://yhb131618.github.io/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js"></script>
 
 
 
 <script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
 <script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
 
-<script src="http://localhost:1313/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
+<script src="https://yhb131618.github.io/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js"></script>
 
 
 
 
-<script defer src="http://localhost:1313/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+<script defer src="https://yhb131618.github.io/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
 
 
 
 
-<script defer src="http://localhost:1313/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+<script defer src="https://yhb131618.github.io/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
 
 
 
 
-<script defer src="http://localhost:1313/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+<script defer src="https://yhb131618.github.io/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
 
 
 
@@ -133,16 +133,16 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 <script>
   const SEARCH_ENABLED =  false 
   const LATEX_ENABLED =  true 
-  const PRODUCTION =  false 
-  const BASE_URL = "http://localhost:1313/"
+  const PRODUCTION =  true 
+  const BASE_URL = "https://yhb131618.github.io/"
   const fetchData = Promise.all([
-        fetch("http:\/\/localhost:1313\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
+        fetch("https:\/\/yhb131618.github.io\/indices\/linkIndex.f6425e3c9c5a78cb1a57d6271bd0c88d.min.json")
           .then(data => data.json())
           .then(data => ({
             index: data.index,
             links: data.links,
           })),
-        fetch("http:\/\/localhost:1313\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
+        fetch("https:\/\/yhb131618.github.io\/indices\/contentIndex.56753ef950db2332e50166167e5b613e.min.json")
           .then(data => data.json()),
       ])
       .then(([{index, links}, content]) => ({
@@ -168,7 +168,7 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 
     
     initPopover(
-      "http://localhost:1313",
+      "https://yhb131618.github.io",
        true 
     )
     
@@ -184,7 +184,7 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 
       const drawGlobal = isHome &&  true ;
       drawGraph(
-          "http://localhost:1313",
+          "https://yhb131618.github.io",
           drawGlobal,
           [{"/moc":"#4388cc"}],
           drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
@@ -253,7 +253,7 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
   integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
 
-<script defer src="http://localhost:1313/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+<script defer src="https://yhb131618.github.io/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
 
 
 
@@ -262,7 +262,7 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
     <label for="menu-control">
       <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
     </label>
-    <h1 id="page-title"><a href="http://localhost:1313/">📓 Amethyst</a></h1>
+    <h1 id="page-title"><a href="https://yhb131618.github.io/">📓 Amethyst</a></h1>
     <div class="spacer"></div>
     <div id="search-icon" class="quartz-search">
       <p>Search</p>
@@ -471,6 +471,19 @@ OSI 7계층 # 참조 https://shlee0882.tistory.com/110
         </li>
       
     
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_certbot/" class="">Linux Certbot</a>
+  
+
+        </li>
       
     
       
@@ -2615,7 +2628,7 @@ IP 주소 지정 (Addressing)
   }
 </style>
 
-<script src="http://localhost:1313/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
+<script src="https://yhb131618.github.io/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js"></script>
 
     </div>
 </div>
@@ -2632,7 +2645,7 @@ IP 주소 지정 (Addressing)
         <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Ben Cuan</p>
         <ul>
             
-            <li><a href="http://localhost:1313/">Home</a></li>
+            <li><a href="https://yhb131618.github.io/">Home</a></li>
             <li><a href="https://bencuan.me">Website</a></li><li><a href="https://blog.bencuan.me">Blog</a></li></ul>
     </footer>
 </div>

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>About Mes on Git blog</title>
     <link>https://yhb131618.github.io/about-me/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content in About Mes on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/about-me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/about-me/_index-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/about-me/_index-/</guid>
+      <description></description>
+    </item>
     <item>
       <title></title>
       <link>https://yhb131618.github.io/about-me/about-me/</link>
@@ -19,7 +26,7 @@
       <link>https://yhb131618.github.io/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/</guid>
-      <description>![[assets/Pasted image 20240301023814.png]]&#xA;![[assets/Pasted image 20240301023848.png]]&#xA;![[assets/Pasted image 20231225050532.png]]&#xA;![[assets/Untitled 2 2.png]]&#xA;![[assets/Untitled 3 3.png]]&#xA;![[assets/Untitled 4 2.png]]&#xA;![[assets/Untitled 5 3.png]]&#xA;![[assets/Untitled 6 2.png]]&#xA;![[assets/Untitled 7 1.png]]&#xA;![[assets/Untitled 10.png]]</description>
+      <description>![[assets/Pasted image 20240301023814.png]]&#xA;![[assets/Pasted image 20240301023848.png]] ![[assets/Pasted image 20240416162349.png]] ![[assets/Pasted image 20231225050532.png]]&#xA;![[assets/Untitled 2 2.png]]&#xA;![[assets/Untitled 3 3.png]]&#xA;![[assets/Untitled 4 2.png]]&#xA;![[assets/Untitled 5 3.png]]&#xA;![[assets/Untitled 6 2.png]]&#xA;![[assets/Untitled 7 1.png]]&#xA;![[assets/Untitled 10.png]]</description>
     </item>
   </channel>
 </rss>

@@ -2,14 +2,12 @@
 <html lang="ko-KR" dir="ltr">
 <head>
   <meta property="og:title" content="" />
-<meta property="og:description" content="중괄호 문법 # ![[assets/Pasted image 20240202162725.png]]
-스타일문법 # ![[assets/Pasted image 20240202162942.png]]
-![[assets/Pasted image 20240202173253.png]]![[assets/Pasted image 20240202174023.png]]![[assets/Pasted image 20240202175720.png]]" />
+<meta property="og:description" content=" Basic Authentication # 사용자 이름/비밀번호 BASE64로 인코딩하여 Authorization 헤더에 포함하여 전송됨 매우 안전하지 않음, SSL/TLS와 함께 사용됨 Bearer Token Authentication # 헤더에 토큰을 포함하여 전송 Authorization 헤더에 포함하여 전송 JWT를 사용하여 인증 간단한 방식, 상태를 유지하지 않음, 확장성이 높음 토큰 노출 위험, 토큰 관리 OAuth # 토큰기반 인증 방식 사용자가 직접 자격을 증명하지 않음 미리 인증 받아서 토큰을 발급을 받은 뒤 이 토큰을 이용하여 API를 요청하는 방식 OAuth 2.0 Kakao / Naver # API key / Session Based Authentication # JWT(JSON Web token) # 클레임이라고 불리는 정보를 JSON 형태로 안전하게 전송하기 위한 토큰 기반의 표준 인증과 정보 교환에 사용, 서명이 되어 있어서 신뢰성 확보가 가능 Header : 토큰의 타입과 사용된 알고리즘 정보를 담고 있음, Base64Url로 인코딩 Payload : 클레임 정보, 대상, 발행자, 만료시간 등 다양한 정보가 포함됨, Base64Url로 인코딩 Signature : header와 payload, secret key를 사용하여 생성된 서명 장점 상태 유지 필요 없음 확장성 단점 크기: 클레임이 많을수록 토큰의 크기가 커짐 보안: 서명은 되어 있지만 암호화는 되어있지 않음 중요한 정보를 JWT에 포함하면 안됨 토큰 관리 : 만료 시간, 갱신 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yhb131618.github.io/3.-it_frontend/04_react/02_/" /><meta property="article:section" content="3.-it_frontend" />
+<meta property="og:url" content="https://yhb131618.github.io/4.-it_backend/security/" /><meta property="article:section" content="4.-it_backend" />
 
-<meta property="og:site_name" content="📓 Amethyst" />
-<title>02 | 📓 Amethyst</title>
+<meta property="og:site_name" content="Git Bolg" />
+<title>Security | Git Bolg</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.45ec1f6261e17c6488824ac77b6b8a0c11eef38eaed587cfecad4b284f57ee79.css" integrity="sha256-RewfYmHhfGSIgkrHe2uKDBHu846u1YfP7K1LKE9X7nk=" crossorigin="anonymous">
@@ -26,12 +24,10 @@ https://github.com/alex-shpak/hugo-book
 <meta charset="UTF-8" />
 <meta
   name="description"
-  content="중괄호 문법 # ![[assets/Pasted image 20240202162725.png]]
-스타일문법 # ![[assets/Pasted image 20240202162942.png]]
-![[assets/Pasted image 20240202173253.png]]![[assets/Pasted image 20240202174023.png]]![[assets/Pasted image 20240202175720.png]]"
+  content=" Basic Authentication # 사용자 이름/비밀번호 BASE64로 인코딩하여 Authorization 헤더에 포함하여 전송됨 매우 안전하지 않음, SSL/TLS와 함께 사용됨 Bearer Token Authentication # 헤더에 토큰을 포함하여 전송 Authorization 헤더에 포함하여 전송 JWT를 사용하여 인증 간단한 방식, 상태를 유지하지 않음, 확장성이 높음 토큰 노출 위험, 토큰 관리 OAuth # 토큰기반 인증 방식 사용자가 직접 자격을 증명하지 않음 미리 인증 받아서 토큰을 발급을 받은 뒤 이 토큰을 이용하여 API를 요청하는 방식 OAuth 2.0 Kakao / Naver # API key / Session Based Authentication # JWT(JSON Web token) # 클레임이라고 불리는 정보를 JSON 형태로 안전하게 전송하기 위한 토큰 기반의 표준 인증과 정보 교환에 사용, 서명이 되어 있어서 신뢰성 확보가 가능 Header : 토큰의 타입과 사용된 알고리즘 정보를 담고 있음, Base64Url로 인코딩 Payload : 클레임 정보, 대상, 발행자, 만료시간 등 다양한 정보가 포함됨, Base64Url로 인코딩 Signature : header와 payload, secret key를 사용하여 생성된 서명 장점 상태 유지 필요 없음 확장성 단점 크기: 클레임이 많을수록 토큰의 크기가 커짐 보안: 서명은 되어 있지만 암호화는 되어있지 않음 중요한 정보를 JWT에 포함하면 안됨 토큰 관리 : 만료 시간, 갱신 "
 />
 <title>
-  📓 Amethyst
+  Git Bolg
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -260,7 +256,7 @@ https://github.com/alex-shpak/hugo-book
     <label for="menu-control">
       <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
     </label>
-    <h1 id="page-title"><a href="https://yhb131618.github.io/">📓 Amethyst</a></h1>
+    <h1 id="page-title"><a href="https://yhb131618.github.io/">Git Bolg</a></h1>
     <div class="spacer"></div>
     <div id="search-icon" class="quartz-search">
       <p>Search</p>
@@ -478,6 +474,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/1.-it_os/linux_ca/" class="">Linux Ca</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/1.-it_os/linux_certbot/" class="">Linux Certbot</a>
   
 
@@ -505,6 +514,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/1.-it_os/linux_ntp/" class="">Linux Ntp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/1.-it_os/linux_openssl/" class="">Linux Open Ssl</a>
   
 
         </li>
@@ -792,7 +814,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle" checked />
+    <input type="checkbox" id="section-8efbae336a9a295cd55ca1435e8b843d" class="toggle"  />
     <label for="section-8efbae336a9a295cd55ca1435e8b843d" class="flex justify-between">
       <a role="button" class="book-collapse-toggle ">3. It Front End</a>
     </label>
@@ -945,9 +967,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle" checked />
+    <input type="checkbox" id="section-286121c225d9b1104704ba479a12082b" class="toggle"  />
     <label for="section-286121c225d9b1104704ba479a12082b" class="flex justify-between">
-      <a role="button" class="book-collapse-toggle ">04 React</a>
+      <a href="/3.-it_frontend/04_react/" class="book-collapse-toggle ">04 React</a>
     </label>
   
 
@@ -974,7 +996,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/3.-it_frontend/04_react/02_/" class="active">02</a>
+    <a href="/3.-it_frontend/04_react/02_react-%EA%B0%95%EC%9D%98/" class="">02 React 강의</a>
   
 
         </li>
@@ -1017,6 +1039,44 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f4a949638b8ac46ccbf35c07caaa38f6" class="toggle"  />
+    <label for="section-f4a949638b8ac46ccbf35c07caaa38f6" class="flex justify-between">
+      <a role="button" class="book-collapse-toggle ">피그마</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/3.-it_frontend/%ED%94%BC%EA%B7%B8%EB%A7%88/%ED%8C%8C%EA%B5%AC%EB%A8%B8/" class="">파구머</a>
+  
+
+        </li>
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1029,7 +1089,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle"  />
+    <input type="checkbox" id="section-9ad64035945ec68c45ad4ec2306d404f" class="toggle" checked />
     <label for="section-9ad64035945ec68c45ad4ec2306d404f" class="flex justify-between">
       <a role="button" class="book-collapse-toggle ">IT_BackEnd</a>
     </label>
@@ -1124,6 +1184,19 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-it_backend/security/" class="active">Security</a>
+  
+
+        </li>
       
     
   </ul>
@@ -1561,6 +1634,34 @@ https://github.com/alex-shpak/hugo-book
       
     
       
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-4%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 4월 독서</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/reading/24%EB%85%84/24%EB%85%84-5%EC%9B%94-%EB%8F%85%EC%84%9C/" class="">24년 5월 독서</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
     
   </ul>
 
@@ -1841,6 +1942,39 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <span class="book-menu-title">About Mes</span>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/about-me/%EC%9E%90%EA%B2%A9%EC%A6%9D/" class="">자격증</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
   </ul>
 
 
@@ -1851,18 +1985,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-
-  
-<ul>
-  
-  <li>
-    <a href="https://github.com/64bitpandas/amethyst"  target="_blank" rel="noopener">
-        Github
-      </a>
-  </li>
-  
-</ul>
 
 
 
@@ -1886,7 +2008,7 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown">
-    <h1 class="title">02</h1>
+    <h1 class="title">Security</h1>
     
 
 
@@ -1901,301 +2023,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  
-  
-
-  
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-        
-        
-        
-      
-    
-    
-
-  
-
-  
-  
-  
-
-  
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-        
-        
-        
-      
-    
-    
-
-  
-
-  
-  
-  
-
-  
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-        
-        
-        
-      
-    
-    
-
-  
-
-  
-  
-  
-
-  
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-        
-        
-        
-      
-    
-    
-
-  
-
-  
-  
-  
-
-  
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-        
-        
-        
-      
-    
-    
-
-  
 
 
 
@@ -2219,17 +2046,68 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<h2 id="중괄호-문법">
-  중괄호 문법
-  <a class="anchor" href="#%ec%a4%91%ea%b4%84%ed%98%b8-%eb%ac%b8%eb%b2%95">#</a>
-</h2>
-<p><img src="/assets/Pasted image 20240202162725.png" width="auto" /></p>
-<h2 id="스타일문법">
-  스타일문법
-  <a class="anchor" href="#%ec%8a%a4%ed%83%80%ec%9d%bc%eb%ac%b8%eb%b2%95">#</a>
-</h2>
-<p><img src="/assets/Pasted image 20240202162942.png" width="auto" /></p>
-<p><img src="/assets/Pasted image 20240202173253.png" width="auto" /><img src="/assets/Pasted image 20240202174023.png" width="auto" /><img src="/assets/Pasted image 20240202175720.png" width="auto" /></p>
+<h3 id="basic-authentication">
+  Basic Authentication
+  <a class="anchor" href="#basic-authentication">#</a>
+</h3>
+<ul>
+<li>사용자 이름/비밀번호 BASE64로 인코딩하여 Authorization 헤더에 포함하여 전송됨</li>
+<li>매우 안전하지 않음, SSL/TLS와 함께 사용됨</li>
+</ul>
+<h3 id="bearer-token-authentication">
+  Bearer Token Authentication
+  <a class="anchor" href="#bearer-token-authentication">#</a>
+</h3>
+<ul>
+<li>헤더에 토큰을 포함하여 전송 Authorization 헤더에 포함하여 전송</li>
+<li>JWT를 사용하여 인증</li>
+<li>간단한 방식, 상태를 유지하지 않음, 확장성이 높음</li>
+<li>토큰 노출 위험, 토큰 관리</li>
+</ul>
+<h3 id="oauth">
+  OAuth
+  <a class="anchor" href="#oauth">#</a>
+</h3>
+<ul>
+<li>토큰기반 인증 방식</li>
+<li>사용자가 직접 자격을 증명하지 않음 미리 인증 받아서 토큰을 발급을 받은 뒤</li>
+<li>이 토큰을 이용하여 API를 요청하는 방식 OAuth 2.0</li>
+</ul>
+<h3 id="kakao--naver">
+  Kakao / Naver
+  <a class="anchor" href="#kakao--naver">#</a>
+</h3>
+<h3 id="api-key--session-based-authentication">
+  API key / Session Based Authentication
+  <a class="anchor" href="#api-key--session-based-authentication">#</a>
+</h3>
+<h3 id="jwtjson-web-token">
+  JWT(JSON Web token)
+  <a class="anchor" href="#jwtjson-web-token">#</a>
+</h3>
+<ul>
+<li>클레임이라고 불리는 정보를 JSON 형태로 안전하게 전송하기 위한 토큰 기반의 표준</li>
+<li>인증과 정보 교환에 사용, 서명이 되어 있어서 신뢰성 확보가 가능
+<ul>
+<li>Header : 토큰의 타입과 사용된 알고리즘 정보를 담고 있음, Base64Url로 인코딩</li>
+<li>Payload : 클레임 정보, 대상, 발행자, 만료시간 등 다양한 정보가 포함됨, Base64Url로 인코딩</li>
+<li>Signature : header와 payload, secret key를 사용하여 생성된 서명</li>
+</ul>
+</li>
+<li>장점
+<ul>
+<li>상태 유지 필요 없음</li>
+<li>확장성</li>
+</ul>
+</li>
+<li>단점
+<ul>
+<li>크기: 클레임이 많을수록 토큰의 크기가 커짐</li>
+<li>보안: 서명은 되어 있지만 암호화는 되어있지 않음 중요한 정보를 JWT에 포함하면 안됨</li>
+<li>토큰 관리 : 만료 시간, 갱신</li>
+</ul>
+</li>
+</ul>
 
 
     
@@ -2287,11 +2165,11 @@ https://github.com/alex-shpak/hugo-book
     <footer>
         
         
-        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Ben Cuan</p>
+        <p>Made with <a href="https://github.com/64bitpandas/amethyst">Amethyst</a>, © 2024 Yang HongBin</p>
         <ul>
             
             <li><a href="https://yhb131618.github.io/">Home</a></li>
-            <li><a href="https://bencuan.me">Website</a></li><li><a href="https://blog.bencuan.me">Blog</a></li></ul>
+            <li><a href="http://www.springboot-yhb-portfolio.store/">Website</a></li><li><a href="https://yhb131618.github.io/">Blog</a></li></ul>
     </footer>
 </div>
 
@@ -2320,8 +2198,16 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#중괄호-문법">중괄호 문법</a></li>
-    <li><a href="#스타일문법">스타일문법</a></li>
+    <li>
+      <ul>
+        <li><a href="#basic-authentication">Basic Authentication</a></li>
+        <li><a href="#bearer-token-authentication">Bearer Token Authentication</a></li>
+        <li><a href="#oauth">OAuth</a></li>
+        <li><a href="#kakao--naver">Kakao / Naver</a></li>
+        <li><a href="#api-key--session-based-authentication">API key / Session Based Authentication</a></li>
+        <li><a href="#jwtjson-web-token">JWT(JSON Web token)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

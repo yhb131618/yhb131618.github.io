@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Git blog</title>
     <link>https://yhb131618.github.io/3.-it_frontend/04_react/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/3.-it_frontend/04_react/index.xml" rel="self" type="application/rss+xml" />
@@ -16,10 +16,10 @@
     </item>
     <item>
       <title></title>
-      <link>https://yhb131618.github.io/3.-it_frontend/04_react/02_/</link>
+      <link>https://yhb131618.github.io/3.-it_frontend/04_react/02_react-%EA%B0%95%EC%9D%98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/02_/</guid>
-      <description>중괄호 문법 # ![[assets/Pasted image 20240202162725.png]]&#xA;스타일문법 # ![[assets/Pasted image 20240202162942.png]]&#xA;![[assets/Pasted image 20240202173253.png]]![[assets/Pasted image 20240202174023.png]]![[assets/Pasted image 20240202175720.png]]</description>
+      <guid>https://yhb131618.github.io/3.-it_frontend/04_react/02_react-%EA%B0%95%EC%9D%98/</guid>
+      <description> 불변의 객체 State로 업데이트 # ![[assets/Pasted image 20240508093114.png]]&#xA;스프레드 연산자를 이용한 참조 방식이 아닌 복제 방식으로 불변의 객체를 생성하고 업데이트 </description>
     </item>
     <item>
       <title></title>

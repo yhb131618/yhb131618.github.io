@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Git blog</title>
     <link>https://yhb131618.github.io/1.-it_os/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/1.-it_os/index.xml" rel="self" type="application/rss+xml" />
@@ -51,6 +51,13 @@
     </item>
     <item>
       <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/linux_ca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_ca/</guid>
+      <description>entOS 7에서는 다음과 같은 방법으로 ca.crt 파일을 신뢰할 수 있는 CA로 설정하여 서버의 자체 서명된 인증서를 신뢰할 수 있습니다:&#xA;CA 파일 복사: 먼저 서버에서 생성된 ca.crt 파일을 클라이언트로 복사합니다. 예를 들어, 클라이언트의 /etc/pki/ca-trust/source/anchors/ 디렉토리로 복사할 수 있습니다.&#xA;bashCopy code&#xA;sudo cp /path/to/ca.crt /etc/pki/ca-trust/source/anchors/&#xA;인증서 트러스트 재구축: 다음으로, update-ca-trust 명령을 사용하여 인증서 트러스트를 다시 구축합니다.&#xA;bashCopy code&#xA;sudo update-ca-trust&#xA;시스템 재시작 (옵션): 변경 사항을 적용하려면 시스템을 재시작할 수 있습니다.&#xA;bashCopy code</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://yhb131618.github.io/1.-it_os/linux_certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/1.-it_os/linux_certbot/</guid>
@@ -69,6 +76,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/1.-it_os/linux_ntp/</guid>
       <description>1. Chrony 설치 확인 # 1. Chrony 설치 확인 # 먼저, chronyd 서비스가 시스템에 설치되어 있는지 확인합니다. 설치되어 있지 않다면 설치합니다:&#xA;bashCopy code&#xA;sudo yum install chrony&#xA;2. Chrony 서비스 시작 및 활성화 # chronyd 서비스를 시작하고 부팅 시 자동으로 실행되도록 설정합니다:&#xA;bashCopy code&#xA;sudo systemctl start chronyd sudo systemctl enable chronyd&#xA;3. 시간 동기화 확인 # 시스템 시계가 NTP 서버와 정확히 동기화되었는지 확인합니다:&#xA;bashCopy code&#xA;chronyc tracking&#xA;이 명령은 현재 시간 소스와 그 정확도에 대한 정보를 보여줍니다.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/1.-it_os/linux_openssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/1.-it_os/linux_openssl/</guid>
+      <description>내부 CA를 구축하는 과정을 코드로 자세히 설명하겠습니다. 이 예제에서는 OpenSSL을 사용하여 내부 CA를 설정하는 방법을 보여줍니다.&#xA;루트 인증서 생성: bashCopy code&#xA;openssl genrsa -aes256 -out root-ca.key 4096 openssl req -x509 -new -nodes -key root-ca.key -sha256 -days 3650 -out root-ca.crt&#xA;하위 인증서 생성을 위한 서버 키 생성: bashCopy code&#xA;openssl genrsa -out server.key 2048&#xA;서버 인증서 요청 생성: bashCopy code&#xA;openssl req -new -key server.key -out server.csr&#xA;서버 인증서 발급: bashCopy code</description>
     </item>
   </channel>
 </rss>

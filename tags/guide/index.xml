@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guide on My New Hugo Site</title>
+    <title>Guide on Git blog</title>
     <link>https://yhb131618.github.io/tags/guide/</link>
-    <description>Recent content in Guide on My New Hugo Site</description>
+    <description>Recent content in Guide on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/tags/guide/index.xml" rel="self" type="application/rss+xml" />
@@ -33,7 +33,7 @@
       <link>https://yhb131618.github.io/blogguide/05-hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/blogguide/05-hugo/</guid>
-      <description>Hugo Logic 예정</description>
+      <description>Hugo가 참조하는 템플릿 # Hugo CLI를 이용해 Site를 만들게 되면 아래와 같은 구조를 가지게 된다.&#xA;$ tree test test ├── archetypes │ └── default.md ├── config.toml ├── content ├── data ├── layouts ├── static └── themes 6 directories, 2 files 여기서 우리가 눈여겨 봐야할 디렉토리는 layouts와 themes 폴더이다. 공식 문서의 내용을 보면 알 수 있듯이, layouts 폴더 안에 해당 템플릿이 있는지 먼저 확인한 후, 없으면 지정한 테마의 폴더(themes)안 의 layouts 폴더에 정의된 템플릿을 사용한다는 것이다.</description>
     </item>
   </channel>
 </rss>

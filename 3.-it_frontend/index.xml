@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Git blog</title>
     <link>https://yhb131618.github.io/3.-it_frontend/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/3.-it_frontend/index.xml" rel="self" type="application/rss+xml" />
@@ -12,6 +12,13 @@
       <link>https://yhb131618.github.io/3.-it_frontend/3.-it_frontend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/3.-it_frontend/3.-it_frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/3.-it_frontend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/3.-it_frontend/%EB%AC%B4%EC%A0%9C-%ED%8C%8C%EC%9D%BC/</guid>
       <description></description>
     </item>
   </channel>

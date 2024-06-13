@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IT_BackEnd on My New Hugo Site</title>
+    <title>IT_BackEnd on Git blog</title>
     <link>https://yhb131618.github.io/4.-it_backend/</link>
-    <description>Recent content in IT_BackEnd on My New Hugo Site</description>
+    <description>Recent content in IT_BackEnd on Git blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <atom:link href="https://yhb131618.github.io/4.-it_backend/index.xml" rel="self" type="application/rss+xml" />
@@ -83,6 +83,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://yhb131618.github.io/4.-it_backend/nodejs/</guid>
       <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yhb131618.github.io/4.-it_backend/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yhb131618.github.io/4.-it_backend/security/</guid>
+      <description> Basic Authentication # 사용자 이름/비밀번호 BASE64로 인코딩하여 Authorization 헤더에 포함하여 전송됨 매우 안전하지 않음, SSL/TLS와 함께 사용됨 Bearer Token Authentication # 헤더에 토큰을 포함하여 전송 Authorization 헤더에 포함하여 전송 JWT를 사용하여 인증 간단한 방식, 상태를 유지하지 않음, 확장성이 높음 토큰 노출 위험, 토큰 관리 OAuth # 토큰기반 인증 방식 사용자가 직접 자격을 증명하지 않음 미리 인증 받아서 토큰을 발급을 받은 뒤 이 토큰을 이용하여 API를 요청하는 방식 OAuth 2.0 Kakao / Naver # API key / Session Based Authentication # JWT(JSON Web token) # 클레임이라고 불리는 정보를 JSON 형태로 안전하게 전송하기 위한 토큰 기반의 표준 인증과 정보 교환에 사용, 서명이 되어 있어서 신뢰성 확보가 가능 Header : 토큰의 타입과 사용된 알고리즘 정보를 담고 있음, Base64Url로 인코딩 Payload : 클레임 정보, 대상, 발행자, 만료시간 등 다양한 정보가 포함됨, Base64Url로 인코딩 Signature : header와 payload, secret key를 사용하여 생성된 서명 장점 상태 유지 필요 없음 확장성 단점 크기: 클레임이 많을수록 토큰의 크기가 커짐 보안: 서명은 되어 있지만 암호화는 되어있지 않음 중요한 정보를 JWT에 포함하면 안됨 토큰 관리 : 만료 시간, 갱신 </description>
     </item>
   </channel>
 </rss>
